@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 32: end of line expected.
+    hide palco:
+              ^
+
+Ren'Py Version: Ren'Py 8.2.2.24050801+nightly
+Thu May  9 18:21:48 2024

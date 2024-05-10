@@ -54,7 +54,7 @@ label start:
             show yara at left:
                 zoom 0.7
 
-            y "CADE MEU CHOCOLATE!!??"
+            y "AAAAA!!??"
 
         "Nao falar com ninguem":
             "Ta maluco vo eh dormi kkkkk"

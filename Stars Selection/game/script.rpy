@@ -1,5 +1,8 @@
-﻿define j = Character("Jolie")
-define apresentador = Character("Apresentador")
+﻿init python:
+    pts = 20
+
+define j = Character(_("Jolie"), color="#f1e842")
+define apresentador = Character(_("Apresentador"), color="#e93c59")
 define y = Character("Yara")
 
 image jolie = "images/homem1.png"
@@ -44,6 +47,7 @@ label start:
         "Se juntar a conversa":
             show jolie at truecenter:
                 zoom 0.4
+                
             j "Oie!"
 
             hide jolie
@@ -54,12 +58,20 @@ label start:
             show yara at left:
                 zoom 0.7
 
-            y "Auimaué"
+            y "AAAA!"
 
         "Nao falar com ninguem":
+
             "Ta maluco vo eh dormi kkkkk"
+            $pts = 20
+            jump fim
 
     # This ends the game.
     stop music
 
+label fim:
+
+    if pts == 20:
+        "parabens!"
+        
     return

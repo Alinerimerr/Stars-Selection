@@ -12,7 +12,7 @@
 ##
 ## O _() ao redor da string a marca como elegível para tradução.
 
-define config.name = _("Project Idol")
+define config.name = _("Stars Selection")
 
 
 ## Determina se o título fornecido acima será mostrado na tela do menu
@@ -37,7 +37,7 @@ define gui.about = _p("""
 ## construída. Ele deve ser somente ASCII e não deve conter espaços, dois pontos
 ## ou ponto e vírgula.
 
-define build.name = "ProjectIdol"
+define build.name = "StarsSelection"
 
 
 ## Sons e música ###############################################################
@@ -145,7 +145,7 @@ default preferences.afm_time = 15
 ## Isso geralmente não deve ser alterado e, se for, deve ser sempre uma string
 ## literal, não uma expressão.
 
-define config.save_directory = "ProjectIdol-1715270984"
+define config.save_directory = "StarsSelection-1716152020"
 
 
 ## Ícone #######################################################################

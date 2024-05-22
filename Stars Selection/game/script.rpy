@@ -3,6 +3,9 @@
 
     import math
 
+    def friendship(x):
+        return x
+
     class Appearing(renpy.Displayable):
 
         def __init__(self, child, opaque_distance, transparent_distance, **kwargs):
@@ -95,7 +98,7 @@ label start:
 
 #suponha q aq comeca a apresentacao das participantes
 
-    play music "audio/Catwoman (from The Batman).mp3"
+    #play music "audio/Catwoman (from The Batman).mp3"
 
     show palco at truecenter:
         zoom 2
@@ -118,6 +121,8 @@ label start:
     #"Ufa! Essa apresentacao estava me matando"
     #"Todas as concorrentes estao conversando nos bastidores... devo me juntar a elas?"
 
+    $pts = friendship(5)
+
     menu:
         "Se juntar a conversa":
             show jolie at truecenter:
@@ -135,10 +140,13 @@ label start:
 
             y "AAAA!"
 
+            $pts += friendship(20)
+
+
         "Nao falar com ninguem":
 
             "Ta maluco vo eh dormi kkkkk"
-            $pts = 20
+            #$pts = 20
 
             show screen alpha_magic
 
@@ -146,14 +154,16 @@ label start:
 
             return
 
-            jump fim
+            jump end
 
     # This ends the game.
     stop music
 
-label fim:
+label end:
 
-    if pts == 20:
-        "parabens!"
+    #renpy.display(f"Pontos: {pts}")
+
+    if pts == 25:
+        "parabens! [pts]"
         
     return

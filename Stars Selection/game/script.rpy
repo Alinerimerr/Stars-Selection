@@ -59,6 +59,7 @@ define j = Character(_("Jolie"), color="#f1e842")
 define c = Character(_("Coco"), color="#deb2d1")
 define Sr = Character(_("Sr. Star"), color="#e93c59")
 define n = Character(_("Nadia"), color="#871abe")
+define m = Character(_("Moonie"), color="#54eeff")
 
 image jolie = "images/sylvie blue normal.png"
 image coco = "images/sylvie green giggle.png"
@@ -82,10 +83,27 @@ label start:
     show palco at truecenter:
         zoom 2
     with dissolve
-
-    Sr "SENHORAS E SENHORES! SEJAM TODOS BEM VINDOS!!"
-    "Que nervoso... não acredito que isso realmente está acontecendo..."
-    Sr "EU SOU O SR. STAR E ESTE É O REALITY STAR'S SELECTION!"
+    "Os sets de gravação estão prontos e é neste momento que somos avisadas que o show vai começar."
+    Sr "Senhoras e senhores, sejam bem vindos!"
+    "Me sinto nervosa... Não acredito que isso realmente está acontecendo..."
+    Sr "Eu sou o Sr. Star e este é o primeiro episódio do REALITY STAR'S SELECTION!"
+    Sr "A partir de uma seleção prévia, temos aqui cinco treinees com sublime potencial para debutar..."
+    Sr "No entanto, apenas uma delas irá ser capaz de se superar e mostrar ao mundo suas habilidades!"
+    Sr "Agora, eu sei que vocês devem estar curiosos para conhecer elas, então vamos conferir as nossas candidatas!"
+    Sr "Começando por..."
+    "As câmeras e as luzes viram para o palco e a primeira garota da fila entra na cena."
+    Sr "Srta. Moonie!"
+    #ela entra na tela
+    Sr "Com suas habilidades excepcionais de canto e visuais incríveis, apesar da tenra idade, é definitivamente um charme para os fans!"
+    Sr "Srta. Moonie, gostaria de compartilhar algo sobre suas expectativas com o programa?"
+    m "Primeiramente, boa noite a todos!"
+    "Ela sorri e posa para a câmera fazendo um gesto de ""aegio""."
+    m "E segundamente, gostaria de agradecer a todos os fans que me deram a oportunidade de estar aqui, sem seu apoio eu não seria capaz de ir tão longe!"
+    "Ainda com um sorriso no rosto ela fecha os olhos e junta as mãos em um gesto de gratidão."
+    m "Eu prometo que não irei decepcionar vocês!"
+    Sr "Ahhhh! Como ela é encantadora, muito obrigado pelas suas palavras! Sente-se aqui, por favor."
+    "Ela acena de forma fofa para o apresentador, indo para uma das cadeiras dispostas no palco."
+    Sr "Agora, nossa próxima candidata"
     #Sr "AQUI "
 
     

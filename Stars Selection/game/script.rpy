@@ -1,88 +1,110 @@
 ﻿init python:
-    pts = 0
+    # must be persistent to be able to record the scores
+    # after adding new songs, please remember to delete the persistent data
 
-    import math
+    rhythm_game_songs = [
+    Song('Isolation', 'audio/Isolation.mp3', 'audio/Isolation.beatmap.txt'),
+    Song('Positivity', 'audio/Positivity.mp3', 'audio/Positivity.beatmap.txt'),
+    Song('Pearlescent', 'audio/Pearlescent.mp3', 'audio/Pearlescent.beatmap.txt'),
+    Song('Pearlescent - trimmed', 'audio/Pearlescent - trimmed.mp3', 'audio/Pearlescent - trimmed.beatmap.txt'), # 22 sec, easy to test 
+    Song('Thoughts', 'audio/Thoughts.mp3', 'audio/Thoughts.beatmap.txt')
+    ]
 
-    def friendship(x):
-        return x
+    # # init
+    # if persistent.rhythm_game_high_scores:
+    #     for song in songs:
+    #         if not song in persistent.rhythm_game_high_scores:
+    #             persistent.rhythm_game_high_scores[song] = (0, 0)
 
-    class Appearing(renpy.Displayable):
+# map song name to high scores
+default persistent.rhythm_game_high_scores = {
+    song.name: (0, 0) for song in rhythm_game_songs
+}
 
-        def __init__(self, child, opaque_distance, transparent_distance, **kwargs):
-
-            self.child = renpy.displayable(child)
-
-            self.opaque_distance = opaque_distance
-            self.transparent_distance = transparent_distance
-
-            self.alpha = 0.0
-
-            self.width = 0
-            self.height = 0
-
-        def render(self, width, height, st, at):
-
-            t = Transform(child=self.child, alpha=self.alpha)
-
-            child_render = renpy.render(t, width, height, st, at)
-
-            self.width, self.height = child_render.get_size()
-
-            render = renpy.Render(self.width, self.height)
-
-            render.blit(child_render, (0, 0))
-
-            return render
-
-        def event(self, ev, x, y, st):
-
-            distance = math.hypot(x - (self.width / 2), y - (self.height / 2))
-
-            if distance <= self.opaque_distance:
-                alpha = 1.0
-            elif distance >= self.transparent_distance:
-                alpha = 0.0
-            else:
-                alpha = 1.0 - 1.0 * (distance - self.opaque_distance) / (self.transparent_distance - self.opaque_distance)
-
-            if alpha != self.alpha:
-                self.alpha = alpha
-                renpy.redraw(self, 0)
-
-            return self.child.event(ev, x, y, st)
-
-        def visit(self):
-            return [ self.child ]
-
-
-define j = Character(_("Jolie"), color="#f1e842")
-define c = Character(_("Coco"), color="#deb2d1")
+# the song that the player chooses to play, set in `choose_song_screen` below
+default selected_song = None
+define l = Character(_("Linne"), color="#fff422")
+define j = Character(_("Juni"), color="#deb2d1")
 define Sr = Character(_("Sr. Star"), color="#e93c59")
 define n = Character(_("Nadia"), color="#871abe")
-define m = Character(_("Moonie"), color="#54eeff")
+define r = Character(_("Roko"), color="#54ff95")
+define m = Character(_("Moonie"), color="#5754ff")
 
-image jolie = "images/sylvie blue normal.png"
-image coco = "images/sylvie green giggle.png"
+image linne = "images/sylvie blue normal.png"
+image juni = "images/sylvie green giggle.png"
 image palco = "images/teste2.png"
 image bastidores = "images/bastidores.jpg"
-
-screen alpha_magic:
-    add Appearing("shrek1.png", 100, 200):
-        xalign 0.5
-        yalign 0.5
 
 
 # The game starts here.
 
 label start:
 
-#Inicio da apresentacao
+    menu:
+        "Testar":
+            jump teste
+        "Início do Jogo":
+            jump jogo
 
+label teste:
+    menu:
+        "Minigame":
+            window hide
+            call rhythm_game_entry_label
+            j "Mt bem"
+
+            return
+
+            label test:
+                e "Welcome to the Ren'Py Rhythm Game! Ready for a challenge?"
+                window hide
+                $ quick_menu = False
+
+                # avoid rolling back and losing chess game state
+                $ renpy.block_rollback()
+
+                $ song = Song('Isolation', 'audio/Isolation.mp3', 'audio/Isolation.beatmap.txt', beatmap_stride=2)
+                $ rhythm_game_displayable = RhythmGameDisplayable(song)
+                call screen rhythm_game(rhythm_game_displayable)
+
+                # avoid rolling back and entering the chess game again
+                $ renpy.block_rollback()
+
+                # restore rollback from this point on
+                $ renpy.checkpoint()
+
+                $ quick_menu = True
+                window show
+
+                return
+        "Prologo":
+            menu:
+                "parte 1":
+                    jump prologo1
+
+                "parte 2":
+                    jump prologo2
+
+                "Fim prologo":
+                    jump fimprologo
+
+        "Capítulo 1":
+            menu:
+                "parte 1":
+                    jump parte1
+
+                "parte 2":
+                    jump parte2
+
+label jogo:
+    #Inicio do jogo
+
+label Prologo:
+    label prologo1:
     #play music "audio/Catwoman (from The Batman).mp3"
-
-    show palco at truecenter:
-        zoom 2
-    with dissolve
+    #show palco at truecenter:
+    #    zoom 2
+    #with dissolve"""
     "Os sets de gravação estão prontos e é neste momento que somos avisadas que o show vai começar."
     Sr "Senhoras e senhores, sejam bem vindos!"
     "Me sinto nervosa... Não acredito que isso realmente está acontecendo..."
@@ -97,7 +119,7 @@ label start:
     Sr "Com suas habilidades excepcionais de canto e visuais incríveis, apesar da tenra idade, é definitivamente um charme para os fans!"
     Sr "Srta. Moonie, gostaria de compartilhar algo sobre suas expectativas com o programa?"
     m "Primeiramente, boa noite a todos!"
-    "Ela sorri e posa para a câmera fazendo um gesto de ""aegio""."
+    "Ela sorri e posa para a câmera fazendo um gesto de aegio."
     m "E segundamente, gostaria de agradecer a todos os fans que me deram a oportunidade de estar aqui, sem seu apoio eu não seria capaz de ir tão longe!"
     "Ainda com um sorriso no rosto ela fecha os olhos e junta as mãos em um gesto de gratidão."
     m "Eu prometo que não irei decepcionar vocês!"
@@ -107,10 +129,12 @@ label start:
     #Sr "AQUI "
 
     
-    hide palco
-    with fade
+    #hide palco
+    #with fade
 
+    label prologo2:
     # Cena apos apresentacao
+    # As participantes conversam entre si
     show bastidores
     with dissolve
 
@@ -119,26 +143,26 @@ label start:
     "Após a apresentação, todas as participantes se reuniram nos bastidores"
     "Elas estão conversando... devo me juntar a elas?"
 
-    $pts = friendship(5)
+    $pts += 5
 
     menu:
         "Se juntar a conversa":
-            show jolie at truecenter:
+            show linne at truecenter:
                 zoom 1.5
                 
-            j "Tô tão animada! Mal posso esperar pra começar"
+            l "Tô tão animada! Mal posso esperar pra começar"
 
             "Ela abre um sorriso confiante e alegre"
 
-            j "E vocês? Como se sentem?"
+            l "E vocês? Como se sentem?"
 
-            hide jolie
-            show coco at truecenter:
+            hide linne
+            show juni at truecenter:
                 zoom 1.5
-            c "... Me sinto enjooada, "
+            j "... Me sinto enjooada "
 
 
-            $pts += friendship(20)
+            $pts += 20
 
 
         "Nao falar com ninguem":
@@ -146,22 +170,24 @@ label start:
             "Ta maluco vo eh dormi kkkkk"
             #$pts = 20
 
-            show screen alpha_magic
+    label fimprologo:
+    "Após a conversa, as participantes são dirijidas até sua moradia durante o período do Jogo."
+    "Moonie analisa o local e se instala em seu dormitório ao final do dia, dando início ao primeiro capítulo"
 
-            "Encontre Shrek."
+label Capitulo1:
 
-            return
+    label parte1:
+        "O paresentador explica o método de cíclos e das avaliações por apresentação para o público."
+        "As avaliações seram feitas por meio da pontuação nos minigames"
 
-            jump end
+    label parte2:
+        "Antes dos testes haverá o peíodo de treino e após haverá o momento de descanso."
 
-    # fim do jogo
-    stop music
-
+label Capitulo2:
+    
 label end:
 
-    #renpy.display(f"Pontos: {pts}")
-
-    if pts == 25:
-        "parabens! [pts]"
+    #if pts == 25:
+    #   "parabens! [pts]"
         
     return

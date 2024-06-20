@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 50: unexpected indent
-                def event(self, ev, x, y, st):
-                ^
+The label start is defined twice, at File "game/script.rpy", line 30:
+label start:
+and File "game/script1.rpy", line 41:
+label start:
+
+
+The label test is defined twice, at File "game/script.rpy", line 43:
+label test:
+and File "game/script1.rpy", line 58:
+            label test:
+
 
 Ren'Py Version: Ren'Py 8.2.2.24050801+nightly
-Wed May 22 15:02:02 2024
+Thu Jun 20 14:58:07 2024

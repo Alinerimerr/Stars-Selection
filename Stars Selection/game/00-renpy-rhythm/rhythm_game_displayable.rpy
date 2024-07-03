@@ -111,7 +111,7 @@ screen rhythm_game(rhythm_game_displayable):
     key 'K_DOWN' action NullAction()
     key 'K_RIGHT' action NullAction()
 
-    add Solid('#000')
+    add Solid('#383535ff')
     add rhythm_game_displayable
 
     vbox:
@@ -167,7 +167,7 @@ init python:
         return onset_times
 
     class Song():
-        def __init__(self, name, audio_path, beatmap_path, beatmap_stride=2):
+        def __init__(self, name, audio_path, beatmap_path, beatmap_stride=1):
             # beatmap_stride (int): Default to 2. Use onset_times[::beatmap_stride] so that the tracks don't get too crowded. Can be used to set difficulty level
             self.name = name
             self.audio_path = audio_path
@@ -210,14 +210,14 @@ init python:
             # of each element on screen
 
             # offset from the left of the screen
-            self.x_offset = 400
+            self.x_offset = 390
             self.track_bar_height = int(config.screen_height * 0.85)
             self.track_bar_width = 12
             self.horizontal_bar_height = 8
 
-            self.note_width = 50 # width of the note image
+            self.note_width = 125 # width of the note image
             # zoom in on the note when it is hittable
-            self.zoom_scale = 1.2
+            self.zoom_scale = 1.1
             # offset the note to the right so it shows at the center of the track
             self.note_xoffset = (self.track_bar_width - self.note_width) / 2
             self.note_xoffset_large = (self.track_bar_width - self.note_width * self.zoom_scale) / 2
@@ -230,7 +230,7 @@ init python:
             # hit or considered a miss
             # the note now takes 3 seconds to travel the screen
             # can be used to set difficulty level of the game
-            self.note_offset = 2.0
+            self.note_offset = 2.5
             # speed = distance / time
             self.note_speed = config.screen_height / self.note_offset
 
@@ -355,7 +355,7 @@ init python:
                 # look up the offset for drawing
                 x_offset = self.track_xoffsets[track_idx]
                 # y = 0 starts from the top
-                render.place(self.track_bar_drawable, x=x_offset, y=0)
+                #render.place(self.track_bar_drawable, x=x_offset, y=0)
 
             # draw the horizontal bar to indicate where the track ends
             # x = 0 starts from the left

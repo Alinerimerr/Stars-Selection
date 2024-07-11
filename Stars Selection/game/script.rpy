@@ -104,6 +104,13 @@ label teste:
                 "parte 2":
                     jump parte2
 
+        "Textbox":
+            jump textbox
+
+label textbox:
+    Sr "opa" (multiple=2)
+    n "oiee" (multiple=2)
+    jump teste
 label jogo:
     #Inicio do jogo
 
@@ -138,16 +145,16 @@ label Prologo:
     Sr "Eu lhes apresento: Srta. Nadia!"
     Sr "Essa já esteve envolvida em algumas polemicas..."
     Sr "Mas o que é um reality sem um pouco de encrenca, não é mesmo? heheheh"
-    N "Como é?!!"
+    n "Como é?!!"
     #ela parece imcomodada
     Sr "Nada, querida! Era só brincadeira!"
     Sr "Fique à vontade para falar com o público."
     Sr "Mas cuidado com o que diz, mocinha, pois está todo mundo escutando!"
-    N "Hump! Muito bem, nesse caso..."
+    n "Hump! Muito bem, nesse caso..."
     #ela olha p/ camera
-    N "Sei que muitos de vocês me conhecem pelos motivos errados e já têm uma opinião formada sobre mim..."
-    N "Mas eu mudei, e conquistei uma vaga nesse grande reality!"
-    N "Essa é uma grande oportunidade e eu não irei disperdiça-la. Vou lutar até o fim!"
+    n "Sei que muitos de vocês me conhecem pelos motivos errados e já têm uma opinião formada sobre mim..."
+    n "Mas eu mudei, e conquistei uma vaga nesse grande reality!"
+    n "Essa é uma grande oportunidade e eu não irei disperdiça-la. Vou lutar até o fim!"
     Sr "Quanta determinação! É assim que se fala, Nadia! Agora, pode se dirigir ao seu assento."
     #Luzes de nadia apagam
     Sr "A nossa próxima convidada é um doce de pessoa!"
@@ -168,8 +175,6 @@ label Prologo:
     "Após a apresentação, todas as participantes se reuniram nos bastidores"
     "Elas estão conversando... devo me juntar a elas?"
 
-    $pts += 5
-
     menu:
         "Se juntar a conversa":
             show linne at truecenter:
@@ -185,9 +190,6 @@ label Prologo:
             show juni at truecenter:
                 zoom 1.5
             j "... Me sinto enjooada "
-
-
-            $pts += 20
 
 
         "Nao falar com ninguem":

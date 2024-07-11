@@ -20,15 +20,14 @@ Star's Selection
 }
 
 
-:: 2 mentiras 1 verdade {"position":"2775,675","size":"100,100"}
-
+:: 2 mentiras 1 verdade [pontos-de-amizade] {"position":"2775,675","size":"100,100"}
+[[Minigames 3]]
 
 
 :: Apresentação 1 [apresentação] {"position":"1375,2150","size":"100,100"}
 Compilado dos minigames de ritmo (dança) e canto (pianotiles) sequência.
 Nota final = Nota da composição + Nota dança + Nota canto;
 [[Resultados 1]]
-
 
 
 :: Apresentação 2 [apresentação] {"position":"2250,1125","size":"100,100"}
@@ -51,6 +50,11 @@ O jogador escolhe o evento de fa servise
 [[Verdade ou desafio]]
 
 
+:: Boa convivência [pontos-de-amizade] {"position":"2850,1975","size":"100,100"}
+Linne revela que se arrepende de seus atos a agradece pelo seu apoio. (A amizade entre as duas se fortalece)
+[[Última entrevista]]
+
+
 :: Capítulo 1 [Início] {"position":"1400,100","size":"100,100"}
 Amanhecer do dia seguinte e iniciamos o período de tutorial.
 [[Explicação da competição]]
@@ -62,9 +66,8 @@ Amanhecer do dia seguinte e iniciamos o período de tutorial.
 
 :: Capítulo 3 [Início] {"position":"2700,100","size":"100,100"}
 O apresentaor conversa em particular com Nadiah. Após a conversa, Nadiah parece tensa. (As interacoes a seguir dependem do seu nível de amizade com cada personagem)
-[[Conversar  com Nadiah]]
+[[Conversar  com Nadia]]
 [[Seguir para o quarto]]
-
 
 
 :: Colaborar com planos {"position":"2200,375","size":"100,100"}
@@ -72,7 +75,6 @@ Vaza dados das participantes, ganha o favoritismo e fica de plateia no desafio {
 Ha a escolha de ajudar a participante do desafio caso se arrependa de colaborar ou não (n ajuadr leva direto para resultados)
 [[ajudar]]
 [[N ajudar]]
-
 
 
 :: Competição de Nadiah [pontos-de-amizade] {"position":"2050,1725","size":"100,100"}
@@ -86,9 +88,18 @@ O apresentador procura por informaçoes p/ ideias de eventos fanservise p/ ganha
 [[N colaborar]]
 
 
-:: Conversar  com Nadiah {"position":"2900,200","size":"100,100"}
+:: Conversar  com Nadia {"position":"2900,200","size":"100,100"}
 Nadiah fala um pouco sobre seu passado de polemicas.(superficialmente)
 [[Seguir para o quarto]]
+
+
+:: Declaração das finais {"position":"2550,1250","size":"100,100"}
+O apresentador anuncia que com a chegada das finais, as coisas começaram a caminhar mais rápido ao resultado final.
+[[Fim do Capítulo 3]]
+
+
+:: Derrota [Bad-Ending] {"position":"2800,2575","size":"100,100"}
+
 
 
 :: Desaprovação geral [Bad-Ending] {"position":"2025,700","size":"100,100"}
@@ -102,6 +113,23 @@ Participe do encontro artistico organizado por Juni, da competiçao "amigavel" d
 [[Competição de Nadiah]]
 [[Ter um momento pra si 2]]
 
+
+:: Dialogo de esclarecimento {"position":"2850,1825","size":"100,100"}
+Agora, sabendo da história de Linne, a protagonista ainda pode escolher se fica ao seu lado ou vinga as suas antigas colegas.
+[[Vingança]]
+[[Boa convivência]]
+
+
+:: Discussão {"position":"2550,1100","size":"100,100"}
+Nadia questiona o motivo de sua saída, então o apresentador fala sobre as supostas polemicas envolvendo seu nome e revela que Linne e sua família estam envolvida no caso. Ao ser confrontada por Nadia, Linne assume uma postura defensiva e frustrada.
+A discussão termina sem um pedido de desculpas.
+[[Pronunciamento de Nadia]]
+
+
+:: Divulgação do Resultado Final {"position":"2675,2450","size":"100,100"}
+Aqui a protagonista pode perder por desempenho ou pelo seu "karma"
+[[Vitória]]
+[[Derrota]]
 
 
 :: Diálogo de Melhor pontuação {"position":"1250,475","size":"100,100"}
@@ -194,8 +222,8 @@ Roko se despede e se desculpa pelo seu comportamento infantil
 [[Interlúdio 2]]
 
 
-:: Fim do Capítulo 3 [Fim] {"position":"3075,550","size":"100,100"}
-
+:: Fim do Capítulo 3 [Fim] {"position":"2775,1300","size":"100,100"}
+[[Início do Capítulo 4]]
 
 
 :: Fim do Interlúdio 1 [Fim] {"position":"1425,2750","size":"100,100"}
@@ -241,6 +269,11 @@ O apresentador faz uma breve narrativa e chama as personagens enquanto a protago
 [[Entrevista]]
 
 
+:: Início do Capítulo 4 [Início] {"position":"2625,1375","size":"100,100"}
+O capítulo se inicia com um clima pesado e treinamentos intensos. Linne não está disposta a conversar.
+[[Reflexão pós treino]]
+
+
 :: Início do Interlúdio 2 {"position":"2125,2500","size":"100,100"}
 Notícias de um suposto caso de bullying cometido por Nadiah começa a rodar pelas redes.
 [[Fim do Interlúdio 2]]
@@ -251,7 +284,7 @@ Desafio: performe enquanto sobrevive a furia da plateia!
 [[Resultado do desafio]]
 
 
-:: Minigames [jogável-em-python] {"position":"2100,1050","size":"100,100"}
+:: Minigames [jogável-em-python] {"position":"2125,1025","size":"100,100"}
 Treino de cada um dos minigames com interações entre as personagens.
 [[Apresentação 2]]
 
@@ -260,16 +293,30 @@ Treino de cada um dos minigames com interações entre as personagens.
 [[Apresentção3]]
 
 
+:: Minigames 3 [jogável-em-python] {"position":"2650,825","size":"100,100"}
+Os testes são realizadps. (as notícias sobre a suposta polemica começam a ficar mais fortes e Linne parece abalada).
+[[Tentar esclarecer com Linne]]
+[[Resultados 4]]
+
+
+:: Minigames 4 {"position":"2600,2325","size":"100,100"}
+[[Divulgação do Resultado Final]]
+
+
 :: Momento de Descanso [pontos-de-amizade] {"position":"1375,625","size":"100,100"}
 As personagens dialogam em conjunto. A protagonista novamente tem a opção de conversar com cada uma delas.
 [[Passar o dia com alguém]]
 [[Ter um momento pra si]]
 
 
-
 :: Momento de Descanso 2 [pontos-de-amizade] {"position":"1225,1825","size":"100,100"}
 As personagens dialogam em conjunto. A protagonista novamente tem a opção de conversar com cada uma delas.
 [[Terceiro Minigame]]
+
+
+:: Má convivência {"position":"2625,1825","size":"100,100"}
+As participantes começam a se tratar com indiferença e acidez, gerando estresse e desconforto.
+[[Última entrevista]]
 
 
 :: N ajudar {"position":"2025,525","size":"100,100"}
@@ -331,9 +378,20 @@ A pontuação será gerada (tabela previamente definida) e a protagonista e as o
 [[Diálogo de pontuação Mediana]]
 
 
+:: Pronunciamento de Nadia {"position":"2675,1175","size":"100,100"}
+Nadia esclarece que todas as acusações a seu respeito são falsas e se despede do programa.
+[[Declaração das finais]]
+
+
 :: Recompensa [pontos-de-amizade] {"position":"2175,850","size":"100,100"}
 Pode ser um dia no spa ou ingressos p/ um show
 [[Período de treino]]
+
+
+:: Reflexão pós treino {"position":"2750,1500","size":"100,100"}
+Após um longo período de teinos, a protagonista finalmente tira um momento para ler as notícias e tirar suas conclusões a respeito dos últimos acontecimentos
+[[Vingança]]
+[[Tentar entender Linne]]
 
 
 :: Resultado do desafio {"position":"2225,675","size":"100,100"}
@@ -356,6 +414,10 @@ Temos o cliffhanger para o próximo capítulo onde será revelada a primeira eli
 [[Game Over 2]]
 [[Início do Interlúdio 2]]
 
+
+:: Resultados 4 {"position":"2675,1000","size":"100,100"}
+Os resultados são divulgados e Linne é a participante com menos pontos. Porém, o apresentador anuncia que Nadia é a eliminada por outros motivos.
+[[Discussão]]
 
 
 :: Sala de star {"position":"2675,400","size":"100,100"}
@@ -380,6 +442,17 @@ Minigame de canto.
 [[Diálogo de pontuação Mediana 2]]
 
 
+:: Tentar entender Linne {"position":"2850,1675","size":"100,100"}
+Essa escolha leva a protagonista a tentar acalmar Linne a entender o seu lado da história.
+[[Dialogo de esclarecimento]]
+
+
+
+:: Tentar esclarecer com Linne {"position":"2500,925","size":"100,100"}
+Linne está realmente abalada, mas n se abre ao jogador.
+[[Resultados 4]]
+
+
 :: Ter um momento pra si {"position":"1250,775","size":"100,100"}
 [[Evento Noturno]]
 
@@ -399,10 +472,35 @@ Treine em dupla ou sozinha
 [[Organização]]
 
 
-:: Verdade ou desafio {"position":"2625,675","size":"100,100"}
+:: Ultimos dialogos {"position":"2750,2200","size":"100,100"}
+[[Minigames 4]]
+
+
+:: Vazar podres da L {"position":"2575,2150","size":"100,100"}
+
+[[Ultimos dialogos]]
+
+
+:: Verdade ou desafio [pontos-de-amizade] {"position":"2625,675","size":"100,100"}
+[[Minigames 3]]
+
+
+:: Vingança {"position":"2650,1675","size":"100,100"}
+A protagonista escolhe ficar contra Linne e faze-la se arrepender de tudo o que fez e busca a vitória a todo custo.
+[[Má convivência]]
+
+
+:: Vitória [Fim] {"position":"2550,2575","size":"100,100"}
 
 
 
 :: ajudar {"position":"2150,525","size":"100,100"}
 A participante do desafio agradeçe e o laço entre vcs se fortalece {ninguém desconfia q vc causou aquilo)
-[[Resultado do desafio]] 
+[[Resultado do desafio]]
+
+
+:: Última entrevista {"position":"2675,2025","size":"100,100"}
+Algumas perguntas básicas seram feitas ao jogador. Ele poderá responder da forma que quiser as perguntas iniciais, mas, surgira a oportunidade de causar um grande estrago na reputação de Linne.
+[[Vazar podres da L]]
+[[Ultimos dialogos]]
+

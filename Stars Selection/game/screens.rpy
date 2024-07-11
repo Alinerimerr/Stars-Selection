@@ -116,8 +116,25 @@ screen say(who, what):
     if not renpy.variant("small"):
         add SideImage() xalign 0.0 yalign 1.0
 
-
 ## Disponibilize a caixa de nome para estilização por meio do objeto Character.
+screen multiple_say(who, what, multiple):
+    if multiple[0] == 1:
+        style_prefix "say"
+    elif multiple[1] == 2:
+        style_prefix "multiple2_say"
+    
+    window:
+        id "window"
+        #draggable False mousewheel True pagekeys True
+        if who is not None:
+
+            window:
+                id "namebox"
+                style "namebox"
+                text who id "who"
+
+        text what id "what"
+
 init python:
     config.character_id_prefixes.append('namebox')
 
@@ -129,11 +146,19 @@ style say_thought is say_dialogue
 style namebox is default
 style namebox_label is say_label
 
-
-style window:
+style say_window:
     xalign 0.5
     xfill True
     yalign gui.textbox_yalign
+    ysize gui.textbox_height
+
+    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+
+style multiple2_say_window:
+    xalign 0.5
+    xfill True
+    #yalign gui.textbox_yalign
+    yalign 0.5
     ysize gui.textbox_height
 
     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)

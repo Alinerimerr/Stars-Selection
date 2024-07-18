@@ -381,26 +381,26 @@ define gui.nvl_borders = Borders(0, 15, 0, 30)
 
 ## O número máximo de entradas do modo NVL que o Ren'Py exibirá. Quando mais
 ## entradas do que isso forem exibidas, a entrada mais antiga será removida.
-define gui.nvl_list_length = 6
+define gui.nvl_list_length = 3
 
 ## A altura de uma entrada no modo NVL. Defina como None para que as entradas
 ## ajustem a altura dinamicamente.
-define gui.nvl_height = 173
+define gui.nvl_height = 280
 
 ## O espaçamento entre as entradas do modo NVL quando gui.nvl_height é Nenhum e
 ## entre as entradas do modo NVL e um menu do modo NVL.
-define gui.nvl_spacing = 15
+define gui.nvl_spacing = 200
 
 ## A posição, a largura e o alinhamento do rótulo que fornece o nome do
 ## caractere falante.
-define gui.nvl_name_xpos = 645
-define gui.nvl_name_ypos = 0
+define gui.nvl_name_xpos = 675
+define gui.nvl_name_ypos = 40
 define gui.nvl_name_width = 225
-define gui.nvl_name_xalign = 1.0
+define gui.nvl_name_xalign = 0.0
 
 ## A posição, a largura e o alinhamento do texto da caixa de diálogo.
 define gui.nvl_text_xpos = 675
-define gui.nvl_text_ypos = 12
+define gui.nvl_text_ypos = 100
 define gui.nvl_text_width = 885
 define gui.nvl_text_xalign = 0.0
 

@@ -1395,14 +1395,16 @@ style nvl_window:
     xfill True
     yfill True
 
-    background "gui/nvl.png"
+    #background "gui/nvl.png"
     padding gui.nvl_borders.padding
 
 style nvl_entry:
+    background "gui/textbox2.png"
     xfill True
     ysize gui.nvl_height
 
 style nvl_label:
+    #background "gui/textbox.png"
     xpos gui.nvl_name_xpos
     xanchor gui.nvl_name_xalign
     ypos gui.nvl_name_ypos
@@ -1412,6 +1414,7 @@ style nvl_label:
     textalign gui.nvl_name_xalign
 
 style nvl_dialogue:
+    
     xpos gui.nvl_text_xpos
     xanchor gui.nvl_text_xalign
     ypos gui.nvl_text_ypos
@@ -1419,6 +1422,7 @@ style nvl_dialogue:
     min_width gui.nvl_text_width
     textalign gui.nvl_text_xalign
     layout ("subtitle" if gui.nvl_text_xalign else "tex")
+    #background "gui/textbox.png"
 
 style nvl_thought:
     xpos gui.nvl_thought_xpos

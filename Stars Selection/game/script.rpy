@@ -22,13 +22,17 @@ default persistent.rhythm_game_high_scores = {
 }
 
 # the song that the player chooses to play, set in `choose_song_screen` below
+
 default selected_song = None
 define l = Character(_("Linne"), kind=nvl, color="#fff422")
 define j = Character(_("Juni"), kind=nvl, color="#deb2d1")
-define Sr = Character(_("Sr. Star"), kind=nvl, color="#e93c59")
+define Sr = Character(_("Sr. Star"), kind=nvl, color="#e93c59", image="images/sylvie blue normal.png")
 define n = Character(_("Nadia"), kind=nvl, color="#871abe")
 define r = Character(_("Roko"), kind=nvl, color="#54ff95")
 define m = Character(_("Moonie"), kind=nvl, color="#5754ff")
+define narrator = Character(None, kind=nvl)
+
+#define menu = nvl_menu
 
 image linne = "images/sylvie blue normal.png"
 image juni = "images/sylvie green giggle.png"
@@ -108,8 +112,12 @@ label teste:
             jump textbox
 
 label textbox:
-    Sr "opa" 
-    n "oiee" 
+    Sr "opa"
+    Sr "como vai?"
+    n "jbdsdjf"
+    #n "oiee" (multiple=2)
+    #l "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" (multiple=2)
+    #Rj "kjdousfguigdiujghdfug" (multiple=2)
     jump teste
 label jogo:
     #Inicio do jogo

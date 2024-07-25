@@ -115,9 +115,7 @@ label textbox:
     Sr "opa"
     Sr "como vai?"
     n "jbdsdjf"
-    #n "oiee" (multiple=2)
-    #l "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" (multiple=2)
-    #Rj "kjdousfguigdiujghdfug" (multiple=2)
+    
     jump teste
 label jogo:
     #Inicio do jogo

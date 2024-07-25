@@ -1,26 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 176, in script
-    $pts += 5
-  File "game/script.rpy", line 176, in <module>
-    $pts += 5
-NameError: name 'pts' is not defined
+  File "game/script.rpy", line 159, in script
+    I "Obrigada."
+Exception: Sayer 'I' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 176, in script
-    $pts += 5
-  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\ast.py", line 823, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/script.rpy", line 176, in <module>
-    $pts += 5
-NameError: name 'pts' is not defined
+  File "game/script.rpy", line 159, in script
+    I "Obrigada."
+  File "C:\Users\User\Downloads\renpy-8.2.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\User\Downloads\renpy-8.2.3-sdk\renpy\ast.py", line 575, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\User\Downloads\renpy-8.2.3-sdk\renpy\ast.py", line 464, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'I' is not defined.
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.2.3.24061702
 Stars Selection 1.0
-Tue Jul  9 11:13:44 2024
+Thu Jul 25 11:22:40 2024

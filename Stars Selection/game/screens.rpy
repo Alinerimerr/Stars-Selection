@@ -414,6 +414,8 @@ style main_menu_frame:
     background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
+    xpos 0.97
+    ypos 0.5
     xalign 1.0
     xoffset -30
     xmaximum 1200

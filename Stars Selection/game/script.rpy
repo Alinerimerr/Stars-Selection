@@ -131,48 +131,79 @@ label Prologo:
     
     show bg
     show lo
-   
     #show palco at truecenter:
     #    zoom 2
     #with dissolve"""
-    "Os sets de gravação estão prontos e é neste momento que somos avisadas que o show vai começar."
-    Sr "Senhoras e senhores, sejam bem vindos!"
-    "Tô tão nervosa... Nem acredito que isso realmente tá acontecendo..."
-    Sr "Eu sou o Sr. Star e este é o primeiro episódio do REALITY STAR'S SELECTION!"
-    Sr "A partir de uma seleção prévia, temos aqui cinco treinees com sublime potencial para debutar..."
-    Sr "No entanto, apenas uma delas irá ser capaz de se superar e mostrar ao mundo suas habilidades!"
-    Sr "Agora, eu sei que vocês devem estar curiosos para conhecer elas, então vamos conferir as nossas candidatas!"
+    "Som, som, testando… E-hem…"
+    Sr "Boa noite, senhoras e senhores telespectadores!"
+    Sr "Agradeço sua sublime companhia que nos permite estar neste palco tão acolhedor"
+    "{i}Eu estou tão nervosa. Não acredito que isso realmente tá acontecendo…{/i}"
+    Sr "Eu sou o Sr. Star e este é o primeiro episódio de {i}STAR'S SELECTION!{/i}"
+    Sr "A partir de uma avaliação prévia, haverão cinco trainees com potencial para debutar."
+    Sr "No entanto, apenas uma delas irá ser capaz de superar e mostrar ao mundo suas habilidades!"
+    #mudar para sorriso arrogante
+    Sr "Agora, eu sei que vocês devem estar curiosos para conhecer elas… Hehe, eu também estou!"
+    Sr "Então vamos conferir as nossas candidatas!"
     Sr "Começando por..."
-    "As câmeras e as luzes viram para o palco e apontam para a primeira candidata, dando destaque a uma garota de aparência milimetricamente impecável."
-    Sr "Srta. Moonie!"
-    #ela entra na tela
-    Sr "Com suas habilidades excepcionais de canto e visuais incríveis, apesar da idade, é definitivamente um charme para os fans!"
+    Sr "Srta. Linnie!"
+    Sr "Com suas habilidades excepcionais de canto e visuais incríveis, mesmo tão jovem, é definitivamente um charme para os fãs!"
     Sr "Srta. Linne, gostaria de compartilhar algo sobre suas expectativas com o programa?"
+    #colocar piscadinha
     l "Primeiramente, boa noite a todos!"
-    "Ela sorri e posa para a câmera fazendo um gesto de aegio."
-    l "E segundamente, gostaria de agradecer a todos os fans que me deram a oportunidade de estar aqui, sem seu apoio eu não seria capaz de ir tão longe!"
-    "Ainda com um sorriso no rosto ela fecha os olhos e junta as mãos em um gesto de gratidão."
+    #colocar sorriso falso
+    l "Gostaria de agradecer a todos os fãs que me deram a oportunidade de estar aqui, sem seu apoio eu não seria capaz de ir tão longe!"
     l "Eu prometo que não irei decepcionar vocês!"
-    Sr "Ahhhh! Como ela é encantadora, muito obrigado pelas suas palavras! Sente-se aqui, por favor."
-    "Ela acena de forma fofa para o apresentador, indo para uma das cadeiras dispostas no palco."
+    #colocar hiperreação do Sr Star
+    Sr "Ahhhh! Como ela é encantadora, muito obrigado pelas suas palavras!"
+    Sr "Sente-se aqui, por favor."
+    l "Obrigada."
     Sr "Agora, nossa próxima candidata."
     # Luzes apontam para Nadia
     Sr "Eu lhes apresento: Srta. Nadia!"
-    Sr "Essa já esteve envolvida em algumas polemicas..."
-    Sr "Mas o que é um reality sem um pouco de encrenca, não é mesmo? heheheh"
-    n "Como é?!!"
-    #ela parece imcomodada
-    Sr "Nada, querida! Era só brincadeira!"
+    n "Olá, mundo! Preparem-se pois eu vou com tudo!"
+    Sr "Caramba, e que baita personalidade…"
+    #risadas programadas do público
+    Sr "Mas o que é um reality sem um pouco de encrenca, não é mesmo? Hehehe"
+    n "Como é?!"
+    #ela parece incomodada
+    Sr "Nada, minha querida! Era só brincadeira!"
     Sr "Fique à vontade para falar com o público."
-    Sr "Mas cuidado com o que diz, mocinha, pois está todo mundo escutando!"
-    n "Hump! Muito bem, nesse caso..."
-    #ela olha p/ camera
-    n "Sei que muitos de vocês me conhecem pelos motivos errados e já têm uma opinião formada sobre mim..."
-    n "Mas eu mudei, e conquistei uma vaga nesse grande reality!"
-    n "Essa é uma grande oportunidade e eu não irei disperdiça-la. Vou lutar até o fim!"
+    Sr "Mas cuidado com o que diz, senhorita, pois todos estão ouvindo!"
+    n "Humpf! Muito bem..."
+    #ela olha para a câmera
+    n "Sei que poucas pessoas me conhecem e esta será sua primeira impressão de mim..."
+    #olhar determinado
+    n "Mas eu quero deixar claro quem eu sou e que não me deixarei perder pelo caminho."
+    n "Esta é uma grande oportunidade e eu não vou desperdiçá-la. Irei lutar até o fim!"
+    #falso sorriso do sr star
     Sr "Quanta determinação! É assim que se fala, Nadia! Agora, pode se dirigir ao seu assento."
-    #Luzes de nadia apagam
-    Sr "A nossa próxima convidada é um doce de pessoa!"
+    Sr "A nossa próxima convidada ganhou o olhar dos nossos jurados à primeira vista, uma pérola rara!"
+    Sr "Apresento-lhes: Srta. Junnie!"
+    #junnie tímida
+    j "O-Olá, pessoal…!"
+    Sr "Vamos lá, não seja tímida, certamente há muito que você queira dizer."
+    j "Certo, bem… Meu nome é Junnie e e-eu realmente quero conseguir debutar…"
+    j "Conto com o apoio de todos vocês!"
+    Sr "Obrigada, querida, espero que possamos vê-la evoluir na sua timidez…"
+    Sr "A próxima candidata tem um nome relativamente conhecido…"
+    Sr "Não para a indústria da música muito embora, e sim para a de cosméticos!"
+    Sr "Com vocês, Srta. Roko!"  
+    r "Boa noite, Sr. Star! Boa noite, todo mundo!"
+    Sr "Olá, querida! Há muito tempo que não vejo seu rosto por aqui."
+    #o sr star faz cara de confuso
+    Sr "Perdoe-me pela deselegância, se me cabe a pergunta, mas o que traz você aqui?"
+    r "Oh, Sr. Star, sinto que devo correr atrás dos meus sonhos, devo viver o mundo eu mesma!"
+    #faz cara de drama
+    r "Sei que muitos acreditam que o dinheiro me garante um futuro, mas não é assim! Eu tenho que conquistar por mim mesma!"
+    r "Portanto, estou aqui para provar meu valor."
+    #Sr. star faz cara de choro
+    Sr "Oh, meu Deus, que comovente! Seja bem-vinda para mostrar seu talento…"
+    Sr "Bem, o show deve continuar…"
+    Sr "Por último mas não menos importante,"
+    "{i}É minha vez, é agora ou nunca…{/i}"
+    Sr "Um rosto novo nas câmeras, com um potencial de desenvolvimento em todas as habilidades!"
+    Sr "Aqui vem Srta. Moonie!"
+    m "Boa noite!"
 
     
     #hide palco
@@ -181,16 +212,18 @@ label Prologo:
     label prologo2:
     # Cena apos apresentacao
     # As participantes conversam entre si
-    
+
+    hide lo    
 
     # o jogador pode ou nao falar com as personagens
 
     "Após a apresentação, todas as participantes se reuniram nos bastidores"
     "Elas estão conversando... devo me juntar a elas?"
 
+    
     menu (nvl=True):
         "Se juntar a conversa":
-            show linne at truecenter:
+            show linne at left:
                 zoom 1.5
                 
             l "Tô tão animada! Mal posso esperar pra começar"
@@ -200,7 +233,7 @@ label Prologo:
             l "E vocês? Como se sentem?"
 
             hide linne
-            show juni at truecenter:
+            show juni at left:
                 zoom 1.5
             j "... Me sinto enjooada "
 

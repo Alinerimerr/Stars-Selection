@@ -22,24 +22,31 @@ default persistent.rhythm_game_high_scores = {
 }
 
 # the song that the player chooses to play, set in `choose_song_screen` below
-
+#image nadia = "images/side_nadia_happy.png"
 default selected_song = None
+
 define l = Character(_("Linne"), kind=nvl, color="#fff422")
 define j = Character(_("Juni"), kind=nvl, color="#deb2d1")
-define Sr = Character(_("Sr. Star"), kind=nvl, color="#e93c59", image="images/sylvie blue normal.png")
-define n = Character(_("Nadia"), kind=nvl, color="#871abe")
+define Sr = Character(_("Sr. Star"), kind=nvl, color="#e93c59")
+define n = Character(_("Nadia"), kind=nvl, color="#871abe", image="nadia")
 define r = Character(_("Roko"), kind=nvl, color="#54ff95")
 define m = Character(_("Moonie"), kind=nvl, color="#5754ff")
 define narrator = Character(None, kind=nvl)
+
+define config.nvl_page_ctc = True
 
 #define menu = nvl_menu
 
 image linne = "images/sylvie blue normal.png"
 image juni = "images/sylvie green giggle.png"
+image bg = "images/bg.png"
+image lo = "images/lo2.png"
+
 image palco = "images/teste2.png"
 image bastidores = "images/bastidores.jpg"
 
-
+image side nadia happy = "images/side_nadia_happy.png"
+image side nadia sad = "images/side_nadia_sad.png"
 # The game starts here.
 
 label start:
@@ -112,17 +119,19 @@ label teste:
             jump textbox
 
 label textbox:
-    Sr "opa"
-    Sr "como vai?"
-    n "jbdsdjf"
-    
+    #n happy "feliz"
+    #n sad "triste"
+    nvl clear
     jump teste
 label jogo:
     #Inicio do jogo
 
 label Prologo:
     label prologo1:
-    #play music "audio/Catwoman (from The Batman).mp3"
+    
+    show bg
+    show lo
+   
     #show palco at truecenter:
     #    zoom 2
     #with dissolve"""
@@ -164,7 +173,6 @@ label Prologo:
     Sr "Quanta determinação! É assim que se fala, Nadia! Agora, pode se dirigir ao seu assento."
     #Luzes de nadia apagam
     Sr "A nossa próxima convidada é um doce de pessoa!"
-    Sr ""
 
     
     #hide palco
@@ -173,15 +181,14 @@ label Prologo:
     label prologo2:
     # Cena apos apresentacao
     # As participantes conversam entre si
-    show bastidores
-    with dissolve
+    
 
     # o jogador pode ou nao falar com as personagens
 
     "Após a apresentação, todas as participantes se reuniram nos bastidores"
     "Elas estão conversando... devo me juntar a elas?"
 
-    menu:
+    menu (nvl=True):
         "Se juntar a conversa":
             show linne at truecenter:
                 zoom 1.5
@@ -201,7 +208,7 @@ label Prologo:
         "Nao falar com ninguem":
 
             "Ta maluco vo eh dormi kkkkk"
-            #$pts = 20
+
 
     label fimprologo:
     "Após a conversa, as participantes são dirijidas até sua moradia durante o período do Jogo."

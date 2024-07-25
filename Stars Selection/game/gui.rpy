@@ -62,19 +62,19 @@ define gui.interface_text_color = '#404040'
 ## Fontes e tamanhos de fonte ##################################################
 
 ## A fonte usada para o texto do jogo.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = "fonts/dogica.ttf"
 
 ## A fonte usada para os nomes dos caracteres.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "fonts/dogica.ttf"
 
 ## A fonte usada para o texto fora do jogo.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "fonts/dogica.ttf"
 
 ## O tamanho do texto normal do diálogo.
-define gui.text_size = 33
+define gui.text_size = 26
 
 ## O tamanho dos nomes dos caracteres.
-define gui.name_text_size = 45
+define gui.name_text_size = 27
 
 ## O tamanho do texto na interface de usuário do jogo.
 define gui.interface_text_size = 33
@@ -377,43 +377,45 @@ define gui.history_text_xalign = 0.0
 ## A tela do modo NVL exibe o diálogo falado pelos personagens do modo NVL.
 
 ## As bordas do plano de fundo da janela de plano de fundo do modo NVL.
-define gui.nvl_borders = Borders(0, 15, 0, 30)
+define gui.nvl_borders = Borders(0, 20, 0, 10)
 
 ## O número máximo de entradas do modo NVL que o Ren'Py exibirá. Quando mais
 ## entradas do que isso forem exibidas, a entrada mais antiga será removida.
-define gui.nvl_list_length = 3
+define gui.nvl_list_length = 4
 
 ## A altura de uma entrada no modo NVL. Defina como None para que as entradas
 ## ajustem a altura dinamicamente.
-define gui.nvl_height = 280
+define gui.nvl_height = None
+define gui.nvl_width = 1200
 
 ## O espaçamento entre as entradas do modo NVL quando gui.nvl_height é Nenhum e
 ## entre as entradas do modo NVL e um menu do modo NVL.
-define gui.nvl_spacing = 200
+define gui.nvl_spacing = 50
 
 ## A posição, a largura e o alinhamento do rótulo que fornece o nome do
 ## caractere falante.
-define gui.nvl_name_xpos = 675
-define gui.nvl_name_ypos = 40
-define gui.nvl_name_width = 225
+define gui.nvl_name_xpos = 0.07
+define gui.nvl_name_ypos = 0.01
+define gui.nvl_name_width = 0.40
 define gui.nvl_name_xalign = 0.0
 
 ## A posição, a largura e o alinhamento do texto da caixa de diálogo.
-define gui.nvl_text_xpos = 675
-define gui.nvl_text_ypos = 100
-define gui.nvl_text_width = 885
+define gui.nvl_text_xpos = 0.09
+define gui.nvl_text_ypos = 0.1
+define gui.nvl_text_width = 0.80
 define gui.nvl_text_xalign = 0.0
 
 ## A posição, a largura e o alinhamento do texto nvl_thought (o texto dito pelo
 ## caractere nvl_narrator).
-define gui.nvl_thought_xpos = 360
-define gui.nvl_thought_ypos = 0
-define gui.nvl_thought_width = 1170
+define gui.nvl_thought_xpos = 0.0
+define gui.nvl_thought_ypos = 0.07
+define gui.nvl_thought_width = 0.9
 define gui.nvl_thought_xalign = 0.0
 
 ## A posição dos botões de menu nvl.
-define gui.nvl_button_xpos = 675
+define gui.nvl_button_xpos = 0.12
 define gui.nvl_button_xalign = 0.0
+define gui.nvl_button_ypos = 0.5
 
 
 ## Localização #################################################################

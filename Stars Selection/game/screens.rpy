@@ -181,6 +181,7 @@ style say_label:
 style say_dialogue:
     properties gui.text_properties("dialogue")
 
+
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos
@@ -1343,11 +1344,9 @@ screen nvl(dialogue, items=None):
                 yinitial 1.0
 
                 use nvl_dialogue(dialogue)
-
         else:
 
             use nvl_dialogue(dialogue)
-
         ## Exibe o menu, se fornecido. O menu poderá ser exibido incorretamente
         ## se config.narrator_menu estiver definido como True.
         for i in items:
@@ -1355,8 +1354,7 @@ screen nvl(dialogue, items=None):
             textbutton i.caption:
                 action i.action
                 style "nvl_button"
-
-    add SideImage() xalign 0.0 yalign 1.0
+    add SideImage() xalign 0.35 yalign 0.07
 
 
 screen nvl_dialogue(dialogue):
@@ -1376,7 +1374,7 @@ screen nvl_dialogue(dialogue):
 
                 text d.what:
                     id d.what_id
-
+                    
 
 ## Isso controla o número máximo de entradas do modo NVL que podem ser exibidas
 ## de uma vez.
@@ -1392,19 +1390,22 @@ style nvl_button is button
 style nvl_button_text is button_text
 
 style nvl_window:
-    xfill True
-    yfill True
-
-    #background "gui/nvl.png"
+    #xfill True
+    #yfill True
+    xpos 820
+    xsize gui.nvl_width
     padding gui.nvl_borders.padding
+    background "gui/nvl.png"
 
 style nvl_entry:
-    background "gui/textbox2.png"
-    xfill True
+    xpos 0.1
+    #xfill True
+    background "#ffb0a3"
+    xsize 0.75
     ysize gui.nvl_height
 
 style nvl_label:
-    #background "gui/textbox.png"
+
     xpos gui.nvl_name_xpos
     xanchor gui.nvl_name_xalign
     ypos gui.nvl_name_ypos
@@ -1422,7 +1423,6 @@ style nvl_dialogue:
     min_width gui.nvl_text_width
     textalign gui.nvl_text_xalign
     layout ("subtitle" if gui.nvl_text_xalign else "tex")
-    #background "gui/textbox.png"
 
 style nvl_thought:
     xpos gui.nvl_thought_xpos
@@ -1434,9 +1434,11 @@ style nvl_thought:
     layout ("subtitle" if gui.nvl_text_xalign else "tex")
 
 style nvl_button:
+
     properties gui.button_properties("nvl_button")
     xpos gui.nvl_button_xpos
     xanchor gui.nvl_button_xalign
+    ypos gui.nvl_button_xpos
 
 style nvl_button_text:
     properties gui.text_properties("nvl_button")

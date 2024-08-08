@@ -31,7 +31,7 @@ define j = Character(_("Juni"), kind=nvl, color="#deb2d1", window_background="im
 define Sr = Character(_("Sr. Star"), kind=nvl, color="#e93c59", window_background="images/frame_persona.png")
 define n = Character(_("Nadia"), kind=nvl, color="#871abe", window_background="images/txtbox.png")
 define r = Character(_("Roko"), kind=nvl, color="#54ff95")
-define m = Character(_("Moonie"), kind=nvl, color="#5754ff", window_background="images/txtbox2.png", what_xpos=0.06, who_xpos=0.57)
+define m = Character(_("Moonie"), kind=nvl, color="#5754ff", window_background="images/txtbox2.png", what_xpos=0.06, who_xpos=0.57, what_width=0.7)
 define narrator = Character(None, kind=nvl, what_xpos=0.1)
 
 define config.nvl_page_ctc = True

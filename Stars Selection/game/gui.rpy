@@ -385,8 +385,9 @@ define gui.nvl_list_length = 2
 
 ## A altura de uma entrada no modo NVL. Defina como None para que as entradas
 ## ajustem a altura dinamicamente.
-define gui.nvl_height = None
-define gui.nvl_width = 1200
+define gui.nvl_height = 260
+#define gui.nvl_width = 1200
+define gui.nvl_width = 1400
 
 ## O espaçamento entre as entradas do modo NVL quando gui.nvl_height é Nenhum e
 ## entre as entradas do modo NVL e um menu do modo NVL.
@@ -394,14 +395,17 @@ define gui.nvl_spacing = 120
 
 ## A posição, a largura e o alinhamento do rótulo que fornece o nome do
 ## caractere falante.
-define gui.nvl_name_xpos = 0.3
+#define gui.nvl_name_xpos = 0.3
+define gui.nvl_name_xpos = 0.37
 define gui.nvl_name_ypos = 0.03
 define gui.nvl_name_width = 0.40
 define gui.nvl_name_xalign = 0.0
 
 ## A posição, a largura e o alinhamento do texto da caixa de diálogo.
-define gui.nvl_text_xpos = 0.28
-define gui.nvl_text_ypos = 0.09
+#define gui.nvl_text_xpos = 0.28
+define gui.nvl_text_xpos = 0.35
+#define gui.nvl_text_ypos = 0.12
+define gui.nvl_text_ypos = 0.15
 define gui.nvl_text_width = 0.80
 define gui.nvl_text_xalign = 0.0
 
@@ -448,7 +452,7 @@ init python:
 
         ## Tamanhos de fonte.
         gui.text_size = 45
-        gui.name_text_size = 54
+        gui.name_text_size = 58
         gui.notify_text_size = 38
         gui.interface_text_size = 45
         gui.button_text_size = 45

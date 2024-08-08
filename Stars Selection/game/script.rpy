@@ -1,4 +1,5 @@
-﻿init python:
+﻿
+init python:
     # must be persistent to be able to record the scores
     # after adding new songs, please remember to delete the persistent data
 
@@ -26,12 +27,12 @@ default persistent.rhythm_game_high_scores = {
 default selected_song = None
 
 define l = Character(_("Linne"), kind=nvl, color="#fff422")
-define j = Character(_("Juni"), kind=nvl, color="#deb2d1")
-define Sr = Character(_("Sr. Star"), kind=nvl, color="#e93c59")
-define n = Character(_("Nadia"), kind=nvl, color="#871abe", image="nadia")
+define j = Character(_("Juni"), kind=nvl, color="#deb2d1", window_background="images/frame_persona.png")
+define Sr = Character(_("Sr. Star"), kind=nvl, color="#e93c59", window_background="images/frame_persona.png")
+define n = Character(_("Nadia"), kind=nvl, color="#871abe", window_background="images/txtbox.png")
 define r = Character(_("Roko"), kind=nvl, color="#54ff95")
-define m = Character(_("Moonie"), kind=nvl, color="#5754ff")
-define narrator = Character(None, kind=nvl)
+define m = Character(_("Moonie"), kind=nvl, color="#5754ff", window_background="images/txtbox2.png", what_xpos=0.06, who_xpos=0.57)
+define narrator = Character(None, kind=nvl, what_xpos=0.1)
 
 define config.nvl_page_ctc = True
 
@@ -217,8 +218,8 @@ label Prologo:
 
     # o jogador pode ou nao falar com as personagens
 
-    "Após a apresentação, todas as participantes se reuniram nos bastidores"
-    "Elas estão conversando... devo me juntar a elas?"
+    m "Após a apresentação, todas as participantes se reuniram nos bastidores"
+    m "Elas estão conversando... devo me juntar a elas?"
 
     
     menu (nvl=True):

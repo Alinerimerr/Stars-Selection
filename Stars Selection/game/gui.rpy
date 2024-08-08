@@ -31,7 +31,7 @@ define gui.accent_color = '#cc0066'
 
 ## A cor usada para um botão de texto quando ele não está selecionado nem passa
 ## o mouse.
-define gui.idle_color = '#707070'
+define gui.idle_color = '#ffffff'
 
 ## A cor pequena é usada para texto pequeno, que precisa ser mais claro/escuro
 ## para obter o mesmo efeito.
@@ -55,7 +55,7 @@ define gui.muted_color = '#e066a3'
 define gui.hover_muted_color = '#ea99c1'
 
 ## As cores usadas para o diálogo e o texto da opção de menu.
-define gui.text_color = '#404040'
+define gui.text_color = '#ffffff'
 define gui.interface_text_color = '#404040'
 
 
@@ -381,7 +381,7 @@ define gui.nvl_borders = Borders(0, 20, 0, 10)
 
 ## O número máximo de entradas do modo NVL que o Ren'Py exibirá. Quando mais
 ## entradas do que isso forem exibidas, a entrada mais antiga será removida.
-define gui.nvl_list_length = 4
+define gui.nvl_list_length = 2
 
 ## A altura de uma entrada no modo NVL. Defina como None para que as entradas
 ## ajustem a altura dinamicamente.
@@ -390,18 +390,18 @@ define gui.nvl_width = 1200
 
 ## O espaçamento entre as entradas do modo NVL quando gui.nvl_height é Nenhum e
 ## entre as entradas do modo NVL e um menu do modo NVL.
-define gui.nvl_spacing = 50
+define gui.nvl_spacing = 120
 
 ## A posição, a largura e o alinhamento do rótulo que fornece o nome do
 ## caractere falante.
-define gui.nvl_name_xpos = 0.07
-define gui.nvl_name_ypos = 0.01
+define gui.nvl_name_xpos = 0.3
+define gui.nvl_name_ypos = 0.03
 define gui.nvl_name_width = 0.40
 define gui.nvl_name_xalign = 0.0
 
 ## A posição, a largura e o alinhamento do texto da caixa de diálogo.
-define gui.nvl_text_xpos = 0.09
-define gui.nvl_text_ypos = 0.1
+define gui.nvl_text_xpos = 0.28
+define gui.nvl_text_ypos = 0.09
 define gui.nvl_text_width = 0.80
 define gui.nvl_text_xalign = 0.0
 

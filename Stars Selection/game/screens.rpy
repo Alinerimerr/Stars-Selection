@@ -1401,8 +1401,10 @@ style nvl_window:
 
 style nvl_entry:
     xpos 0.1
+
     #xfill True
-    background "#ffb0a3"
+    #background "#ffb0a3"
+    #background "images/frame_persona.png"
     xsize 0.75
     ysize gui.nvl_height
 

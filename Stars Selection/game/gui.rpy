@@ -411,7 +411,7 @@ define gui.nvl_text_xalign = 0.0
 
 ## A posição, a largura e o alinhamento do texto nvl_thought (o texto dito pelo
 ## caractere nvl_narrator).
-define gui.nvl_thought_xpos = 0.0
+define gui.nvl_thought_xpos = 250
 define gui.nvl_thought_ypos = 0.07
 define gui.nvl_thought_width = 0.9
 define gui.nvl_thought_xalign = 0.0

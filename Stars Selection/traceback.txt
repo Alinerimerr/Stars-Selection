@@ -1,24 +1,53 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 159, in script
-    I "Obrigada."
-Exception: Sayer 'I' is not defined.
+  File "game/script.rpy", line 225, in script
+    menu (nvl=True, xpos=0.4):
+  File "renpy/common/00nvl_mode.rpy", line 493, in nvl_menu
+    return renpy.display_menu(
+TypeError: got an unexpected keyword argument 'xpos'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 159, in script
-    I "Obrigada."
-  File "C:\Users\User\Downloads\renpy-8.2.3-sdk\renpy\ast.py", line 2560, in execute
-    Say.execute(self)
-  File "C:\Users\User\Downloads\renpy-8.2.3-sdk\renpy\ast.py", line 575, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "C:\Users\User\Downloads\renpy-8.2.3-sdk\renpy\ast.py", line 464, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'I' is not defined.
+  File "game/script.rpy", line 225, in script
+    menu (nvl=True, xpos=0.4):
+  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\ast.py", line 1621, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\exports.py", line 1108, in menu
+    rv = renpy.store.nvl_menu(new_items) # type: ignore
+  File "renpy/common/00nvl_mode.rpy", line 493, in nvl_menu
+    return renpy.display_menu(
+  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\exports.py", line 1365, in display_menu
+    rv = renpy.ui.interact(mouse='menu', type=type, roll_forward=roll_forward)
+  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\display\core.py", line 2166, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\display\core.py", line 2688, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\display\displayable.py", line 431, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\display\core.py", line 2688, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\parameter.py", line 429, in apply_arguments
+    return parameters.apply(args or (), kwargs or {}, ignore_errors)
+  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\parameter.py", line 360, in apply
+    raise TypeError(
+TypeError: got an unexpected keyword argument 'xpos'
 
-Windows-10-10.0.22621 AMD64
+Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.3.24061702
-Stars Selection 1.0
-Thu Jul 25 11:22:40 2024
+Star's   
+Selection    1.0
+Thu Aug  8 01:08:02 2024

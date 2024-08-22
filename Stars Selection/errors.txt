@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 418: expected 'simple_expression' not found.
-    ypos 
-         ^
+File "game/script.rpy", line 225: positional argument follows keyword argument
+    menu (nvl=True, background "images/txtbox2.png"):
+                               ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Thu Jul 25 12:12:34 2024
+Thu Aug  8 01:06:47 2024

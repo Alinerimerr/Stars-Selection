@@ -17,6 +17,21 @@ init python:
     #         if not song in persistent.rhythm_game_high_scores:
     #             persistent.rhythm_game_high_scores[song] = (0, 0)
 
+    #pts de amizade
+    linne = 0
+    nadia = 0
+    juni = 0
+    roko = 0
+    star = 0
+
+    # variaveis p/ dialogo prologo
+    familia = False
+    fama = False
+    reconh = False
+
+    # variaveis p/ dialogo prologo
+    ajuda_j = False
+
 # map song name to high scores
 default persistent.rhythm_game_high_scores = {
     song.name: (0, 0) for song in rhythm_game_songs
@@ -48,6 +63,8 @@ image bastidores = "images/bastidores.jpg"
 
 image side nadia happy = "images/side_nadia_happy.png"
 image side nadia sad = "images/side_nadia_sad.png"
+
+
 # The game starts here.
 
 label start:
@@ -100,7 +117,7 @@ label teste:
         "Prologo":
             menu:
                 "parte 1":
-                    jump prologo1
+                    jump prologo1_m
 
                 "parte 2":
                     jump prologo2
@@ -128,32 +145,7 @@ label jogo:
     show lo
     jump prologo1_i
 
-    label prologo1_m:
-        "Essa pode ser a minha chance de impressionar o Sr.Star."
-        "O que devo fazer?"
-
-        menu(nvl=true):
-            "Compartilhar sobre sua jornada."
-                
-            "Falar sobre suas expectativas."
-
-            "Apelar pro público."
-
-    
-label Capitulo1:
-
-    label cap1_1:
-        "O paresentador explica o método de cíclos e das avaliações por apresentação para o público."
-        "As avaliações seram feitas por meio da pontuação nos minigames"
-
-    label cap1_2:
-        "Hoje teremos o nosso primeiro teste de desempenho..."
-        "O que será que nos espera?"
-
-        Sr "Fique à vontade para escolher a música quem preferir"
-
-label Capitulo2:
-    
+   
 label end:
 
     #if pts == 25:

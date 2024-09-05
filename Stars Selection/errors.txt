@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 225: positional argument follows keyword argument
-    menu (nvl=True, background "images/txtbox2.png"):
-                               ^
+File "game/scrpy_falas.rpy", line 103: expected statement.
+    familia = True
+            ^
+
+File "game/scrpy_falas.rpy", line 116: expected statement.
+    fama = True
+         ^
+
+File "game/scrpy_falas.rpy", line 127: expected statement.
+    reconh = True
+           ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Thu Aug  8 01:06:47 2024
+Tue Sep  3 00:32:53 2024

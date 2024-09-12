@@ -54,7 +54,7 @@ label cap1_1:
                     m "Bom... Vou voltar a me preparar."
                     m "Até mais!"
 
-        "Continiar minhas tarefas"
+        "Continuar minhas tarefas":
             "Não acho que isso deve ser questionado..."
 
 label cap1_2:

@@ -25,7 +25,6 @@ label prologo1_i:
     #colocar hiperreação do Sr Star
     Sr "Ahhhh! Como ela é encantadora, muito obrigado pelas suas palavras!"
     Sr "Sente-se aqui, por favor."
-    l "Obrigada."
     Sr "Agora, nossa próxima candidata."
     # Luzes apontam para Nadia
     Sr "Eu lhes apresento: Srta. Nadia!"
@@ -125,7 +124,7 @@ label prologo1_m:
             m "Por meio da arte, podemos nos conectar uns com os outros."
             m "Assim, saberemos que não estamos sozinhos."
             Sr "Essas... são belas palavras, realmente."
-            sr "Espero que não esteja dizendo isso apenas para ganhar o público, querida!"
+            Sr "Espero que não esteja dizendo isso apenas para ganhar o público, querida!"
             m "Eu nunc-"
             $ reconh = True
 

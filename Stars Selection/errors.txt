@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scrpy_falas.rpy", line 103: expected statement.
-    familia = True
-            ^
-
-File "game/scrpy_falas.rpy", line 116: expected statement.
-    fama = True
-         ^
-
-File "game/scrpy_falas.rpy", line 127: expected statement.
-    reconh = True
-           ^
+File "game/capitulo1.rpy", line 57: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "Continiar minhas tarefas"
+                              ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Tue Sep  3 00:32:53 2024
+Thu Sep 12 12:49:34 2024

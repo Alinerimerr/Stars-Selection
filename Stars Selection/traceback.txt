@@ -1,27 +1,25 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/scrpy_falas.rpy", line 173, in script
-    $ nadia += 1
-  File "game/scrpy_falas.rpy", line 173, in <module>
-    $ nadia += 1
-NameError: name 'nadia' is not defined
+  File "game/prologo.rpy", line 128, in script
+    sr "Espero que não esteja dizendo isso apenas para ganhar o público, querida!"
+Exception: Sayer 'sr' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/scrpy_falas.rpy", line 173, in script
-    $ nadia += 1
-  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\ast.py", line 823, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\aline\Documents\renpy-8.2.1-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/scrpy_falas.rpy", line 173, in <module>
-    $ nadia += 1
-NameError: name 'nadia' is not defined
+  File "game/prologo.rpy", line 128, in script
+    sr "Espero que não esteja dizendo isso apenas para ganhar o público, querida!"
+  File "C:\Users\User\Downloads\renpy-8.2.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "C:\Users\User\Downloads\renpy-8.2.3-sdk\renpy\ast.py", line 575, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\User\Downloads\renpy-8.2.3-sdk\renpy\ast.py", line 464, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'sr' is not defined.
 
-Windows-10-10.0.22631 AMD64
+Windows-10-10.0.22621 AMD64
 Ren'Py 8.2.3.24061702
 Star's   
 Selection    1.0
-Tue Sep  3 00:41:37 2024
+Thu Sep 12 13:03:22 2024

@@ -5,10 +5,10 @@ label prologo1_i:
     #with dissolve"""
     "Som, som, testando… E-hem…"
     Sr "Boa noite, senhoras e senhores telespectadores!"
-    Sr "Agradeço sua sublime companhia que nos permite estar neste palco tão acolhedor"
+    Sr "Agradeço sua sublime companhia que nos permite estar neste palco tão acolhedor."
     "{i}Eu estou tão nervosa. Não acredito que isso realmente tá acontecendo…{/i}"
     Sr "Eu sou o Sr. Star e este é o primeiro episódio de {i}STAR'S SELECTION!{/i}"
-    Sr "A partir de uma avaliação prévia, haverão cinco trainees com potencial para debutar."
+    Sr "A partir de uma avaliação prévia, foram escolhidas cinco trainees com potencial para debutar."
     Sr "No entanto, apenas uma delas irá ser capaz de superar e mostrar ao mundo suas habilidades!"
     #mudar para sorriso arrogante
     Sr "Agora, eu sei que vocês devem estar curiosos para conhecer elas… Hehe, eu também estou!"
@@ -58,12 +58,12 @@ label prologo1_i:
     Sr "Não para a indústria da música muito embora, e sim para a de cosméticos!"
     Sr "Com vocês, Srta. Roko!"  
     r "Boa noite, Sr. Star! Boa noite, todo mundo!"
-    Sr "Olá, querida! Há muito tempo que não vejo seu rosto por aqui."
+    Sr "Olá, querida!"
     #o sr star faz cara de confuso
     Sr "Perdoe-me pela deselegância, se me cabe a pergunta, mas o que traz você aqui?"
     r "Oh, Sr. Star, sinto que devo correr atrás dos meus sonhos, devo viver o mundo eu mesma!"
     #faz cara de drama
-    r "Sei que muitos acreditam que o dinheiro me garante um futuro, mas não é assim! Eu tenho que conquistar por mim mesma!"
+    r "Sei que muitos acreditam que a influência da minha família me garante um futuro, mas não é assim! Eu tenho que conquistá-lo por conta própria!"
     r "Portanto, estou aqui para provar meu valor."
     #Sr. star faz cara de choro
     Sr "Oh, meu Deus, que comovente! Seja bem-vinda para mostrar seu talento…"
@@ -75,49 +75,48 @@ label prologo1_i:
     "Sou eu!"
 
     m "Boa noite, pessoal! Estou muito feliz de estar aqu-"
-    Sr "E quem não estaria? HaHaHa!"
+    Sr "E quem não estaria? Ha ha ha!"
     Sr "Brincadeira, querida!"
     m "Hah..."
-    "Caramba! que sem noção!."
-    Sr "Oh, minhas sinceras desculpas, senhorita!"
-    Sr "Não era minha intenção deixá-la sem graça dessa forma."
-    Sr "Então... A senhorita é nova na área e já ouvi que a senhorita tem talento."
+    "Caramba, que sem noção...!"
+    Sr "Oh, minhas sinceras desculpas, senhorita..."
+    Sr "Não era minha intenção deixá-la interrompe-la dessa forma."
+    Sr "Então... A senhorita é nova na área e já ouvi que tem talento."
     Sr "Porém, o público anseia por mais sobre você!"
     Sr "Não gostaria de dizer algo mais sobre... Por exemplo, as suas motivações?"
     
 label prologo1_m:
-    "Essa pode ser a minha chance de impressionar o apresentador."
+    "Essa pode ser a minha chance de impressionar o apresentador e o público."
     "O que devo dizer? Qual é a minha maior motivação?"
 
     menu(nvl=True):
         "Minha família.":
             # a protagonista sente q precisa vencer como forma de agradecimento a td o q a familia fez por ela
             m "Devo tudo o que tenho e tudo o que conquistei à minha família..."
-            m "Investiram tanto no meu sucesso... Agora, tudo o que tenho que fazer é vencer!"
-            m "Para que se orgulhem de mim!"
+            m "Eles investiram tanto no meu sonho de me tornar uma idol... Agora, o mínimo que posso fazer em retribuição é vencer!"
+            m "Para que se orgulhem de mim e vejam o valor de todo esse esforço."
             Sr "Ah sim, sim! Retribuir o investimento é importante para alguns."
-            Sr "Mas, se me permite dizer..."
-            Sr "Acredito que fracassar a essa altura os deixaria bem decepcionados, não?"
+            Sr "Entretanto, espero que não pense demais na possibilidade contrária ao sucesso, sua determinação será sua maior aliada, não é mesmo?"
             m "Hmm... S-sim... Ma-"
-            Sr "Pois bem, mantenha isso em mente para tentar sua vitória! HAHA!"
+            Sr "Pois bem, mantenha isso em mente para tentar sua vitória! Ha, Ha!"
             "É a segunda vez que ele me corta."
             "Talvez, a minha resposta não o tenha agradado..."
             $ familia = True
-            if familia:
-                "ops"
+
         "Fama e luxo.":
             # a protagonista deseja a vitoria pelo prazer de estar nos holofotes e receber muito bem
             m "Desde garotinha... Sempre aspirei para que o mundo soubesse meu nome."
             m "Nasci para brilhar nos palcos e nas capas das maiores revistas!"
-            m "Ainda serei a Idol mais bem-sucedida da atualidade, e, esse é apenas o primeiro passo."
-            Sr "Minha nossa! Quanta coragem, senhorita."
-            Sr "Nunca presenciei ninguém que teve a audácia de dizer isso na frente de todos."
+            m "Ainda serei a Idol mais bem-sucedida da atualidade, e este é apenas o primeiro passo."
+            Sr "Minha nossa! Quanta ambição, senhorita."
+            Sr "Nunca, em tantos anos de minha carreira, presenciei ninguém que teve a coragem de dizer isso para o público."
             Sr "Ainda mais em um grande programa como este, senhoras e senhores!"
             Sr "Admiro a sua boa honestidade e sede de fama, querida Monnie."
             Sr "Vejo que chegará longe!"
-            m "Consegui impressionar o Sr.Star!"
-            m "Nem foi tão complicado quanto imaginei... Talvez ele tenha se identificado."
+            "Acho que consegui impressionar o Sr.Star! Talvez ele tenha se identificado..."
+            "Mas não tenho tanta certeza quanto aos espectadores. Nem todos lidam muito bem com sinceridade..."
             $ fama = True
+
         "Ser uma pessoa querida e reconhecida.":
             # a protagonista deseja a fama para ajudar pessoas por meio de sua arte
             # (ex.: produzir musicas p/ pessoas se identificarem e se sentir melhor)
@@ -129,9 +128,23 @@ label prologo1_m:
             sr "Espero que não esteja dizendo isso apenas para ganhar o público, querida!"
             m "Eu nunc-"
             $ reconh = True
+
+        "Fazer aquilo que eu gosto.":
+            # a protagonista deseja fazer aquilo que sempre sonhou, música, dança e apresentar-se
+            # (ex.: produzir musicas, letras, stages grandes, etc...)
+            m "Quero fazer."
+            m "Servir de inspiração para meus fãs quando eles mais precisarem."
+            m "Por meio da arte, podemos nos conectar uns com os outros."
+            m "Assim, saberemos que não estamos sozinhos."
+            Sr "Essas... são belas palavras, realmente."
+            Sr "Espero que não esteja dizendo isso apenas para ganhar o público, querida!"
+            m "Eu nunc-"
+            $ reconh = True
    
     Sr "Muito bem, assim se encerra a nossa apresentação dessas promissoras estrelas!"
-    sr "Amanhã estaremos de volta para esclarecer o funcionamento do programa"
+    if reconh:
+        "Lá vai ele de novo... Já consigo ver os cortes na transmissão colocados em vídeos frustrados de fãs..."
+    Sr "Amanhã estaremos de volta para esclarecer o funcionamento do programa"
     Sr "E para apresentar a primeira performance!"
     #Sr "Quem sairá vitoriosa?? É o que vamos descobrir nos próximos episódios!"
     Sr "Muito obrigada pela audiência e até a próxima!"

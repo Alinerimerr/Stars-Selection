@@ -42,10 +42,10 @@ default persistent.rhythm_game_high_scores = {
 default selected_song = None
 
 define l = Character(_("Linne"), kind=nvl, color="#fff422", window_background="images/txtbox3.png")
-define j = Character(_("Juni"), kind=nvl, color="#deb2d1", window_background="images/txtbox3.png")
+define j = Character(_("Juni"), kind=nvl, color="#deb2d1", window_background="images/txtbox-junni.png")
 define Sr = Character(_("Sr. Star"), kind=nvl, color="#e93c59", window_background="images/txtbox3.png")
-define n = Character(_("Nadia"), kind=nvl, color="#871abe", window_background="images/txtbox3.png")
-define r = Character(_("Roko"), kind=nvl, color="#54ff95", window_background="images/txtbox3.png")
+define n = Character(_("Nadia"), kind=nvl, color="#871abe", window_background="images/txtbox-nadia.png")
+define r = Character(_("Roko"), kind=nvl, color="#54ff95", window_background="images/txtbox-roko.png")
 define m = Character(_("Moonie"), kind=nvl, color="#5754ff", window_background="images/txtbox3.png", what_xpos=0.06, who_xpos=0.57, what_width=0.7)
 define narrator = Character(None, kind=nvl, window_background="images/txtbox3.png", what_xpos=0.1)
 

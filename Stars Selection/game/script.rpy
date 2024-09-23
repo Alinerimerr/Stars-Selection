@@ -1,21 +1,5 @@
 ﻿
 init python:
-    # must be persistent to be able to record the scores
-    # after adding new songs, please remember to delete the persistent data
-
-    rhythm_game_songs = [
-    Song('Isolation', 'audio/Isolation.mp3', 'audio/Isolation.beatmap.txt'),
-    Song('Positivity', 'audio/Positivity.mp3', 'audio/Positivity.beatmap.txt'),
-    Song('Pearlescent', 'audio/Pearlescent.mp3', 'audio/Pearlescent.beatmap.txt'),
-    Song('Pearlescent - trimmed', 'audio/Pearlescent - trimmed.mp3', 'audio/Pearlescent - trimmed.beatmap.txt'), # 22 sec, easy to test 
-    Song('Thoughts', 'audio/Thoughts.mp3', 'audio/Thoughts.beatmap.txt')
-    ]
-
-    # # init
-    # if persistent.rhythm_game_high_scores:
-    #     for song in songs:
-    #         if not song in persistent.rhythm_game_high_scores:
-    #             persistent.rhythm_game_high_scores[song] = (0, 0)
 
     #pts de amizade
     linne = 0
@@ -24,6 +8,8 @@ init python:
     roko = 0
     star = 0
 
+    # pts popularidade
+    #popularidade = 0
     # variaveis p/ dialogo prologo
     familia = False
     fama = False
@@ -32,29 +18,20 @@ init python:
     # variaveis p/ dialogo prologo
     ajuda_j = False
 
-# map song name to high scores
-default persistent.rhythm_game_high_scores = {
-    song.name: (0, 0) for song in rhythm_game_songs
-}
-
-# the song that the player chooses to play, set in `choose_song_screen` below
-#image nadia = "images/side_nadia_happy.png"
-default selected_song = None
-
-define l = Character(_("Linne"), kind=nvl, color="#fff422", window_background="images/txtbox3.png")
+define l = Character(_("Linne"), kind=nvl, color="#fff422", window_background="images/txtbox5-2.png")
 define j = Character(_("Juni"), kind=nvl, color="#deb2d1", window_background="images/txtbox-junni.png")
-define Sr = Character(_("Sr. Star"), kind=nvl, color="#e93c59", window_background="images/txtbox3.png")
+define Sr = Character(_("Sr. Star"), kind=nvl, color="#e93c59", window_background="images/txtbox5-2.png")
 define n = Character(_("Nadia"), kind=nvl, color="#871abe", window_background="images/txtbox-nadia.png")
 define r = Character(_("Roko"), kind=nvl, color="#54ff95", window_background="images/txtbox-roko.png")
-define m = Character(_("Moonie"), kind=nvl, color="#5754ff", window_background="images/txtbox3.png", what_xpos=0.06, who_xpos=0.57, what_width=0.7)
-define narrator = Character(None, kind=nvl, window_background="images/txtbox3.png", what_xpos=0.1)
+define m = Character(_("Moonie"), kind=nvl, color="#5754ff", window_background="images/txtbox5-2.png", what_xpos=0.06, who_xpos=0.57, what_width=0.7)
+define narrator = Character(None, kind=nvl, what_xpos=0.1)
 
 define config.nvl_page_ctc = True
 
 #define menu = nvl_menu
 
-image linne = "images/sylvie blue normal.png"
-image juni = "images/sylvie green giggle.png"
+#image linne = "images/sylvie blue normal.png"
+#image juni = "images/sylvie green giggle.png"
 image bg = "images/bg.png"
 image lo = "images/lo2.png"
 
@@ -92,28 +69,6 @@ label teste:
                 "Desafio":
                     jump test    
 
-            label test:
-                Sr "Welcome to the Ren'Py Rhythm Game! Ready for a challenge?"
-                window hide
-                $ quick_menu = False
-
-                # avoid rolling back and losing chess game state
-                $ renpy.block_rollback()
-
-                $ song = Song('Isolation', 'audio/Isolation.mp3', 'audio/Isolation.beatmap.txt', beatmap_stride=0.1)
-                $ rhythm_game_displayable = RhythmGameDisplayable(song)
-                call screen rhythm_game(rhythm_game_displayable)
-
-                # avoid rolling back and entering the chess game again
-                $ renpy.block_rollback()
-
-                # restore rollback from this point on
-                $ renpy.checkpoint()
-
-                $ quick_menu = True
-                window show
-
-                return
         "Prologo":
             menu:
                 "parte 1":

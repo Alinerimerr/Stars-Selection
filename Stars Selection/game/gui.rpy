@@ -31,7 +31,7 @@ define gui.accent_color = '#cc0066'
 
 ## A cor usada para um botão de texto quando ele não está selecionado nem passa
 ## o mouse.
-define gui.idle_color = '#ffffff'
+define gui.idle_color = '#ffb1f3'
 
 ## A cor pequena é usada para texto pequeno, que precisa ser mais claro/escuro
 ## para obter o mesmo efeito.
@@ -77,7 +77,7 @@ define gui.text_size = 26
 define gui.name_text_size = 27
 
 ## O tamanho do texto na interface de usuário do jogo.
-define gui.interface_text_size = 33
+define gui.interface_text_size = 28
 
 ## O tamanho dos rótulos na interface de usuário do jogo.
 define gui.label_text_size = 36
@@ -102,11 +102,11 @@ define gui.game_menu_background = "gui/game_menu.png"
 ## vez.
 
 ## A altura da caixa de texto que contém o diálogo.
-define gui.textbox_height = 278
+define gui.textbox_height = 250
 
 ## O posicionamento da caixa de texto verticalmente na tela. 0,0 é a parte
 ## superior, 0,5 é o centro e 1,0 é a parte inferior.
-define gui.textbox_yalign = 1.0
+define gui.textbox_yalign = 0.0
 
 
 ## O posicionamento do nome do personagem que fala, em relação à caixa de texto.
@@ -385,28 +385,27 @@ define gui.nvl_list_length = 2
 
 ## A altura de uma entrada no modo NVL. Defina como None para que as entradas
 ## ajustem a altura dinamicamente.
-define gui.nvl_height = 260
+define gui.nvl_height = None
 #define gui.nvl_width = 1200
 define gui.nvl_width = 1400
 
 ## O espaçamento entre as entradas do modo NVL quando gui.nvl_height é Nenhum e
 ## entre as entradas do modo NVL e um menu do modo NVL.
-define gui.nvl_spacing = 120
+define gui.nvl_spacing = 150
 
 ## A posição, a largura e o alinhamento do rótulo que fornece o nome do
 ## caractere falante.
-#define gui.nvl_name_xpos = 0.3
-define gui.nvl_name_xpos = 0.37
+
+define gui.nvl_name_xpos = 0.25
 define gui.nvl_name_ypos = 0.03
 define gui.nvl_name_width = 0.40
 define gui.nvl_name_xalign = 0.0
 
 ## A posição, a largura e o alinhamento do texto da caixa de diálogo.
 #define gui.nvl_text_xpos = 0.28
-define gui.nvl_text_xpos = 0.35
-#define gui.nvl_text_ypos = 0.12
-define gui.nvl_text_ypos = 0.15
-define gui.nvl_text_width = 0.80
+define gui.nvl_text_xpos = 0.26
+define gui.nvl_text_ypos = 85
+define gui.nvl_text_width = 0.59
 define gui.nvl_text_xalign = 0.0
 
 ## A posição, a largura e o alinhamento do texto nvl_thought (o texto dito pelo
@@ -455,7 +454,7 @@ init python:
         gui.name_text_size = 58
         gui.notify_text_size = 38
         gui.interface_text_size = 45
-        gui.button_text_size = 45
+        gui.button_text_size = 10
         gui.label_text_size = 51
 
         ## Ajustar o local da caixa de texto.
@@ -467,8 +466,8 @@ init python:
         ## Altere o tamanho e o espaçamento de vários itens.
         gui.slider_size = 54
 
-        gui.choice_button_width = 1860
-        gui.choice_button_text_size = 45
+        gui.choice_button_width = 920
+        gui.choice_button_text_size = 25
 
         gui.navigation_spacing = 30
         gui.pref_button_spacing = 15
@@ -495,5 +494,5 @@ init python:
         gui.nvl_thought_width = 1860
         gui.nvl_thought_xpos = 30
 
-        gui.nvl_button_width = 1860
+        gui.nvl_button_width = 920
         gui.nvl_button_xpos = 30

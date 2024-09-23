@@ -127,7 +127,20 @@ label prologo1_m:
         "Fazer aquilo que eu gosto.":
             # a protagonista deseja fazer aquilo que sempre sonhou, música, dança e apresentar-se
             # (ex.: produzir musicas, letras, stages grandes, etc...)
-            m "Quero fazer."
+            m "Simplesmente quero fazer aquilo que gosto."
+            m "A música é uma parte muito importante da minha vida."
+            m "Então, performar aquilo que treinei por tanto tempo, trata-se de um sonho realizado."
+            m "Quero compartilhar com o mundo esta parte de mim."
+            Sr "Oh! A juventude e a paixão destemida!"
+            Sr "Espero que não esteja dizendo isso apenas para ganhar o público, querida!"
+            m "O que-"
+            $ reconh = True
+
+        "Inspirar as pessoas.":
+            # a protagonista quer ajudar as pessoas e inspirar
+            # (ex.: produzir musicas, letras, stages grandes, etc...)
+            m "Quero fazer algo que as pessoas possam se identificar."
+            m "Seja pela música, os sentimentos contidos nas letras, na dança, e no palco."
             m "Servir de inspiração para meus fãs quando eles mais precisarem."
             m "Por meio da arte, podemos nos conectar uns com os outros."
             m "Assim, saberemos que não estamos sozinhos."
@@ -141,8 +154,8 @@ label prologo1_m:
         "Lá vai ele de novo... Já consigo ver os cortes na transmissão colocados em vídeos frustrados de fãs..."
     Sr "Amanhã estaremos de volta para esclarecer o funcionamento do programa"
     Sr "E para apresentar a primeira performance!"
-    #Sr "Quem sairá vitoriosa?? É o que vamos descobrir nos próximos episódios!"
-    Sr "Muito obrigada pela audiência e até a próxima!"
+    #Sr "Quem sairá vitoriosa? É o que vamos descobrir nos próximos episódios!"
+    Sr "Muito obrigado por fazer parte da nossa audiência e até a próxima!"
 
 label prologo2:
     # Cena apos apresentacao
@@ -150,14 +163,14 @@ label prologo2:
 
     # o jogador pode ou nao falar com as personagens
 
-    "Após a apresentação, todas as participantes se reuniram nos bastidores"
+    "Após a apresentação, fomos todas reunidas nos bastidores."
     "Elas estão conversando... devo me juntar a elas?"
 
     
     menu (nvl=True):
         "Se juntar a conversa":
             # aqui temos a primeira interacao com as personagens
-            "Tomo coragem na cara e me aproximo do grupo."
+            "Respiro fundo, tomo coragem e me aproximo do grupo."
             l "Foi uma ótima apresentação, meninas!"
             l "Na minha opinião, todas se saíram muito bem."
             "As garotas parecem mais empolgadas depois da fala de Linne."
@@ -189,8 +202,8 @@ label prologo2:
                             n "Isso é tão irritante."
                             m "Irritante?"
                             n "Ah, desculpa."
-                            n "Sabe, eu só... pensei alto."
-                            m "Sei..."
+                            n "Eu só... pensei alto."
+                            m "Entendi..."
         
                 "Não perguntar.":
                     "Ela não parece aberta para conversar..."
@@ -201,7 +214,7 @@ label prologo2:
             #"Tá maluco vo eh dormi kkkkk"
             #"Brincadeira, hehe"
             "Acho... que vou ficar na minha mesmo."
-            "Escuto Linne, Juni e Roko trocar elogios."
+            "Escuto Linne, Juni e Roko trocarem elogios."
             "Enquanto Nádia permanece calada."
             "E levemente irritada também."
             "Após algum tempo, sua atenção se volta para mim."
@@ -209,7 +222,7 @@ label prologo2:
             "Devo dizer algo para ela?"
             menu(nvl=True):
                 "Tentar puxar assunto":
-                    m "Ehr..."
+                    m "Er..."
                     m "Seu nome é Nádia, não?"
                     m "É um prazer te conhecer."
                     n "Oh, o prazer é todo meu."
@@ -218,9 +231,13 @@ label prologo2:
                     n "Entendi..."
                     n "Você não é muito de conversar, né?"
             "Isso atrai a atenção das outras."
-            n ""
+            n "Não se preocupe, eu não mordo a menos que necessário, he, he."
+            l "Certo, junte-se a nós, estaremos convivendo por bastante tempo, não?"
+            m "Obrigada, espero que nos demos bem."
+            r "Olh-"
     
-    "A equipe de produção se aproxima e intervém."
+    "O que quer que Roko fosse dizer, acabou sendo ignorado."
+    "A conversa foi interrompida pela equipe de produção se aproximando e anunciando o próximo cronograma."
     "O diretor explica que, basicamente, todas as nossas atividades serão gravadas para o programa."
     "Inclusive algumas partes do dormitório, como cozinha, quartos e sala de estar."
     "Não precisaremos dividir os quartos e nem nos preocupar em preparar nossas refeições."
@@ -231,16 +248,14 @@ label prologo2:
     # achei melhor a protagonista ter uma opinião propria aq
     "Apesar de simples, achei o espaço até que bem agradável."
     r "Ah... Eh aqui que nós todas vamos ficar?"
-    "Roko olha ao redor com uma expressão... meio enojada."
-    l "Hora, Roko! Não faça essa cara!"
+    "Roko olha ao redor com uma expressão meio... enojada."
+    l "Ora, Roko! Não faça essa cara!"
     l "A equipe deu tudo para que o ambiente fosse o melhor possível!"
-    l "É muito rude da sua parte fic-"
-    n "Olha só!"
-    n "Não vamos precisar dividir os quartos!"
-    l "Uh... Sim??"
-    l "Já fomos notificadas sobre isso anteriormente, Nádia!"
-    n "Ohh..."
-    n "Acho que não estava prestando atenção nessa hora."
+    l "É muito rude da sua parte exigir isso."
+    n "Ainda bem que não vamos precisar dividir os quartos..."
+    "Nádia sussurrou, mas não foi baixo o suficiente..."
+    r "O que?!"
+    l "Nádia, por favor, você também não!"
     "Linne retorce levemente a boca."
     "Por um momento, ela pareceu bem irritada"
     j "A decoração também é muito bem elaborada..."

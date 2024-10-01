@@ -15,8 +15,10 @@ init python:
     fama = False
     reconh = False
 
-    # variaveis p/ dialogo prologo
+    # variaveis p/ dialogo cap1
     ajuda_j = False
+    vermelho = False
+    ignorante = False
 
 define l = Character(_("Linne"), kind=nvl, color="#fff422", window_background="images/txtbox5-2.png")
 define j = Character(_("Juni"), kind=nvl, color="#deb2d1", window_background="images/txtbox-junni.png")
@@ -35,64 +37,9 @@ define config.nvl_page_ctc = True
 image bg = "images/bg.png"
 image lo = "images/lo2.png"
 
-image palco = "images/teste2.png"
-image bastidores = "images/bastidores.jpg"
-
-image side nadia happy = "images/side_nadia_happy.png"
-image side nadia sad = "images/side_nadia_sad.png"
-
-
 # The game starts here.
 
 label start:
-
-    menu:
-        "Testar":
-            jump teste
-        "Início do Jogo":
-            jump jogo
-
-label teste:
-    menu:
-        "Minigame":
-            window hide
-            call rhythm_game_entry_label
-            Sr "Mt bem"
-
-            menu:
-                "Sair":
-                    return
-
-                "Voltar":
-                    jump teste
-
-                "Desafio":
-                    jump test    
-
-        "Prologo":
-            menu:
-                "parte 1":
-                    jump prologo1_m
-
-                "parte 2":
-                    jump prologo2
-
-                "Fim prologo":
-                    jump fimprologo
-
-        "Capítulo 1":
-            menu:
-                "parte 1":
-                    jump parte1
-
-                "parte 2":
-                    jump parte2
-
-        "teste fa":
-            jump testef
-
-
-label jogo:
     #Inicio do jogo
 
       
@@ -102,8 +49,9 @@ label jogo:
 
    
 label end:
-
-    #if pts == 25:
-    #   "parabens! [pts]"
-        
+    Sr "Aqui termina a versão Demo de Star's Selection."
+    Sr "Mas não pense que acaba por aqui!"
+    Sr "Fique ligado para as próximas atualizações!"
+    Sr "Obrigada por jogar!"
+    
     return

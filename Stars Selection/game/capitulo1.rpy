@@ -238,9 +238,9 @@ label cap1_3:
                 r "Foi ótima, se quer saber a minha opinião."
                 r "Parece até que nasci pra isso."
                 m "Caramba!"
-                m "Fiquei palavras diante de tanta confiança."
+                m "Fiquei sem palavras diante de tanta confiança."
                 r "Isso acontece com os menos afortunados, de fato."
-                "Oh..."
+                "Oh... h u m i l d a d e . . ."
                 r "É como eu sempre digo:"
                 r "Para se tornar uma verdadeira estrela"
                 r "Primeiro você deve acreditar que já é!"
@@ -285,6 +285,7 @@ label cap1_3:
                 r "E conversar com ele enquanto trabalha."
                 r "Ele quanse nunca me responde."
                 r "Mas eu sei que ele me escuta com atenção."
+                r "..."
                 r "Um dia, quando eu era menor, ele me perguntou o motivo de minhas visitas constantes."
                 r "Então eu respondi que todos os meus amigos estavam viajando com os pais."
                 r "Enquanto os meus estavam sempre bem ocupados."
@@ -311,8 +312,8 @@ label cap1_3:
                 "Ela cobre a boca como se esivesse prestes a vomitar."
                 r "..."
                 r "Pensando agora..."
-                # Inventar nome pro veio
-                r "O senhor jardineiro deve ter ficado deveras decepcionado..."
+                # Inventar nome pro veio (Helian)
+                r "O sr. Helian deve ter ficado deveras decepcionado..."
                 menu(nvl=True):
                     "E com razão!":
                         m "Com certeza!"
@@ -331,16 +332,16 @@ label cap1_3:
                         m "Talvez o que importasse, no final, não era o sabor do sanduíche."
                         m "Mas sim a experiência do processo!"
                         m "Você mesma disse que não tinha gostado da ideia."
-                        m "E mesmo assim aceitou participar"
+                        m "E mesmo assim aceitou participar."
                         m "Tenho certeza de que ele deve ter ficado contente por isso."
-                        r "Acha isso mesmo... ?"
+                        r "Acha isso mesmo...?"
                         r "Bem... Deve estar certa..."
                         r "Afinal, você se parece bastante com ele."
                         $ roko += 5
 
 label cap1_4:
     # inicio do evento
-    # Determinar local do acontecimento(fiquei em duvida)
+    # Determinar local do acontecimento(fiquei em duvida)- ao ar livre?
 
     "Ao chegarmos ao local"
     "Observamos que estão dispostas mesas, utensílios de coxinha e vários ingredientes."
@@ -507,14 +508,14 @@ label cap1_4:
     Sr "O tempo está se esgotando, meninas!"
     m "Vamos ter que nos apressar."
 
-    # entrega dos pratos
+    # entrega dos pratos (nomes dos times: Sun-Moon e 2in - nadia acumula raiva com a roko)(apos perder, linne briga com a juni, roko se junta a linne e nadia a juni, protagonista escolhe o lado - nadia surta com a roko)
     Sr "Tempo esgotado!"
     Sr "Equipe 1, apresentem seus pratos por gentileza."
     "Levamos nosso prato ao balcão de Roko."
     #Sr "Começando por Moonie e Nádia."
     Sr "O que prepararam?"
     m "Fizemos um delicioso espaguete ao molho branco."
-    n "Com Brócolis."
+    n "Com brócolis."
     "Roko se esforça para não fazer cara de nojo mais uma vez."
     Sr "Pode provar, jurada."
     "Ela empurra os brócolis pra um canto do prato"

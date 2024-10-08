@@ -238,9 +238,9 @@ label cap1_3:
                 r "Foi ótima, se quer saber a minha opinião."
                 r "Parece até que nasci pra isso."
                 m "Caramba!"
-                m "Fiquei sem palavras diante de tanta confiança."
+                m "Fiquei palavras diante de tanta confiança."
                 r "Isso acontece com os menos afortunados, de fato."
-                "Oh... h u m i l d a d e . . ."
+                "Oh..."
                 r "É como eu sempre digo:"
                 r "Para se tornar uma verdadeira estrela"
                 r "Primeiro você deve acreditar que já é!"
@@ -285,7 +285,6 @@ label cap1_3:
                 r "E conversar com ele enquanto trabalha."
                 r "Ele quanse nunca me responde."
                 r "Mas eu sei que ele me escuta com atenção."
-                r "..."
                 r "Um dia, quando eu era menor, ele me perguntou o motivo de minhas visitas constantes."
                 r "Então eu respondi que todos os meus amigos estavam viajando com os pais."
                 r "Enquanto os meus estavam sempre bem ocupados."
@@ -312,8 +311,8 @@ label cap1_3:
                 "Ela cobre a boca como se esivesse prestes a vomitar."
                 r "..."
                 r "Pensando agora..."
-                # Inventar nome pro veio (Helian)
-                r "O sr. Helian deve ter ficado deveras decepcionado..."
+                # Inventar nome pro veio
+                r "O senhor jardineiro deve ter ficado deveras decepcionado..."
                 menu(nvl=True):
                     "E com razão!":
                         m "Com certeza!"
@@ -332,16 +331,16 @@ label cap1_3:
                         m "Talvez o que importasse, no final, não era o sabor do sanduíche."
                         m "Mas sim a experiência do processo!"
                         m "Você mesma disse que não tinha gostado da ideia."
-                        m "E mesmo assim aceitou participar."
+                        m "E mesmo assim aceitou participar"
                         m "Tenho certeza de que ele deve ter ficado contente por isso."
-                        r "Acha isso mesmo...?"
+                        r "Acha isso mesmo... ?"
                         r "Bem... Deve estar certa..."
                         r "Afinal, você se parece bastante com ele."
                         $ roko += 5
 
 label cap1_4:
     # inicio do evento
-    # Determinar local do acontecimento(fiquei em duvida)- ao ar livre?
+    # Determinar local do acontecimento(fiquei em duvida)
 
     "Ao chegarmos ao local"
     "Observamos que estão dispostas mesas, utensílios de coxinha e vários ingredientes."
@@ -508,17 +507,17 @@ label cap1_4:
     Sr "O tempo está se esgotando, meninas!"
     m "Vamos ter que nos apressar."
 
-    # entrega dos pratos (nomes dos times: Sun-Moon e 2in - nadia acumula raiva com a roko)(apos perder, linne briga com a juni, roko se junta a linne e nadia a juni, protagonista escolhe o lado - nadia surta com a roko)
+    # entrega dos pratos
     Sr "Tempo esgotado!"
     Sr "Equipe 1, apresentem seus pratos por gentileza."
     "Levamos nosso prato ao balcão de Roko."
     #Sr "Começando por Moonie e Nádia."
     Sr "O que prepararam?"
     m "Fizemos um delicioso espaguete ao molho branco."
-    n "Com brócolis."
+    n "Com Brócolis."
     "Roko se esforça para não fazer cara de nojo mais uma vez."
     Sr "Pode provar, jurada."
-    "Ela empurra os brócolis pra um canto do prato"
+    "Ela empurra os brócolis pra um canto do prato com o garfo."
     "E prova a massa com molho."
     r "Hmm..."
     r "Até que não está ruim..."
@@ -526,4 +525,275 @@ label cap1_4:
     Sr "8 é uma boa nota!"
     r "Mas como tem brócolis a minha nota final é 5!"
     Sr "!!!"
+    "Ah não, não pode ser..."
+    "Como ela tem a audacia!?"
+    "Olho para o lado e vejo Nádia com uma expressão vazia."
+    "Mas sinto o ódio crescente nela."
+    Sr "Ehr..."
+    "Até mesmo o Sr.Star parece indignado."
+    Sr "Neste caso... 5 é a nota final!"
+    Sr "He he..."
+    "Ele ri meio sem graça."
+    Sr "Podem ir, meninas. Vocês fizeram um ótimo trabalho!"
+    Sr "Equipe 2, por favor, apresente-se!"
+    "As meninas da equipe 2 dispoe seu prato sobre o balcão de Roko."
+    "Roko arregala os olhos ao observar o macarrão coberto de molho de tomate."
+
+    if (vermelho):
+        "Nádia susurra ao meu lado."
+        n "Parece que a Carminha Frufru se deu mal..."
+        m "Tudo o que vai... volta."
+        
+    Sr "Uhh! Parece muito bom!"
+    Sr "Podem dizer do que se trata?"
+    l "Temos aqui o clássico e muito amado espaguete com almondegas."
+    r "E... molho de tomate...?"
+    j "Sim! foi temperado com um ingrediente secreto especial meu!"
+    "Juni parece orgulhosa sobre isso."
+    
+    if (vermelho):
+        "Mal ela sabe..."
+
+    r "... Tenho mesmo que comer isso?"
+    Sr "Para dar uma nota, você precisa primeiro provar."
+    r "Ok..."
+    "Ela hesita em provar por algum tempo."
+    Sr "Apresse-se! O prato vai esfriar!"
+    "Depois de muito esforço mental, ela leva o garfo a boca."
+    r "..."
+    "Ela mastiga devadar..."
+    Sr "Está tudo bem, srta. Roko...?"
+    r "..."
+    "Ela continua mastigando."
+    "Seu rosto começa a suar e empalidecer."
+    "Ela parece prestes a vomitar ou desmaiar."
+    Sr "Meu Deus, há algo errado!"
+    "As meninas da equipe 2 também parecem nervosas."
+    l "Oh, não! O que houve?!"
+    n "Meninas, quando eu falei de envenenar ela, eu estava BRIN-CAN-DO, tá bem?"
+    "Nádia se diverte com a situação."
+    Sr "Equipe médica, por favor!"
+    "Sr.Star acena para chamar os primeiros socorros."
+    "Nesse momento, Roko finalmete consegue engolir."
+    r "Arhg!"
+    r "Não precisa, eu estou bem..."
+    Sr "Ufa!"
+    "Todos parecem bem mais aliviados."
+    Sr "A senhorita realmente nos preocupou..."
+    Sr "Gostaria de uma palsa para respirar, srta. Roko?"
+    r "Não, não."
+    r "Isso já foi o suficiente pra minha decisão final."
+    "O clima se torna mais tenso após suas palavras."
+    Sr "Bem... Então..."
+    # muda para feicao confiante
+    Sr "Diga-nos a sua escolha!"
+    r "Dadas as circunstâncias..."
+    r "Minha nota para a equipe 2 é..."
+    "A produção coloca uma música de tensão."
+
+    r "5.1!"
+    "!!!"
+    "O-o que...?"
+    "Todos permanecem em choque por uns istantes."
+    j "5-5.1??"
+    "Juni se vira para Linne, ainda em choque."
+    j "Então nós..."
+    l "Vencemos?!"
+    Sr "Ha Ha, sim!"
+    Sr "As vencedoras são Linne e Juni!"
+    Sr "Meus parabéns, meninas!"
+    "Confetes são lançados ao ar em comemoração."
+    # elaborar comemoracao
+
+    n "Espera aí um istante..."
+    n "Você quase desmaiou provando aquele prato..."
+    n "E mesmo assim deu a MAIOR NOTA?!"
+    #"Nádia finalmente libera sua raiva."
+    r "Eu não estava quase desmaiando..."
+    r "Estava apenas... Saboreando o ingrediente especial da Juni!"
+    r "Sabe ele deu um sabor..."
+    #"Roko procura por palavras."
+    r "Muito..."
+    r "Huh..."
+    r "..."
+    r "Único!"
+    r "Por isso achei que elas mereceram essa nota."
+    n "Escuta aqui o sua-"
+    l "Calma, Nádia. Não há motivos para ficar irritada."
+    l "É só uma brincadeira..."
+    #Sr "Exatamente. Vocês não sairam prejudicadas."
+    n "Grrr!"
+    "Ela vira as costas e sai batendo os pés."
+
+    # opcao de escolha?
+    "É melhor eu conversar com ela."
+    m "Nádia, espera!"
+    "Corro atrás dela enquanto Sr.Star encerra o evento."
+    "Já estamos na metado do caminho para os dormitórios quando finalmente a alcanço."
+    n "Argh! O que foi agora?!"
+    n "Será que não posso ter um minuto de paz!??"
+
+    menu(nvl=True):
+        "Você não devia reagir assim":
+            m "Sei que está zangada, mas..."
+            m "Explodir daquela forma na frente de todos é loucura!"
+            n "Isso... não é algo fácil de controlar e você sabe disso!"
+            n "Afinal, aquilo foi muito pessoal..."
+            m "..."
+            m "Mas se você continuar assim..."
+            m "Quem sairá prejudicada será você!"
+            n "... Não preciso da sua preocupação."
+
+        "Há algo de errado no julgamento.":
+            m "Acredito que você também tenha percebido..."
+            m "Pela forma que Roko fez o julgamento..."
+            m "Ela-"
+            n "Tem algo pessoal contra nós? Sim. Eu percebi!"
+            n "Porque não se manifestou naquela hora? Você também fazia parte da equipe."
+            m "..."
+            m "Bom... Tenho certeza de que ela colherá o que plantou."
+            $roko -= 5
+
+    "Solto um longo suspiro."
+    m "É melhor esquecermos isso."
+
+    "Ouço as outras garotas chegando a nós."
+    r "Ora se não é a pavio curto e compania!"
+    r "Espero que tenha esfriado a cabeça após aquele pequeno show."
+    "O comentário incomoda não apenas Nádia, mas também Juni."
+    n "Você que dá um julgamento totalmente inconsistente e eu saio como louca?!"
+    l "Ela não disse isso!"
+    l "Não há motivos para brigar, meninas!"
+    l "Aquilo não era importante-"
+    j "Quem pensa que é..."
+    j "Quem você pensa que é para dar apelidos para os outros, Roko!"
+    #"Surpresas, encaramos Juni."
+    r "!"
+    j "Err... Quero dizer..."
+    j "E-essa não é uma atitude... Muito legal..."
+    n "Concordo plenamente."
+    r "..."
+    r "Te dou 0.1 ponto a mais e é assim que me agradece?"
+    r "Deveria ter avaliado aquela porcaria como um completo zero!"
+    # de qual lado ficar?
+    l "Agora já chega!"
+    l "Isso está indo longe demais!"
+    l "Não podemos nos esquecer..."
+    l "Que no final somos todas colegas e-"
+    n "Cansei dessa conversa furada!"
+    n "Tô indo pro meu quarto. Uma boa noite pra vocês."
+
+    # final da discussao
+
+label cap1_5:
+
+    # a sequencia de dias a seguir servem apenas p/ treinamento e pequenas conversas com as personagens
+    # lembrando que roko nunca se interessa por treinar muito
+
+    # dia 2
+
+    # dia 3
+
+    # Final do dia 3
+    "Acho que vou encerrar os treinos de hoje."
+    "Amanhã já é a nossa primeira apresentaçaõ oficial..."
+    "Ah, que emoção!"
+    "Devo treinar mais um pouco para garantir?"
+    "Não, não posso pensar assim!"
+    "Fiz tudo o que podia..."
+    "Eu acho."
+
+    # dia da apresentacao
+
+    "Hã?"
+    "Acordo com o despertador me incomodando de novo."
+    "Mal me levanto da cama..."
+    "E já escuto barulhos vindos do lado de fora do quarto."    
+    l "Ai! Toma cuidado!"
+    j "Desculpa! E-eu não quis te machucar."
+    "Ouço passos apressados se afastando."
+    "Ahhh... Parece que o dia não começou tão bem."
+
+    "Saio do quarto para ver o que houve."
+    m "Bom dia, Linne."
+    l "Oh, bom dia!"
+    m "Aconteceu... alguma coisa?"
+    l "Ah, não, não."
+    l "Era só a Juni. Ela esbarrou em mim..."
+    l "E acabou machucando meu pé."
+
+    menu(nvl=True):
+        "Foi de propósito!":
+            #m "Aposto que foi de propósito!"
+            m "Machucar a participante mais habilidosa do programa justo no dia da apresentação..."
+            m "É no mínimo suspeito... Não?"
+            "Linne ri baixinho."
+            l "Ora, não podemos incrimina-lá de nada..."
+            $linne += 3
+            $karma += 5
+
+        "Você está bem?":
+            m "Nossa, eu sinto muito."
+            m "Foi muito grave?"
+            l "Não. Eu dou um jeito."
+            l "Como sempre..."
+            "..."
+
+    l "Oh! Estou me demorando aqui."
+    l "Será um dia cheio."
+    m "Sim... Temos a apresentação á tarde e os resultados à noite."
+
+    # fim desse pequeno dialogo.
+
+    # inicio da apresentacao
+    # participantes nos bastidores
+
+    Sr "Boa noite à todos!"
+    Sr "Sejam bem-vindos de volta ao reality Star's Selection!"
+    Sr "E hoje, senhoras e senhores..."
+    Sr "Será a primeira apresentação do programa!"
+    "Luzes se acendem no palco."
+    Sr "As nossas queridas participantes serão avaliádas de acordo com seus devidos desempenhos."
+    Sr "Aquela que ficar em último no ranking..."
+    Sr "Será, infeizmente, desqualificada do reality."
+    # bla bla bla
+    Sr "Começaremos com a promissora moonie!"
+    "Eu!!"
+    # Minigame
+
+    "Aplausos soam ao final da apresentação."
+    Sr "Foi uma ótima apresentação!"
+    # apresentacao das outras.
+
+    # saida dos resultados
+    # definir local
+    Sr "Estamos de volta ao programa!"
+    Sr "Espero que não tenham sentido saudades, ha ha!"
+    Sr "Chegou o tão esperado..."
+    Sr "O tão aguardado..."
+    Sr "Momento dos resultados!"
+    "A música se intensifica."
+    Sr "Aparecerá no telão o ranking das performances."
+    Sr "Como dito anteriormente..."
+    Sr "A trainee com a menor pontuação estará fora do programa."
+    Sr "A eliminada é..."
+    l "É isso meninas..."
+    l "Boa sorte."
+    j "B-boa sorte."
+    "Após o que parece ser uma eternidade, o ranking aparece no telão."
     Sr ""
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+    

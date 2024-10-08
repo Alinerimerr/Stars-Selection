@@ -741,7 +741,7 @@ label cap1_5:
 
     l "Oh! Estou me demorando aqui."
     l "Será um dia cheio."
-    m "Sim... Temos a apresentação á tarde e os resultados à noite."
+    m "Sim... Temos a apresentação à tarde e os resultados à noite."
 
     # fim desse pequeno dialogo.
 
@@ -757,7 +757,7 @@ label cap1_5:
     Sr "Aquela que ficar em último no ranking..."
     Sr "Será, infeizmente, desqualificada do reality."
     # bla bla bla
-    Sr "Começaremos com a promissora moonie!"
+    Sr "Começaremos com a promissora Moonie!"
     "Eu!!"
     # Minigame
 

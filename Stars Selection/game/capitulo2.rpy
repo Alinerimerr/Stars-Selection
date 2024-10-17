@@ -67,7 +67,9 @@ label cap2_1:
             $ karma = 15
 
         "Não passar":
+            m "sheeeesh"
 
 label cap2_2:
+    "hihihehehuhuhuhu"
 
     #evento no qual Juni sera escolhida 

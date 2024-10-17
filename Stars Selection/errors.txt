@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/capitulo1.rpy", line 57: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Continiar minhas tarefas"
-                              ^
+File "game/capitulo2.rpy", line 69: choice menuitem expects a non-empty block.
+    "Não passar":
+                 ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Thu Sep 12 12:49:34 2024
+Thu Oct 17 12:43:05 2024

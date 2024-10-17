@@ -86,7 +86,7 @@ label prologo1_i:
     m "Hah..."
     "Caramba! que sem noção...!"
     Sr "Oh, minhas sinceras desculpas, senhorita!"
-    Sr "Não era minha intenção deixá-la interrompe-la dessa forma."
+    Sr "Não era minha intenção interrompe-la dessa forma."
     Sr "Então... A senhorita é nova na área e já ouvi que tem talento."
     Sr "Porém, o público anseia por mais sobre você!"
     Sr "Não gostaria de dizer algo mais sobre... Por exemplo, as suas motivações?"
@@ -295,9 +295,8 @@ label prologo2:
     r "Ah, sinto muito se as ofendi!"
     r "Mas eu costumo comer apenas pratos profissionais."
     r "Não posso correr riscos, endentem?"
-    n "Hah!"
-    n "Calma, amiga."
-    n "Ninguém aqui vai te envenenar!"
+    n "Nossah!"
+    n "Com certeza estamos planejando te envenenar!"
     "Ela diz isso em um tom sarcástico e brincalhão."
     l "Não brinque com isso Nádia!"
     l "Este é um assunto sério."
@@ -323,6 +322,7 @@ label fimprologo:
     "Tenho muito o que processar..."
     # ela formula opinioes sobre as personagens e contextos
 
+    "Bom... É melhor eu ir dormir."
     jump cap1_1
 
 

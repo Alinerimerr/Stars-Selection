@@ -337,6 +337,7 @@ label cap1_3:
                         r "Bem... Deve estar certa..."
                         r "Afinal, você se parece bastante com ele."
                         $ roko += 5
+                        
 
 label cap1_4:
     # inicio do evento
@@ -652,7 +653,7 @@ label cap1_4:
             n "Porque não se manifestou naquela hora? Você também fazia parte da equipe."
             m "..."
             m "Bom... Tenho certeza de que ela colherá o que plantou."
-            $roko -= 5
+            $ roko -= 3
 
     "Solto um longo suspiro."
     m "É melhor esquecermos isso."
@@ -729,8 +730,8 @@ label cap1_5:
             m "É no mínimo suspeito... Não?"
             "Linne ri baixinho."
             l "Ora, não podemos incrimina-lá de nada..."
-            $linne += 3
-            $karma += 5
+            $ linne += 3
+            $ karma += 5
 
         "Você está bem?":
             m "Nossa, eu sinto muito."
@@ -779,21 +780,41 @@ label cap1_5:
     Sr "A eliminada é..."
     l "É isso meninas..."
     l "Boa sorte."
-    j "B-boa sorte."
+    j_m "B-boa sorte."
     "Após o que parece ser uma eternidade, o ranking aparece no telão."
-    Sr ""
+    "Parece que Roko ficou em último."
+    Sr "Ahh... srta.Roko, é uma pena mesmo..."
+    r_m "O que... ?"
+    Sr "É com um grande pesar que anuncio que você é a primeira eliminada do programa!" 
+    r_t "M-mas isso n-não é justo!"
+    "Roko começa a chorar de verdade agora."
+    l_t "Não, não chore."
+    l "Você foi bem, Roko!"
+    j_t "Sim. Fez tudo o que podia!"
+    j_t "Roko, você é muito mais do que apenas uma nota e não se esqueça."
+    n_n "..."
+    n_n "Éh... Você é meio... desagradável."
+    n_n "Mesmo assim, reconheço que há algum potencial em ti."
+    r_t "M-mas isso é um erro!"
+    r_r "Não posso ser a primeira eliminada! Eu sou uma ESTRELA!"
 
+    if roko > 3:
+        m "Escute, amiga..."
+        m "Você é sim uma estrela, mas não é sempre que as coisas dão certo!"
+        m "As vezes, temos que reconhecer nossos erros e aprender com eles."
+        r_t "Eu... Não entendo..."
+        m "O exesso de confiaça pode nos deixar cegos para a realidade."
+        m "Talvez, se você ouvisse mais as outras pessoas e não fosse tão fechada em sua bolha..."
+        m "As coisas seriam diferentes."
+        r_t "É mesmo...?"
+        r_t "Ahh... Minha nossa, não pensei que estivesse cometendo um erro..."
+        m "Está tudo bem. Agora que já sabe, você pode começar outra vez de uma forma diferente!"
+    else:
+        m "..."
 
-
-
-
-
-
-            
-
-
-
-
-
-
+    Sr "É realmente uma cena tocante..."
+    Sr "Mas, srta.Roko, está na hora das despedida!"
     
+    # Despedida de roko
+
+    # Finalizacao do cap1 com um pequeno descanso das personagens

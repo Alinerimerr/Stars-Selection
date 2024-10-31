@@ -344,7 +344,7 @@ label cap1_4:
     # Determinar local do acontecimento(fiquei em duvida)
 
     "Ao chegarmos ao local"
-    "Observamos que estão dispostas mesas, utensílios de coxinha e vários ingredientes."
+    "Observamos que estão dispostas mesas, utensílios de cozinha e vários ingredientes."
     "Confusas, nós todas nos entreolhamos."
     Sr "Boas vindas, meninas!"
     Sr "Espero que tenham aproveitado o dia."
@@ -692,6 +692,18 @@ label cap1_5:
     # lembrando que roko nunca se interessa por treinar muito
 
     # dia 2
+    # musiquinha de toque de alarme (musica de kpop:)
+    "{i}Ah... O alarme... Que sono...{/i}"
+    "{i}Mais um dia, mais uma luta.{/i}"
+    "{i}Tenho muito o que fazer hoje.{/i}"
+    "Ao me levantar e lavar o rosto, lembro-me dos eventos do dia anterior."
+    "{i}Hmm... Como será que estão as coisas na casa?{/i}"
+    "{i}Espero que o clima não esteja tão ruim.{/i}"
+    "Saio do quarto e observo o corredor, está silencioso como sempre, mas pelas luzes acesas alguém mais deve estar acordada."
+    j "Oh, bom dia, Moon!"
+    "Me assusto brevemente ao vê-la e percebo que Nadia também está lá."
+    "Juni parece estar em um bom humor apesar da tensão."
+    m "Bom dia!"
 
     # dia 3
 

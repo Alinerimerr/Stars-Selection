@@ -21,7 +21,7 @@ init python:
     ignorante = False
 
     # variaveis cap2
-    vazamento = False
+    aceitar = False
 
 define l = Character(_("Linne"), kind=nvl, color="#fff422", window_background="images/txtbox5-2.png")
 define l_t = Character(_("Linne"), kind=nvl, color="#fff422", window_background="images/txtbox-triste.png")

@@ -212,4 +212,4 @@ init python:
 ## O nome de usuário e o nome do projeto associados a um projeto itch.io,
 ## separados por uma barra.
 
-# define build.itch_project = "renpytom/test-project"
+#define build.itch_project = "alineri.itch.io/stars-selection"

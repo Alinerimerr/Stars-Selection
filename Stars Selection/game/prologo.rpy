@@ -3,7 +3,7 @@ label prologo1_i:
     #show palco at truecenter:
     #    zoom 2
     #with dissolve"""
-    Sr "Som, som, testando… E-hem…"
+    "Som, som, testando… E-hem…"
     Sr "Boa noite, senhoras e senhores telespectadores!"
     Sr "Agradeço sua sublime companhia que nos permite estar neste palco tão acolhedor"
     "{i}Eu estou tão nervosa.{/i}"

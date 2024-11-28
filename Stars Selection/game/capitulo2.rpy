@@ -1,126 +1,173 @@
 label cap2_1:
 
-    "Mais uma manhã..."
-    "Ahh... Parece que tenho que voltar a treinar."
-    "Não quero acabar como Roko..."
-    #"Ao sair do meu quarto, escuto Juni e Nádia conversando na sala de estar."
-    #n "... Isso me lembra da minha época de colegial."
-    #j_n "C-colegial?"
-    #j_m "Uhh, tenho más lembraças de lá."
-    #j_m "Sinto um frio na espinha só de pensar..."
 
-    #"Oh, esse parece um tópico sensivel de Juni."
-    #"Melhor eu não me intrometer..."
-    
-    "Enquanto me preparava para começar meu treinamento, alguns funcionários da produção avisam que o apresentador que falar comigo o mais cedo possível."
-    "Fui conduzida até sua sala."
-    Sr "Srta.Monnie! Por favor, sente-se."
-    m "Huh... Claro."
-    "O que será que ele quer?"
-    Sr_n "Bom, Srta... Tenho observado que você é, realmente, bem carismática..."
-    Sr "Por isso, te ofereço um acordo especial."
-    m "Um acordo...?"
-    Sr "Sim. Mas antes, gostaria que ficasse sabendo de algumas coisas."
-    Sr_n "Com saída de Roko, acabei perdendo um pouco do investimento para o reality..."
-    Sr_n "Ela era um grande imã de dinheiro..."
-    Sr "Felizmente, esse investimento pode retornar dependendo da audiencia do programa."
-    Sr "E é aí que você entra."
-    m "C-como assim?"
-    Sr "Não sei se a srta sabe, mas a sua figura é importante!"
-    Sr "Tanto para o público... Quanto para as outras participantes do programa."
-    Sr "Suas interações tem efeito... E as pessoas gostam disso!"
-    Sr_n "Então, o acordo é simples:"
-    Sr "Você se torna minha agente..."
-    Sr "Me passando informações e... Tornando algumas coisas mas interessantes no jogo."
-    # desenvolver melhor essa parte p melhor entendimento
-    Sr "E em troca recebe benefícios como um empurrãozinho nas avaliações, grandes ofertas ou ferramentas exclusivas."
-    Sr "O que acha?"
-    
-    menu(nvl=True):
-        "Não sei...":
-            m "Não tenho certeza..."
-            Sr "Ah, está tudo bem ficar dúvida."
-            Sr_n "Mas caso mude de ideia..."
-        "Gostei da ideia!":
-            m "Parece um bom negocio."
-            m "Eu aceito a proposta!"
-            Sr "Sabia que aceitaria!"
-            $ karma += 15
-            $ aceitar = True
-
-    Sr "Leve este telefone como você."
-    "Sr.Star me entrega um celular comum."
-    Sr "Ele tem acesso a Internet e a srta. pode me contatar quando quiser."
-    m "Mas celulares não são permitidos..."
-    Sr "Ora, não se preocupe com isso!"
-    Sr "Eu controlo tudo aqui dentro. Posso facilmente apagar qualquer evidencia a respeito disso."
-    Sr_n "Ah! Mas é melhor manter isso loge das outras competidoras."
-    Sr_n "Podemos ter problemas caso elas saibam..."
-    
-    Sr "Bom, srta. Moonie, está dispensada."
-
-    # encerramento do dialogo e reflexao
-
-    "Caramba, quanta informação!" 
-    "Bem... Se eu quiser trabalhar com ele..."
-    "Devo começar a planejar as minhas ações."
-    "Para 'tornar as coisas mais interessantes'."
-    "Mas, isso na prática... Seria usar as participantes."
-    
-    if aceitar:
-        "Bom, por onde começar?"
-        "Talvez se eu me aproximar mais das meninas..."
-    else:
-        "..."
-        "Ah, não sei, não..."
-
-    "Melhor pensar sobre mais tarde."
-    "Tenho que voltar ao treino agora."
-
-    "Após o treino, encontro Juni cantarolando uma melodia e tomando anotações."
+    # a sequencia de dias a seguir servem apenas p/ treinamento e pequenas conversas com as personagens
+    # lembrando que roko nunca se interessa por treinar muito
 
 
+    # dia 2
+    # musiquinha de toque de alarme (musica de kpop:)
+    "{i}Ah... O alarme... Que sono...{/i}"
+    "{i}Mais um dia, mais uma luta.{/i}"
+    "{i}Tenho muito o que fazer hoje.{/i}"
+    "Ao me levantar e lavar o rosto, lembro-me dos eventos do dia anterior."
+    "{i}Hmm... Como será que estão as coisas na casa?{/i}"
+    "{i}Espero que o clima não esteja tão ruim.{/i}"
+    "Saio do quarto e observo o corredor, está silencioso como sempre, mas pelas luzes acesas alguém mais deve estar acordada."
+    j "Oh, bom dia, Moon!"
+    "Me assusto brevemente ao vê-la e percebo que Nadia também está lá."
+    "Juni parece estar em um bom humor apesar da tensão."
+    m "Bom dia!"
+    # treino com roko na parte da manhã
+    if treino_roko:
+        "Tinha combinado com Roko que iríamos treinar juntas hoje."
+        "Será que ela ainda está disposta... mesmo com os acontecimentos de ontem?"
+        "Bem... acho que só vou descobrir se ela aparecer."
+        if roko>3:
+            "Após algum tempo, Roko aparece na academia."
+            m "Roko, você veio!"
+            r "Perdão pelo atraso..."
+            r "É que eu... eu estava..."
+            "Ela está nitidamente abalada."
+            m "Tá... tudo bem?"
+            r "Estou bem!"
+            r "E-estou ótima! he he..."
+            r "Não acha melhor nós começarmos?"
+            m "Claro..."
+            "Ficamos em silêncio durante os exercícios."
+            r "..."
+            "Hmm... isso é estranho."
+            "Roko tem o costume de falar muito..."
+            r "Ei, Moon."
+            r "Acredito que..."
+            r "Sabe... Talvez eu..."
+            r "..."
+            r "E-eu te devo desculpas!"
+
+
+            menu(nvl=True):
+                "Pelo que exatamente?":
+                    m "Desculpas por...?"
+                    r "Hã? "
+                    r "Não é óbvio? Pela nota que eu dei ao seu prato!"
+                    #r "Acho que no final ficou meio injusto..."
+                    r "Pensei que você ficaria chateada..."
+                    menu(nvl=True):
+                        "Por que fez aquilo?":
+                            m "Eu só queria saber o motivo dessa decisão."
+                            r "Oh, bem... Não é nada contra você..."
+                            r "Mas, eu não SUPORTO a ideia de dar a vitória para alguém como a Nádia!"
+                            r "Você viu como ela reagiu? Totalmente fora de questão!"
+                            r "E sabe... eu também fiquei bem amiga da Linne."
+                            r "Ela disse que se quisermos manter nossa amizade, sempre temos que nos ajudar..."
+                       
+                "Não se preocupe com isso.":      
+                    m "Tá tudo bem, eu não ligo pra isso."
+                    r "Ah, não mesmo?"
+                    r "Ufa! Que bom."
+                    r "Assim eu não devo satisfação pra ninguém!"
+                #"Deve mesmo!":
+    #
+
+
+    # dia 3
+
+
+    # Final do dia 3
+    "Acho que vou encerrar os treinos de hoje."
+    "Amanhã já é a nossa primeira apresentação oficial..."
+    "Ah, que emoção!"
+    "Devo treinar mais um pouco para garantir?"
+    "Não, não posso pensar assim!"
+    "Fiz tudo o que podia..."
+    "Eu acho."
+
+
+    # dia da apresentacao
 label cap2_2:
-
-    #evento no qual Juni passara por problemas.
-
-    Sr "Bem vindos, senhoras e senhores, à mais um evento ao vivo..."
-    Sr "Do reality Stars Selection!"
-    Sr_n "E hoje teremos... Algo mais tranquilo."
-    Sr "Mas não menos imporante, obviamente!"
-    # Apresentacao evento
-
-    Sr "Sabemos que se expressar artisticamente é uma habilidade fundamental para qualquer Idol."
-    # frase de impacto sla
-    #Sr "Mas... Se expressar artisticamente sob pressão é apenas para a estrela en"
-
-    Sr "A atividade do evento consiste na criação de alguma forma de arte que relembre o passado..."
-    Sr "E reafirme quem você é."
-    Sr "Cada participante tratará de um tema diferente."
-    Sr "Tais temas foram votados pela nossa queridissima audiênia no site do programa."
-    Sr "Agradeço a participação de todos vocês!"
-    Sr "E vocês, garotas, retratarão desses temas os relacionando com suas memórias e personalidades."
-    Sr "Saibam também que qualquer forma de expressão artística é valida."
-    Sr "Sintam-se livres para escrever, desenhar, cantar, dançar..."
-
-    "Hmmm..."
-    "Isso parece profundo."
-    "Essa deve ser uma tentativa de fazer o público saber mais sobre nós."
-
-    "Linne argue a mão para fazer uma pergunta."
-
-    Sr "Devo ressaltar que não estamos numa competição..."
-    Sr "Portanto, não haverá vencedora."
-
-    "Envergonhada, Linne abaixa a mão."
-
-    Sr "Massss, pode haver uma recompensa!"
-    Sr "Quem sabe? Hehe..."
-
-    "Um cronometro aparece no telão."
-    Sr ""
-  
+    "Hã?"
+    "Acordo com o despertador me incomodando de novo."
+    "Mal me levanto da cama..."
+    "E já escuto barulhos vindos do lado de fora do quarto."    
+    l "Ai! Toma cuidado!"
+    j "Desculpa! E-eu não quis te machucar."
+    "Ouço passos apressados se afastando."
+    "Ahhh... Parece que o dia não começou tão bem."
 
 
+    "Saio do quarto para ver o que houve."
+    m "Bom dia, Linne."
+    l "Oh, bom dia!"
+    m "Aconteceu... alguma coisa?"
+    l "Ah, não, não."
+    l "Era só a Juni. Ela esbarrou em mim..."
+    l "E acabou machucando meu pé."
 
 
+    menu(nvl=True):
+        "Foi de propósito!":
+            #m "Aposto que foi de propósito!"
+            m "Machucar a participante mais habilidosa do programa justo no dia da apresentação..."
+            m "É no mínimo suspeito... Não?"
+            "Linne ri baixinho."
+            l "Ora, não podemos incrimina-lá de nada..."
+            $ linne += 3
+            $ karma += 5
+
+
+        "Você está bem?":
+            m "Nossa, eu sinto muito."
+            m "Foi muito grave?"
+            l "Não. Eu dou um jeito."
+            l "Como sempre..."
+            "..."
+
+
+    l "Oh! Estou me demorando aqui."
+    l "Será um dia cheio."
+    m "Sim... Temos a apresentação à tarde e os resultados à noite."
+
+
+    # fim desse pequeno dialogo.
+
+
+    # inicio da apresentacao
+    # participantes nos bastidores
+
+
+    Sr "Boa noite à todos!"
+    Sr "Sejam bem-vindos de volta ao reality Star's Selection!"
+    Sr "E hoje, senhoras e senhores..."
+    Sr "Será a primeira apresentação do programa!"
+    "Luzes se acendem no palco."
+    Sr "As nossas queridas participantes serão avaliadas de acordo com seus devidos desempenhos."
+    Sr "Aquela que ficar em último no ranking..."
+    Sr "Será, infelizmente, desqualificada do reality."
+    # bla bla bla
+    Sr "Começaremos com a promissora moonie!"
+    "Eu!!"
+    # Minigame
+
+
+    "Aplausos soaram ao final da apresentação."
+    Sr "Foi uma ótima apresentação!"
+    # apresentacao das outras.
+
+
+    # saida dos resultados
+    # definir local
+    Sr "Estamos de volta ao programa!"
+    Sr "Espero que não tenham sentido saudades, ha ha!"
+    Sr "Chegou o tão esperado..."
+    Sr "O tão aguardado..."
+    Sr "Momento dos resultados!"
+    "A música se intensifica."
+    Sr "Aparecerá no telão o ranking das performances."
+    Sr "Como dito anteriormente..."
+    Sr "A trainee com a menor pontuação estará fora do programa."
+    Sr "A eliminada é..."
+    l "É isso meninas..."
+    l "Boa sorte."
+    j_m "B-boa sorte."
+    "Após o que parece ser uma eternidade, o ranking aparece no telão."
+    "Parece que Roko ficou em último."

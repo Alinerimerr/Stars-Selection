@@ -13,12 +13,13 @@ init python:
     # variaveis p/ dialogo prologo
     familia = False
     fama = False
-    reconh = False
+    reconhecimento = False
 
     # variaveis p/ dialogo cap1
     ajuda_j = False
     vermelho = False
     ignorante = False
+    treino_roko = False
 
     # variaveis cap2
     aceitar = False

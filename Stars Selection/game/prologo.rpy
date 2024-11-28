@@ -134,7 +134,7 @@ label prologo1_m:
             Sr "Oh! A juventude e a paixão destemida!"
             Sr "Espero que não esteja dizendo isso apenas para ganhar o público, querida!"
             m "O que-"
-            $ reconh = True
+            $ reconhecimento = True
 
         "Inspirar as pessoas.":
             # a protagonista quer ajudar as pessoas e inspirar
@@ -147,10 +147,10 @@ label prologo1_m:
             Sr "Essas... são belas palavras, realmente."
             Sr "Espero que não esteja dizendo isso apenas para ganhar o público, querida!"
             m "Eu nunc-"
-            $ reconh = True
+            $ reconhecimento = True
    
     Sr "Muito bem, assim se encerra a nossa apresentação dessas promissoras estrelas!"
-    if reconh:
+    if reconhecimento:
         "Lá vai ele de novo... Já consigo ver os cortes na transmissão colocados em vídeos frustrados de fãs..."
     Sr "Amanhã estaremos de volta para esclarecer o funcionamento do programa"
     Sr "E para apresentar a primeira performance!"
@@ -253,11 +253,8 @@ label prologo2:
     l "A equipe deu tudo para que o ambiente fosse o melhor possível!"
     l "É muito rude da sua parte exigir isso."
     n "Ainda bem que não vamos precisar dividir os quartos..."
-    "Nádia sussurrou, mas não foi baixo o suficiente..."
     r "O que?!"
-    l "Nádia, por favor, você também não!"
-    "Linne retorce levemente a boca."
-    "Por um momento, ela pareceu bem irritada"
+    n "Nada, não."
     j "A decoração também é muito bem elaborada..."
     j "Eu achei uma graça!"
     n "A cozinha parece ótima também..."
@@ -267,62 +264,74 @@ label prologo2:
     n "Hmm... Como se chama mesmo?"
     n "Luna ou algo do tipo, né?"
     "Como... Como ela errou completamente o nome!?"
-    m "É moonie, na verdade."
+    m "É Moonie, na verdade."
     m "Mas podem me chamar de Moon, se quiserem."
-    n "Moon... Gostei!"
     j "Aaah! achei um apelido muito fofinho!"
     n "E é bem mais simples lembrar."   
-    n "Bem, ia dizendo..."
-    n "Podemos preparar um banquete com o que temos aqui!"
+    n "Do que tava falando mesmo?... Ah, é!"
+    n "Dá fazer muita coisa legal aqui."
     n "O que acham?"
 
     menu(nvl=True):
-        "Parece uma boa ideia":
-            m "Claro! Seria muito legal!"
+        "Parece divertido!":
+            m ""
 
         "Não parece grande coisa.":
             m "Não acho que estamos aqui pra isso..."
             l "Exatamente!"
             l "Não vamos ter tempo para essas coisas."
             "Nádia suspira beeem alto."
-            n "Que chato."
 
     r "De qualquer forma..."
     #"Seu tom de voz se torna mais agressivo."
-    r "Não irei ingerir nada que as senhoritas preparem."  
-    "Todas param para encarar Roko."
-    "E um silêncio julgador recai sobre nós."
-    r "Ah, sinto muito se as ofendi!"
-    r "Mas eu costumo comer apenas pratos profissionais."
-    r "Não posso correr riscos, endentem?"
-    n "Nossah!"
-    n "Com certeza estamos planejando te envenenar!"
-    "Ela diz isso em um tom sarcástico e brincalhão."
-    l "Não brinque com isso Nádia!"
-    l "Este é um assunto sério."
-    l "E roko..."
-    l "Sei que deve estar sendo difícil para você..."
-    l "Mas, sabe..."
-    l "Não precisa nos ver como inimigas."
-    l "Afinal, estamos nessa jornada juntas!"
-    "Mesmo com o pequeno discurso de Linne"
-    "O clima continua meio pesado."
-    j "humm... bem..."
+    r "Não irei ingerir nada que vocês prepararem!"  
+    n "!!!"
+    #r "Não é nada pessoal..."
+    r "É q-que eu costumo comer apenas pratos profissionais..."
+    r "N-não é nada pessoal, endentem?"
+    n "Na verdade pareceu bem pessoal, sim!"  
+    j "humm... Bem..."
     j "Melhor nós descansarmos agora."
     j "Hoje foi um dia cheio e amanhã temos muito o que fazer."
     m "Devo admitir que estou bem cansada, também."
     m "Vou terminar de me instalar por aqui e ir dormir."
-    m "Boa noite, meninas!"
+    m "Boa noite, meninas."
 
 label fimprologo:
 
     # aq moonie esta em seu quarto p refletir e descansar
     "..."
-    "Finalmente, tenho um momento a sós no meu quarto."
-    "Tenho muito o que processar..."
-    # ela formula opinioes sobre as personagens e contextos
-
-    "Bom... É melhor eu ir dormir."
+    "{i}Finalmente, tenho um momento a sós no meu quarto.{/i}"
+    "{i}Tenho muito o que processar...{/i}"
+    "{i}Vou ter que desfazer as malas, também.{/i}"
+    "{i}Não foi permito trazer muias coisas, infelizmente...{/i}"
+    "{i}Pelo menos deixaram eu entrar com o meu conjunto de treino favorito!{/i}"
+    "{i}Vou guardar ele bem... Aqui parece bom.{/i}"
+    #"Arrumo meu quarto enquanto penso sobre o dia."
+    "{i}...!{/i}"
+    "{i}Ai, não! Naquela hora da apresentação...{/i}"
+    "{i}Fui interrompida e fiquei sem graça!{/i}"
+    "{i}O público deve ter me achado uma idiota! Um fracasso total!{/i}"
+    "{i}Mas tá tudo bem...{/i}"
+    "{i}Tipo, se for comparar a minha apresentação com a de Roko...{/i}"
+    # pode ter um menu de escolhas aq, mas n pensei em nd ainda
+    "{i}A dela foi tão vazia quanto eu poderia imaginar!{/i}"
+    "{i}Quanto a Juni... Acho que fiquei até com pena dela.{/i}"
+    "{i}Ela pode ser muitas mais do que capaz...{/i}"
+    "{i}Mas com aquela timidez não dá pra chegar muito longe.{/i}"
+    "{i}Engraçado que Nádia é meio que o oposto de Juni.{/i}"
+    "{i}Toda afrontosa e confiante...{/i}"
+    "{i}Fico assustada toda vez que vejo algum boato sobre ela.{/i}"
+    "{i}Eh... Pelo menos, com elas acho que dá pra competir...{/i}"
+    "{i}Agora competir com a Linne?{/i}"
+    "{i}Com aquela voz perfeita, aparência perfeita, atuação perfeita...{/i}"
+    "{i}Sorriso perfeito, timbre perfeito...{/i}"
+    "{i}TUDO perfeito!{/i}"
+    "{i}Que raiva! E eles juram que esse programa é justo!{/i}"
+    "{i}Ahhf...{/i}"
+    "{i}Tenho que me acalmar, ficar irritada faz mal pra minha pele...{/i}"
+    "{i}E a falta de uma boa noite de sono também.{/i}"
+    # finalizacao 
     jump cap1_1
 
 

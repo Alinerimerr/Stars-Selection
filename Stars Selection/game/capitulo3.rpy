@@ -1,4 +1,4 @@
-label cap2_1:
+label cap3_1:
 
     "Mais uma manhã..."
     "Ahh... Parece que tenho que voltar a treinar."
@@ -76,7 +76,7 @@ label cap2_1:
 
     
 
-label cap2_2:
+label cap3_2:
 
     #evento no qual Juni passara por problemas.
 

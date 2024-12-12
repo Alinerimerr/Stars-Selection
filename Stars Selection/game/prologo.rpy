@@ -13,6 +13,10 @@ label prologo1_i:
     Sr "haverão cinco trainees com potencial para debutar."
     Sr "No entanto, apenas uma delas irá ser capaz de superar e mostrar ao mundo suas habilidades!"
     #mudar para sorriso arrogante
+    show exc:
+        xaling 0.5
+        yaling 0.5
+    
     Sr "Agora, eu sei que vocês devem estar curiosos para conhecer elas…"
     Sr "Hehe, eu também estou!"
     Sr "Então vamos conferir as nossas candidatas!"
@@ -33,27 +37,27 @@ label prologo1_i:
     Sr "Agora, nossa próxima candidata."
     # Luzes apontam para Nadia
     Sr "Eu lhes apresento: Srta. Nadia!"
-    n "Olá, mundo! Preparem-se pois eu vou com tudo!"
+    n_f "Olá, mundo! Preparem-se pois eu vou com tudo!"
     Sr "Caramba, e que baita personalidade…"
     #risadas programadas do público
     Sr "Mas o que é um reality sem um pouco de encrenca, não é mesmo? Hehehe"
-    n "Como é?!"
+    n_r "Como é?!"
     #ela parece incomodada
     Sr "Nada, minha querida! Era só brincadeira!"
     Sr "Fique à vontade para falar com o público."
     Sr "Mas cuidado com o que diz, senhorita, pois todos estão ouvindo!"
     n "Humpf! Muito bem..."
     #ela olha para a câmera
-    n "Sei que poucas pessoas me conhecem e esta será sua primeira impressão de mim..."
+    n_n "Sei que poucas pessoas me conhecem e esta será sua primeira impressão de mim..."
     #olhar determinado
-    n "Mas eu quero deixar claro quem eu sou e que não me deixarei perder pelo caminho."
-    n "Esta é uma grande oportunidade e eu não vou desperdiçá-la. Irei lutar até o fim!"
+    n_f "Mas eu quero deixar claro quem eu sou e que não me deixarei perder pelo caminho."
+    n_f "Esta é uma grande oportunidade e eu não vou desperdiçá-la. Irei lutar até o fim!"
     #falso sorriso do sr star
     Sr "Quanta determinação! É assim que se fala, Nadia! Agora, pode se dirigir ao seu assento."
     Sr "A nossa próxima convidada ganhou o olhar dos nossos jurados à primeira vista, uma pérola rara!"
     Sr "Apresento-lhes: Srta. Junnie!"
     #junnie tímida
-    j "O-Olá, pessoal…!"
+    j_m "O-Olá, pessoal…!"
     Sr "Vamos lá, não seja tímida, certamente há muito que você queira dizer."
     j "Certo, bem… Meu nome é Junnie e e-eu realmente quero conseguir debutar…"
     j "Conto com o apoio de todos vocês!"

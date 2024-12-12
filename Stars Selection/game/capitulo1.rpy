@@ -273,9 +273,6 @@ label cap1_3:
                             #"O que te faz pensar assim?":            
                             #"O que quer dizer com isso?"
 
-
-
-
                 "Tem razão.":
                     m "Faz sentido..."
                     m "Acho que tem razão!"
@@ -364,7 +361,6 @@ label cap1_3:
                     "Me sinto até meio especial!"
                     "Pelo menos... pra Roko."
                     # reacao de moon(n sei o que colocar ainda)
-
 
                     # termino do assunto e convite pra treinar
                     m "Ah, não! Devo estar atrasada pro treino!"
@@ -548,6 +544,41 @@ label cap1_5:
     n "Podemos preparar um espaguete ao molho branco."
     n "Você prepara a massa enquanto eu faço o molho."
     m "Pode ser!"
+
+    n "Temos disponíveis aqui:"
+    n "Massas dos tipos tradicional e linguine..."
+    m "Linguine é um macarrão?! Pensei que fosse aquele moço do Ratatouille..."
+    n "Claro que não! Sua-"
+    n "..."
+    n "Meio que é isso também... Mas na verdade esse é aquele macarrão mais achatado, sabe?"
+    n "Temos aqui também os queijos parmesão, gorgonzola e mussarela..."
+    n "E de proteínas temos frango, salmão e bacon."
+    n "Qual massa você acha uma boa?"
+
+    "Nádia espera por uma resposta."
+    $ time = 5
+    $ timer_range = 5
+    $ timer_range = 'escolha_devagar'
+
+    menu:
+        "Tradicional":
+            m "Eu gosto do tradicional."
+            n "Ok..."
+        "Linguine":
+            m "O Linguine parece interessante."
+            n "Ce escolheu esse por causa do desenho do rato, né?"
+            menu(nvl=True):
+                "Não...":
+                    m "Não, não! Eu nunca faria uma coisa desas!"
+                    n "Sei..."
+                "Talvez...":
+                    m "Hmm... Talvez..."
+                    n "Meu irmãozinho de 10 anos teria respondido a mesma coisa."
+                    m "Ei!"
+    
+    n "E o queijo?"
+label escolha_devagar:
+   
     "Coletamos os ingredientes e materiais e começamos a trabalhar."
     "Enquanto espero o macarrão cozinhar, observo Nádia fazer sua parte."
     "Ela é rápida e confiante em seus movimentos."

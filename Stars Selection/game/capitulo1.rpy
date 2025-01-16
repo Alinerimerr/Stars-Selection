@@ -559,16 +559,19 @@ label cap1_5:
     $ time = 5
     $ timer_range = 5
     $ timer_range = 'escolha_devagar'
-
-    menu:
+    show screen countdown
+    menu(nvl=True):
         "Tradicional":
+            hide screen countdown
             m "Eu gosto do tradicional."
             n "Ok..."
         "Linguine":
-            m "O Linguine parece interessante."
-            n "Ce escolheu esse por causa do desenho do rato, né?"
+            hide screen countdown
+            $ linguine = True
+            m "Linguine parece interessante."
+            n "Cê escolheu esse por causa do desenho do rato, né?"
             menu(nvl=True):
-                "Não...":
+                "Não!":
                     m "Não, não! Eu nunca faria uma coisa desas!"
                     n "Sei..."
                 "Talvez...":
@@ -577,7 +580,23 @@ label cap1_5:
                     m "Ei!"
     
     n "E o queijo?"
+
+    $ time = 5
+    $ timer_range = 5
+    $ timer_range = 'escolha_devagar'
+    show screen countdown
+    menu(nvl=True):
+            "Parmesão. ":
+                hide screen countdown
+                n "Tá..."
+            "Gorgonzola. ":
+                hide screen countdown
+                n "Eca, que nojo!"
+
 label escolha_devagar:
+    n "Aí, cê demora demais!
+    n "Deixa que eu faço."
+    "Ela me afasta e escolhe os ingredientes sozinha."
    
     "Coletamos os ingredientes e materiais e começamos a trabalhar."
     "Enquanto espero o macarrão cozinhar, observo Nádia fazer sua parte."

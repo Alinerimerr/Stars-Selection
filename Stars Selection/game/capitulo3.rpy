@@ -417,7 +417,7 @@ label cap3_4:
             n "Tô, tipo... me ajustando à situações dificeis..."
             n "Então, essa é a situação perfeita pra começar a testar isso."
             l "Voltei, garotas. podemos começar!"
-            jump cap3_jogos
+            #jump cap3_jogos
 
         "Artes com Juni.":
             m  "Claro! Pode ser divertido."
@@ -463,9 +463,6 @@ label cap3_4:
             Sr "Então tomei a iniciativa de fazer algumas... gravações mais elaboradas, sabe?"
             
             jump cap3_artes
-
-label cap3_jogos:
-
 
 
 label cap3_artes:
@@ -574,5 +571,3 @@ label cap3_artes:
     "Enquanto analisava as peças de roupa, Juni vem falar comigo."
     j "Animada, Moon? Você parece saber o que está fazendo."
     m "Mais ou menos... tô tentando montar um look mais casual..."
-    ""
-    j ""

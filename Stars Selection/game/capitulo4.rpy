@@ -6,7 +6,7 @@ label cap4_1:
     "Encontro Nádia na cozinha."
     n "Finalmente acordou no horário, Moon?"
     m "*bocejo* Bom dia, pra você também..."
-    n "Garota... cê tá acabada, hein."
+    n "Garota... 'cê tá acabada, hein."
     m "Ah, isso é normal..."
     m "Queria ter a habilidade de acordar disposta todos os dias."
     m "Como a Linne... "
@@ -55,7 +55,7 @@ label cap4_1:
     "E o pior... ela não está aberta a conversar agora."
     "Bem que Nádia tentou avisar..."
     "Mas eu só queria poder ajudar."
-    "... Mas, tenho que começar a treinar. Não posso dar mole, mesmo com minhas ."
+    "... Mas, tenho que começar a treinar. Não posso dar mole, mesmo com minhas   *******."
     
     "Mais tarde eu converso com ela."
     # Treinamento
@@ -254,7 +254,7 @@ label cap4_4:
     "Ele vai embora em mais nem menos."
     n "O que ele quis dizer com 'Linne pode te explicar mais sobre o assunto', hein?"
     l "Não sei... ele deve estar inventando coisas."
-    "Então o realto delas foi ao ar..."
+    "Então o relato delas foi ao ar..."
     #"E talvez... O que deu a entender foi que Linne saiu como vítima."
     "Por isso as pessoas só falavam disso na Internet."
     n "Escuta, eu... não tô brava."

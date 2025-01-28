@@ -20,6 +20,9 @@ init python:
     vermelho = False
     ignorante = False
     treino_roko = False
+    linguine = False
+    parmesao = False
+    frango = False
 
     # variaveis cap2
     aceitar = False
@@ -48,6 +51,7 @@ define Sr_r = Character(_("Sr. Star"), kind=nvl, color="#e93c59", window_backgro
 define Sr_m = Character(_("Sr. Star"), kind=nvl, color="#e93c59", window_background="images/txtbox-medo.png")
 
 define n_f = Character(_("Nadia"), kind=nvl, color="#871abe", window_background="images/txtbox-nadia.png")
+define n = Character(_("Nadia"), kind=nvl, color="#871abe", window_background="images/txtbox-nadia.png")
 define n_t = Character(_("Nadia"), kind=nvl, color="#871abe", window_background="images/txtbox-triste.png")
 define n_n = Character(_("Nadia"), kind=nvl, color="#871abe", window_background="images/txtbox-nadia-neutra.png")
 define n_r = Character(_("Nadia"), kind=nvl, color="#871abe", window_background="images/txtbox-nadia-brava.png")

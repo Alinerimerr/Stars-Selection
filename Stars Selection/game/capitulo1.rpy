@@ -559,16 +559,19 @@ label cap1_5:
     $ time = 5
     $ timer_range = 5
     $ timer_range = 'escolha_devagar'
-
-    menu:
+    show screen countdown
+    menu(nvl=True):
         "Tradicional":
+            hide screen countdown
             m "Eu gosto do tradicional."
             n "Ok..."
         "Linguine":
-            m "O Linguine parece interessante."
-            n "Ce escolheu esse por causa do desenho do rato, né?"
+            hide screen countdown
+            $ linguine = True
+            m "Linguine parece interessante."
+            n "Cê escolheu esse por causa do desenho do rato, né?"
             menu(nvl=True):
-                "Não...":
+                "Não!":
                     m "Não, não! Eu nunca faria uma coisa desas!"
                     n "Sei..."
                 "Talvez...":
@@ -577,8 +580,45 @@ label cap1_5:
                     m "Ei!"
     
     n "E o queijo?"
+
+    $ time = 5
+    $ timer_range = 5
+    $ timer_range = 'escolha_devagar'
+    show screen countdown
+    menu(nvl=True):
+            "Parmesão. ":
+                hide screen countdown
+                n "Tá..."
+                $ parmesao = True
+            "Gorgonzola. ":
+                hide screen countdown
+                n "Eca, que nojo!"
+
+    n "Agora... a carne"
+
+    $ time = 5
+    $ timer_range = 5
+    $ timer_range = 'escolha_devagar'
+    show screen countdown
+
+    menu(nvl=True):
+        "Frango":
+            hide screen countdown
+            n "Uhh, parece bom."
+            $ frango = True
+        "Bacon":
+            hide screen countdown
+            n "Ok..."
+
+    jump escolha_rapida
+
 label escolha_devagar:
+    n "Aí, cê demora demais!"
+    n "Deixa que eu faço."
+    "Ela me afasta e escolhe os ingredientes sozinha."
    
+   
+label escolha_rapida:   
     "Coletamos os ingredientes e materiais e começamos a trabalhar."
     "Enquanto espero o macarrão cozinhar, observo Nádia fazer sua parte."
     "Ela é rápida e confiante em seus movimentos."
@@ -640,7 +680,7 @@ label cap1_6:
     if (vermelho):
         "Nádia sussurra ao meu lado."
         n "Parece que a Carminha Frufru se deu mal..."
-        m "Tudo o que vai... volta."
+        #m "Tudo o que vai... volta."
        
     Sr "Uhh! Parece muito bom!"
     Sr "Podem dizer do que se trata?"
@@ -661,70 +701,78 @@ label cap1_6:
     "Depois de muito esforço mental, ela leva o garfo à boca."
     r "..."
     "Ela mastiga devagar..."
-    Sr "Está tudo bem, srta. Roko...?"
-    r "..."
-    "Ela continua mastigando."
-    "Seu rosto começa a suar e empalidecer."
-    "Ela parece prestes a vomitar ou desmaiar."
-    Sr "Meu Deus, há algo errado!"
-    "As meninas da equipe 2 também parecem nervosas."
-    l "Oh, não! O que houve?!"
-    n "Meninas, quando eu falei de envenenar ela, eu estava BRIN-CAN-DO, tá bem?"
-    "Nádia se diverte com a situação."
-    Sr "Equipe médica, por favor!"
-    "Sr.Star acena para chamar os primeiros socorros."
-    "Nesse momento, Roko finalmente consegue engolir."
-    r "Arhg!"
-    r "Não precisa, eu estou bem..."
-    Sr "Ufa!"
-    "Todos parecem bem mais aliviados."
-    Sr "A senhorita realmente nos preocupou..."
-    Sr "Gostaria de uma pausa para respirar, srta. Roko?"
-    r "Não, não."
-    r "Isso já foi o suficiente para minha decisão final."
-    "O clima se torna mais tenso após suas palavras."
-    Sr "Bem... Então..."
-    # muda para feicao confiante
-    Sr "Diga-nos a sua escolha!"
-    r "Dadas as circunstâncias..."
-    r "Minha nota para a equipe 2 é..."
-    "A produção coloca uma música de tensão."
+
+    if (linguine and parmesao and frango):
+
+        r "Hmmmm..."
+        r "Na verdade... iso tá mt bom!"
 
 
-    r "5.1!"
-    "!!!"
-    "O-o que...?"
-    "Todos permanecem em choque por uns instantes."
-    j "5-5.1??"
-    "Juni se vira para Linne, ainda em choque."
-    j "Então nós..."
-    l "Vencemos?!"
-    Sr "Ha Ha, sim!"
-    Sr "As vencedoras são Linne e Juni!"
-    Sr "Meus parabéns, meninas!"
-    "Confetes são lançados ao ar em comemoração."
-    # elaborar comemoracao
+    else:
+        Sr "Está tudo bem, srta. Roko...?"
+        r "..."
+        "Ela continua mastigando."
+        "Seu rosto começa a suar e empalidecer."
+        "Ela parece prestes a vomitar ou desmaiar."
+        Sr "Meu Deus, há algo errado!"
+        "As meninas da equipe 2 também parecem nervosas."
+        l "Oh, não! O que houve?!"
+        n "Meninas, quando eu falei de envenenar ela, eu estava BRIN-CAN-DO, tá bem?"
+        "Nádia se diverte com a situação."
+        Sr "Equipe médica, por favor!"
+        "Sr.Star acena para chamar os primeiros socorros."
+        "Nesse momento, Roko finalmente consegue engolir."
+        r "Arhg!"
+        r "Não precisa, eu estou bem..."
+        Sr "Ufa!"
+        "Todos parecem bem mais aliviados."
+        Sr "A senhorita realmente nos preocupou..."
+        Sr "Gostaria de uma pausa para respirar, srta. Roko?"
+        r "Não, não."
+        r "Isso já foi o suficiente para minha decisão final."
+        "O clima se torna mais tenso após suas palavras."
+        Sr "Bem... Então..."
+        # muda para feicao confiante
+        Sr "Diga-nos a sua escolha!"
+        r "Dadas as circunstâncias..."
+        r "Minha nota para a equipe 2 é..."
+        "A produção coloca uma música de tensão."
 
 
-    n "Espera aí um instante..."
-    n "Você quase desmaiou provando aquele prato..."
-    n "E mesmo assim deu a MAIOR NOTA?!"
-    #"Nádia finalmente libera sua raiva."
-    r "Eu não estava quase desmaiando..."
-    r "Estava apenas... Saboreando o ingrediente especial da Juni!"
-    r "Sabe ele deu um sabor..."
-    #"Roko procura por palavras."
-    r "Muito..."
-    r "Huh..."
-    r "..."
-    r "Único!"
-    r "Por isso achei que elas mereceram essa nota."
-    n "Escuta aqui o sua-"
-    l "Calma, Nádia. Não há motivos para ficar irritada."
-    l "É só uma brincadeira..."
-    #Sr "Exatamente. Vocês não sairam prejudicadas."
-    n "Grrr!"
-    "Ela vira as costas e sai batendo os pés."
+        r "5.1!"
+        "!!!"
+        "O-o que...?"
+        "Todos permanecem em choque por uns instantes."
+        j "5-5.1??"
+        "Juni se vira para Linne, ainda em choque."
+        j "Então nós..."
+        l "Vencemos?!"
+        Sr "Ha Ha, sim!"
+        Sr "As vencedoras são Linne e Juni!"
+        Sr "Meus parabéns, meninas!"
+        "Confetes são lançados ao ar em comemoração."
+        # elaborar comemoracao
+
+
+        n "Espera aí um instante..."
+        n "Você quase desmaiou provando aquele prato..."
+        n "E mesmo assim deu a MAIOR NOTA?!"
+        #"Nádia finalmente libera sua raiva."
+        r "Eu não estava quase desmaiando..."
+        r "Estava apenas... Saboreando o ingrediente especial da Juni!"
+        r "Sabe ele deu um sabor..."
+        #"Roko procura por palavras."
+        r "Muito..."
+        r "Huh..."
+        r "..."
+        r "Único!"
+        r "Por isso achei que elas mereceram essa nota."
+        n "Escuta aqui o sua-"
+        l "Calma, Nádia. Não há motivos para ficar irritada."
+        l "É só uma brincadeira..."
+        #Sr "Exatamente. Vocês não sairam prejudicadas."
+        n "Grrr!"
+        "Ela vira as costas e sai batendo os pés."
 
 
     # opcao de escolha?

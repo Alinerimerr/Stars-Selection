@@ -748,7 +748,8 @@ label cap1_5:
     menu:
         "Tradicional":
             m "Eu gosto do tradicional."
-            n "Ok..."
+            n "Todo mundo gosta do tradicional."
+            $ tradicional = True
         "Linguine":
             m "O Linguine parece interessante."
             n "Ce escolheu esse por causa do desenho do rato, né?"
@@ -760,9 +761,48 @@ label cap1_5:
                     m "Hmm... Talvez..."
                     n "Meu irmãozinho de 10 anos teria respondido a mesma coisa."
                     m "Ei!"
-   
+
     n "E o queijo?"
+
+    $ time = 5
+    $ timer_range = 5
+    $ timer_range = 'escolha_devagar'
+    show screen countdown
+    menu(nvl=True):
+            "Parmesão. ":
+                hide screen countdown
+                n "Hmm..."
+                $ parmesao = True
+            "Gorgonzola. ":
+                hide screen countdown
+                n "Eca! que nojo!"
+                m "Que foi? Não gosta?"
+                n "E você gosta?"
+                n "Acho que foi um erro ter deixado você ajudar..."
+
+    n "Agora... a carne"
+
+    $ time = 5
+    $ timer_range = 5
+    $ timer_range = 'escolha_devagar'
+    show screen countdown
+
+    menu(nvl=True):
+        "Frango":
+            hide screen countdown
+            n "Hmm, parece uma boa."
+            $ frango = True
+        "Bacon":
+            hide screen countdown
+            n "Você tem... Gostos diferenciados."
+
 label escolha_devagar:
+    n "Aí, cê demora demais!"
+    n "Deixa que eu faço."
+    "Ela me afasta e escolhe os ingredientes sozinha."
+   
+   
+label escolha_rapida:   
    
     "Coletamos os ingredientes e materiais e começamos a trabalhar."
     "Enquanto espero o macarrão cozinhar, observo Nádia fazer sua parte."
@@ -822,6 +862,9 @@ label cap1_6:
     r "Até que não está ruim..."
     r "Eu daria um 8..."
     Sr "8 é uma boa nota!"
+    if (tradicional && parmesao && frango):
+        $ aceitavel = True
+        jump prato2
     r "Mas como tem brócolis a minha nota final é 5!"
     Sr "!!!"
     "Ah não, não pode ser..."
@@ -833,11 +876,12 @@ label cap1_6:
     Sr "Neste caso... 5 é a nota final!"
     Sr "He he..."
     "Ele ri meio sem graça."
+
+label prato2:
     Sr "Podem ir, meninas. Vocês fizeram um ótimo trabalho!"
     Sr "Equipe 2, por favor, apresente-se!"
     "As meninas da equipe 2 dispõem seu prato sobre o balcão de Roko."
     "Roko arregala os olhos ao observar o macarrão coberto de molho de tomate."
-
 
     if (vermelho):
         "Nádia sussurra ao meu lado."
@@ -850,10 +894,8 @@ label cap1_6:
     j "Sim! Foi temperado com um ingrediente secreto especial meu!"
     "Juni parece orgulhosa sobre isso."
 
-
     if (vermelho):
         "Mal ela sabe..."
-
 
     r "... Tenho mesmo que comer isso?"
     Sr "Para dar uma nota, você precisa primeiro provar."
@@ -892,107 +934,111 @@ label cap1_6:
     "A produção coloca uma música de tensão."
 
     r "5.1!"
-    "!!!"
-    "O-o que...?"
-    "Todos permanecem em choque por uns instantes."
-    j "5-5.1??"
-    "Juni se vira para Linne, ainda em choque."
-    j "Então nós..."
-    l "Vencemos?!"
-    Sr "Ha Ha, sim!"
-    Sr "As vencedoras são Linne e Juni!"
-    Sr "Meus parabéns, meninas!"
-    "Confetes são lançados ao ar em comemoração."
-    # elaborar comemoracao
-    n "Espera aí um instante..."
-    n "Você quase desmaiou provando aquele prato..."
-    n "E mesmo assim deu a MAIOR NOTA?!"
-    #"Nádia finalmente libera sua raiva."
-    r "Eu não estava quase desmaiando..."
-    r "Estava apenas... Saboreando o ingrediente especial da Juni!"
-    r "Sabe ele deu um sabor..."
-    #"Roko procura por palavras."
-    r "Muito..."
-    r "Huh..."
-    r "..."
-    r "Único!"
-    r "Por isso achei que elas mereceram essa nota."
-    n "Escuta aqui, sua-"
-    l "Calma, Nádia. Não há motivos para ficar irritada."
-    l "É só uma brincadeira..."
-    #Sr "Exatamente. Vocês não sairam prejudicadas."
-    n "Grrr!"
-    "Ela vira as costas e sai batendo os pés."
-   
-    "É melhor eu conversar com ela."
-    m "Nádia, espera!"
-    "Corro atrás dela enquanto o Sr.Star encerra o evento."
-    "Já estamos na metado do caminho para os dormitórios quando finalmente a alcançou."
-    n "Argh! O que foi agora?!"
-    n "Será que não posso ter um minuto de paz!??"
-    m "Podemos conversar um segundo?"
-    n "..."
+    if aceitavel:
+        n "UUUHUUU! Nós vencemos!"
+        
+    else:
+        "!!!"
+        "O-o que...?"
+        "Todos permanecem em choque por uns instantes."
+        j "5-5.1??"
+        "Juni se vira para Linne, ainda em choque."
+        j "Então nós..."
+        l "Vencemos?!"
+        Sr "Ha Ha, sim!"
+        Sr "As vencedoras são Linne e Juni!"
+        Sr "Meus parabéns, meninas!"
+        "Confetes são lançados ao ar em comemoração."
+        # elaborar comemoracao
+        n "Espera aí um instante..."
+        n "Você quase desmaiou provando aquele prato..."
+        n "E mesmo assim deu a MAIOR NOTA?!"
+        #"Nádia finalmente libera sua raiva."
+        r "Eu não estava quase desmaiando..."
+        r "Estava apenas... Saboreando o ingrediente especial da Juni!"
+        r "Sabe ele deu um sabor..."
+        #"Roko procura por palavras."
+        r "Muito..."
+        r "Huh..."
+        r "..."
+        r "Único!"
+        r "Por isso achei que elas mereceram essa nota."
+        n "Escuta aqui, sua-"
+        l "Calma, Nádia. Não há motivos para ficar irritada."
+        l "É só uma brincadeira..."
+        #Sr "Exatamente. Vocês não sairam prejudicadas."
+        n "Grrr!"
+        "Ela vira as costas e sai batendo os pés."
+    
+        "É melhor eu conversar com ela."
+        m "Nádia, espera!"
+        "Corro atrás dela enquanto o Sr.Star encerra o evento."
+        "Já estamos na metado do caminho para os dormitórios quando finalmente a alcançou."
+        n "Argh! O que foi agora?!"
+        n "Será que não posso ter um minuto de paz!??"
+        m "Podemos conversar um segundo?"
+        n "..."
 
-    menu(nvl=True):
-        "Você não devia reagir assim":
-            m "Sei que está zangada, mas..."
-            m "Explodir daquela forma na frente de todos é loucura!"
-            n "Isso... não é algo fácil de controlar e você sabe disso!"
-            n "Afinal, aquilo foi muito pessoal."
-            m "..."
-            m "Mas se você continuar assim..."
-            m "Quem sairá prejudicada será você!"
-            n "... Não preciso da sua preocupação."
+        menu(nvl=True):
+            "Você não devia reagir assim":
+                m "Sei que está zangada, mas..."
+                m "Explodir daquela forma na frente de todos é loucura!"
+                n "Isso... não é algo fácil de controlar e você sabe disso!"
+                n "Afinal, aquilo foi muito pessoal."
+                m "..."
+                m "Mas se você continuar assim..."
+                m "Quem sairá prejudicada será você!"
+                n "... Não preciso da sua preocupação."
 
 
-        "O julgamento está errado.":
-            m "Olha eu te entendo..."
-            m "Pela forma que Roko fez o julgamento..."
-            m "Ela-"
-            n "Tem algo pessoal contra nós? Sim. Eu percebi!"
-            n "Ela deve achar que a gente é algum tipo se seres primitivos! Por isso fez aquilo!"
-            n "Porque não se manifestou naquela hora? Você também fazia parte da equipe."
-            m "..."
-            "Mas que situação complicada..."
-            $ roko -= 3
+            "O julgamento está errado.":
+                m "Olha eu te entendo..."
+                m "Pela forma que Roko fez o julgamento..."
+                m "Ela-"
+                n "Tem algo pessoal contra nós? Sim. Eu percebi!"
+                n "Ela deve achar que a gente é algum tipo se seres primitivos! Por isso fez aquilo!"
+                n "Porque não se manifestou naquela hora? Você também fazia parte da equipe."
+                m "..."
+                "Mas que situação complicada..."
+                $ roko -= 3
 
-    "Solto um longo suspiro."
-    m "É melhor esquecermos isso."
+        "Solto um longo suspiro."
+        m "É melhor esquecermos isso."
 
-    "Ouço as outras garotas chegando a nós."
-    r "Ora se não é a pavio curto e companhia!"
-    r "Espero que tenha esfriado a cabeça após aquele pequeno show."
-    "O comentário incomoda não apenas Nádia, mas também Juni."
-    n "Você que dá um julgamento totalmente inconsistente e eu saio como louca?!"
-    l "Ela não disse isso!"
-    l "Não há motivos para brigar, meninas!"
-    l "Aquilo não era importante-"
-    j "Quem pensa que é..."
-    j "Quem você pensa que é para dar apelidos para os outros, Roko!"
-    #"Surpresas, encaramos Juni."
-    r "!"
-    j "Err... Quero dizer..."
-    j "E-essa não é uma atitude... Muito legal..."
-    n "Concordo plenamente."
-    r "..."
-    r "Te dou 0.1 ponto a mais e é assim que me agradece?"
-    r "Deveria ter avaliado aquela porcaria como um completo zero!"
-    # de qual lado ficar?
-    l "Agora já chega!"
-    l "Isso está indo longe demais!"
-    l "Não podemos nos esquecer..."
-    l "Que no final somos todas colegas e-"
-    n "Cansei dessa conversa fiada!"
-    n "Tô indo pro meu quarto. Uma boa noite pra vocês."
-    "Nádia segue em direção aos dormitórios."
-    l "Bem... Vamos deixar ela esfriar a cabeça."
-    l "Vocês não sabem do que ela é capaz quando está com muita raiva..."
-    r "Hã?! Como assim?"
-    l "Acreditem em mim... Eu a conheço há muito tempo."
-    m "Conhece?"
-    l "..."
-    l "Está tarde... Vamos dormir, meninas."
-    # final da discussao
+        "Ouço as outras garotas chegando a nós."
+        r "Ora se não é a pavio curto e companhia!"
+        r "Espero que tenha esfriado a cabeça após aquele pequeno show."
+        "O comentário incomoda não apenas Nádia, mas também Juni."
+        n "Você que dá um julgamento totalmente inconsistente e eu saio como louca?!"
+        l "Ela não disse isso!"
+        l "Não há motivos para brigar, meninas!"
+        l "Aquilo não era importante-"
+        j "Quem pensa que é..."
+        j "Quem você pensa que é para dar apelidos para os outros, Roko!"
+        #"Surpresas, encaramos Juni."
+        r "!"
+        j "Err... Quero dizer..."
+        j "E-essa não é uma atitude... Muito legal..."
+        n "Concordo plenamente."
+        r "..."
+        r "Te dou 0.1 ponto a mais e é assim que me agradece?"
+        r "Deveria ter avaliado aquela porcaria como um completo zero!"
+        # de qual lado ficar?
+        l "Agora já chega!"
+        l "Isso está indo longe demais!"
+        l "Não podemos nos esquecer..."
+        l "Que no final somos todas colegas e-"
+        n "Cansei dessa conversa fiada!"
+        n "Tô indo pro meu quarto. Uma boa noite pra vocês."
+        "Nádia segue em direção aos dormitórios."
+        l "Bem... Vamos deixar ela esfriar a cabeça."
+        l "Vocês não sabem do que ela é capaz quando está com muita raiva..."
+        r "Hã?! Como assim?"
+        l "Acreditem em mim... Eu a conheço há muito tempo."
+        m "Conhece?"
+        l "..."
+        l "Está tarde... Vamos dormir, meninas."
+        # final da discussao
 
     $ atividade = "Antes de dormir"
 

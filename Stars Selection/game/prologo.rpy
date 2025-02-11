@@ -3,7 +3,7 @@ label prologo1_i:
     #show palco at truecenter:
     #    zoom 2
     #with dissolve"""
-    "Som, som, testando… E-hem…"
+    Sr "Som, som, testando… E-hem…"
     Sr "Boa noite, senhoras e senhores telespectadores!"
     Sr "Agradeço sua sublime companhia que nos permite estar neste palco tão acolhedor"
     "{i}Eu estou tão nervosa.{/i}"
@@ -13,9 +13,6 @@ label prologo1_i:
     Sr "haverão cinco trainees com potencial para debutar."
     Sr "No entanto, apenas uma delas irá ser capaz de superar e mostrar ao mundo suas habilidades!"
     #mudar para sorriso arrogante
-    show exc:
-        xaling 0.5
-        yaling 0.5
     
     Sr "Agora, eu sei que vocês devem estar curiosos para conhecer elas…"
     Sr "Hehe, eu também estou!"
@@ -278,7 +275,7 @@ label prologo2:
 
     menu(nvl=True):
         "Parece divertido!":
-            m ""
+            m "Acho uma ótima ideia!"
 
         "Não parece grande coisa.":
             m "Não acho que estamos aqui pra isso..."
@@ -335,6 +332,8 @@ label fimprologo:
     "{i}Ahhf...{/i}"
     "{i}Tenho que me acalmar, ficar irritada faz mal pra minha pele...{/i}"
     "{i}E a falta de uma boa noite de sono também.{/i}"
+
+    
     # finalizacao 
     jump cap1_1
 

@@ -1,99 +1,420 @@
 label cap2_1:
-
-
-    # a sequencia de dias a seguir servem apenas p/ treinamento e pequenas conversas com as personagens
-    # lembrando que roko nunca se interessa por treinar muito
-
-
+    $ dia += 1
+    $ periodo = "Manhã"
+    $ atividade = "Despertar"
     # dia 2
     # musiquinha de toque de alarme (musica de kpop:)
-    "{i}Ah... O alarme... Que sono...{/i}"
-    "{i}Mais um dia, mais uma luta.{/i}"
-    "{i}Tenho muito o que fazer hoje.{/i}"
-    "Ao me levantar e lavar o rosto, lembro-me dos eventos do dia anterior."
-    "{i}Hmm... Como será que estão as coisas na casa?{/i}"
-    "{i}Espero que o clima não esteja tão ruim.{/i}"
-    "Saio do quarto e observo o corredor, está silencioso como sempre, mas pelas luzes acesas alguém mais deve estar acordada."
+
+    "Ao me levantar, lembro-me dos eventos do dia anterior."
+    "Hmm... Como será que estão as coisas na casa?"
+    "Espero que o clima não esteja tão ruim."
+
+    $ atividade = "Café da manhã"
     j "Oh, bom dia, Moon!"
-    "Me assusto brevemente ao vê-la e percebo que Nadia também está lá."
-    "Juni parece estar em um bom humor apesar da tensão."
-    m "Bom dia!"
+    n "'Dia."
+    "Juni parece estar em um bom humor, apesar da tensão."
+    m "Bom dia..."
+    m "As outras já acordaram?"
+    j "Tenho quase certeza que Linne já levantou."
+    j "S-Só que eu não vi a Roko..."
+    n "Espero que continue assim."
+    n "Tipo... Nada contra ela obviamente..."
+    "Ela ainda está brava com a Roko."
+    "Conversamos um pouco antes de terminar o café da manhã."
+    "E, logo após, começo as atividades do dia."
+    #"Hoje não teremos nenhum evento especial do programa."
     # treino com roko na parte da manhã
+    $ atividade = "Pilates"
     if treino_roko:
         "Tinha combinado com Roko que iríamos treinar juntas hoje."
         "Será que ela ainda está disposta... mesmo com os acontecimentos de ontem?"
         "Bem... acho que só vou descobrir se ela aparecer."
+        "Vou continuar com meu treino."
         if roko>3:
             "Após algum tempo, Roko aparece na academia."
             m "Roko, você veio!"
+            m "Pensei que tinha se esquecido."
             r "Perdão pelo atraso..."
-            r "É que eu... eu estava..."
-            "Ela está nitidamente abalada."
-            m "Tá... tudo bem?"
-            r "Estou bem!"
-            r "E-estou ótima! he he..."
-            r "Não acha melhor nós começarmos?"
-            m "Claro..."
-            "Ficamos em silêncio durante os exercícios."
+            r "É que eu... eu estava me aprontando."
+            "Lembro que ontem a noite ela estava chorando..."
+            "Devo perguntar a ela se está tudo bem?"
+            menu(nvl=True):
+                "Perguntar.":
+                    m "Tá... tudo bem?"
+                    r "Estou bem!"
+                    r "E-estou ótima! he he..."
+                    r "Não acha melhor nós começarmos?"
+                    m "Claro..."
+                "Não perguntar.":                    
+                    m "Nesse caso... Podemos começar?"
+                    r "Podemos sim."
+            "Ficamos em silêncio por alguns momentos."
             r "..."
             "Hmm... isso é estranho."
             "Roko tem o costume de falar muito..."
-            r "Ei, Moon."
-            r "Acredito que..."
-            r "Sabe... Talvez eu..."
+            "Se bem que..."
+            r "Ah! Chega de exercício!"
+            "Ela já está ofegante."
+            r "Vou... fazer... uma palsa."
+            m "Já? Nós ainda nem come-"
+            r "Mas eu já estou cansada!"
+            "Ela se senta no chão e faz biquinho."
+            "Só pode ser brincadeira. Nem uma criança teria uma atitude dessa!"
+            "Entendo o motivo de Nádia ficar irritada com ela."
+            m "Tá bem. Você pode fazer o seu intervalo."
+            m "Mas, você se importa se eu continuar?"
             r "..."
-            r "E-eu te devo desculpas!"
-
-
+            r "Você não fica cansada, Moonie?"
             menu(nvl=True):
-                "Pelo que exatamente?":
-                    m "Desculpas por...?"
-                    r "Hã? "
-                    r "Não é óbvio? Pela nota que eu dei ao seu prato!"
-                    #r "Acho que no final ficou meio injusto..."
-                    r "Pensei que você ficaria chateada..."
+                "As vezes.":
+                    m "Eu fico depois de muito treino..."
+                    m "Ninguém é de ferro, né?"
+                    r "Vocês fazem parecer o contrário..."
+                    m "Er... Isso não é verdade."
+                    m "Olha, eu mesma tenho muita dificuldade em acordar cedo."
+                    m "Já tive vários problemas por isso."
+                    r "Jura? Ha ha ha!"
+                    m "Ei! Isso não é engraçado!"
+                    r "Heh heh... É sim."
+                    r "Pelo menos, eu sou melhor do que você nesse quesito."
+                    "Aff... Devia ter ficado quieta."
+
+                "Quase nunca.":
+                    m "Muito difícil me sentir cansada."
+                    r "Hã?"
+                    m "É só manter o equilíbrio entre os treinos e descansos."
+                    r "Ah, eu sou especialista nisso!"
+                    r "De manhã eu acordo. Me arrumo e fico encantadora."
+                    r "Gosto de estudar logo de manhazinha."
+                    r "Então, depois disso eu treino dança e faço uma palsa."
+                    r "Aí treino canto e faço uma palsa para o almoço."
+                    r "Já contei que tenho muitos seguidores?"
+                    r "Pois bem... De tarde costumo elaborar minhas postagens."
+                    r "Ser famosa na Internet não é nada fácil, afinal."
+                    m "Sei... E aí?"
+                    r "Bem, depois disso eu tiro meu sono da beleza e passo o dia livre."
+                    r "É a rotina de treino perfeita."
+                    "Ela treina só na parte da manhã e acha isso bom?!"
+                    "Essa rotina está cheia de folgas e auto-sabotamento."
+                    "Se ela continuar assim, não chegará muito longe."
+                    "O que digo a ela?"
+
                     menu(nvl=True):
-                        "Por que fez aquilo?":
-                            m "Eu só queria saber o motivo dessa decisão."
-                            r "Oh, bem... Não é nada contra você..."
-                            r "Mas, eu não SUPORTO a ideia de dar a vitória para alguém como a Nádia!"
-                            r "Você viu como ela reagiu? Totalmente fora de questão!"
-                            r "E sabe... eu também fiquei bem amiga da Linne."
-                            r "Ela disse que se quisermos manter nossa amizade, sempre temos que nos ajudar..."
-                       
-                "Não se preocupe com isso.":      
-                    m "Tá tudo bem, eu não ligo pra isso."
-                    r "Ah, não mesmo?"
-                    r "Ufa! Que bom."
-                    r "Assim eu não devo satisfação pra ninguém!"
-                #"Deve mesmo!":
-    #
+                        "Você pode melhorar.":
+                            m "Não quero ser chata, mas..."
+                            m "Acho que precisa rever essa rotina."
+                            r "Rever? Bobagem! Está bom assim."
+                            m "Não acha que... Talvez você fique para trás assim?"
+                            r "..."
+                        "Continue assim.":
+                            m "É realmente uma ótima rotina."
+                            r "É, sim."
+                            r "Não entendo o motivo de vocês se esforçarem tanto."
+                            r "Vou vencer vocês pelo cansaço."
+                            m "Pode acreditar..."
+                            "Já tô vendo ela sendo a primeira eliminada..."
+                            # incentivou roko a manter sua pessima rotina
+                            $ karma += 10
 
+            r "Hah, quem diria..."
+            r "Achei que você fosse uma ralé qualquer..."
+            r "Pórem, você é até que bem legal, Moon."
+            m "Ah, obrigada..."
+            "'Ralé'."
+            r "Acredito até que... Eu te deva desculpas."
+            r "Pelo que eu fiz ontem no evento..."
+            r "Afinal, você perdeu por um motivo bobo..."
+            m "Ah-ha! Então, você admite que estava errada?"
+            r "..."
+            r "Eu tinha meus motivos..."
+            r "V-Você me perdoa?"
+            menu(nvl=True):
+                "Sim.":
+                    m "Claro. Não tenho motivos pra guardar magoas."
+                    r "Jura? De verdade, mesmo?."
+                    jump presente_roko
+                "Não."
+            m "Hmmm... não sei, não..."
+                if roko>5:
+                    jump presente_roko
+                else:
+                    r "Compreendo sua frustração, mas..."
+                    r "Q-Quero dizer-"
+                    r "E-Eu não preciso do seu perdão!"
+                    "Ela sai sem se despedir."
+                    "E parecia estar muito magoada, também..."
+                    jump cap2_2
 
-    # dia 3
+label presente_roko:
 
+    r "E-Eu posso te dar um conjunto de roupas de treino novo se quiser."
+    r "A costura é bem melhor e-e vai servir certinho-"
+    m "Calma, calma!"
+    m "N-Não precisa comprar meu perdão, Roko."
+    m "Eu te perdoo."
+    r "Ah..."
+    r "Mesmo assim, eu gostaria de te presentear."
+    m "Ah, é? Por que?"
+    r "Porque... Eu realmente acho que o conjunto ficaria ótimo em você."
+    r "E também... Esse seu conjunto surrado é horroroso, Moon."
+    m "Hã?!"
+    "É o meu conjunto preferido..."
+    r "Eu tenho vários conjuntos melhores, então um só não me faz falta."
+    m "..."
+    r "Vou deixá-lo no seu quarto quando puder."
+    "Ela se lavanta."
+    r "Preciso ir agora."
+    m "Ah, t-tudo bem."
+    r "Nós vemos mais tarde."
+    m "Tá bem... E-E obrigada pelo presente."
+    "Ela já se foi."
+    "Hmmm... Fico feliz que ela esteja reconhecendo seus erros e se redimindo..."
+    "Só que... Não sei se ela fazendo jeito... Certo."
+    "E me sinto estranha aceitando um presente assim."
+    "Mas espera... Como ela pode saber meu tamanho? Ela nem me perguntou..."
+    "Pensar sobre isso vai me deixar paranoica... Melhor voltar ao treino."
+    $ presente = True
+    $ roko += 10
 
-    # Final do dia 3
-    "Acho que vou encerrar os treinos de hoje."
-    "Amanhã já é a nossa primeira apresentação oficial..."
-    "Ah, que emoção!"
-    "Devo treinar mais um pouco para garantir?"
-    "Não, não posso pensar assim!"
-    "Fiz tudo o que podia..."
-    "Eu acho."
-
-
-    # dia da apresentacao
 label cap2_2:
+    $ atividade = "Treino"
+    "Sigo minha rotina de treino normalmente durante a manhã."
+
+    # essa cena mostra como perde a paciencia rapido e como linne se aproveita disso
+    $ periodo = "Tarde"
+    $ atividade = "Almoço"
+    "Durante o horário do almoço, tive algumas interações superficiais com Juni sobre nossas performances favoritas."
+
+    $ atividade = "Treino"
+
+    "Voltei a treinar durante a tarde."
+    "Acho que peguei um pouco pesado... Me sinto exauta..."
+
+    $ periodo = "Noite"
+    $ atividade = "Antes de dormir"
+
+    "Depois do jantar, fiz minha skincare e me aprontei para ir dormir."
+    if presente:
+        "Chegando no meu quarto, me deparo com um conjunto de roupas de treino preto com detalhes cor de rosa."
+        "O tecido é macio e de altíssima qualidade."
+        "E curiosamente é exatamente do meu tamanho."
+        "Hmmm... É um conjunto bonito, mesmo. Decidi que vou ficar com ele."
+        "Oh, eu nem cheguei a agradecer a Roko."
+        "Talvez ela estaja na sala de star. Vou falar com ela."
+
+        "Encontro Roko e Linne descansando na sala."
+        l "Olá, Moon. Como foi o treino hoje?"
+        m "Foi bem, eu acho."
+        l "Isso é ótimo. Veio descansar também?"
+        m "Na verdade não... Eu já estava indo dormir."
+        m "Mas eu vim agradecer a Roko pelo presente."
+        r "Não precisa agradecer."
+        r "O que achou das roupas? Já experimentou?"
+        m "Ainda não experimentei... Mas achei uma graça e acredito que serve em mim."
+        r "Claro que serve. Só de olhar já consigo saber que nós vestimos o mesmo tamanho."
+        m "Caramba! Como?"
+        r "Bom, eu tenho uma habilidade com números e medidas, de fato."
+        l "Isso é bem legal... Pena que essa não é uma habilidade tão útil na nossa carreira de idle."
+        r "..."
+        m "Err... Eu já vou dormir. Boa noite."
+        l "Boa noite, Moon."
+        "Enquanto voltava pro meu quarto, escuto as duas conversando da sala."
+        l "Você deu um presente pra ela? Por que?"
+        l "Vocês mal se conhecem ainda."
+        r "Nós nos conhecemos, sim... E ela é muito agradável."
+        # uma das estrategias de linne eh deixar as pessoas paranoicas
+        l "É isso que ela quer que você pense."
+        l "Você ainda é muito ingênua. Vai acabar sendo usada e nem vai perceber..."
+        r "..."
+        "M-Mas eu nunca faria isso..."
+        "O que faz ela pensar isso de mim?"
+        #"Estou muito cansada pra pensar nisso agora"
+    else:
+        "Dou uma última olhadinha no despertador antes de deitar."
+        "Vou colocar um outro alarme pra caso eu não acorde com o primeiro..."
+        "Agora sim, posso dormir."
+
+
+    $ dia += 1
+    $ periodo = "Manhã"
+    $ atividade = "Preparação para o treino"
+
+    "Hmm... E agora? Devo usar o conjunto novo?"
+    menu(nvl=True):
+        "Sim.":
+            "Vou usar."
+            "Aposto que Roko ficará feliz."
+            $ conjunto = True
+        "Não.":
+            "Melhor não."
+            "Gosto do meu antigo."
+
+    $ atividade = "Treino"
+
+    "Tudo ocorre normalmente durante os treinos da manhã."
+    if conjunto:
+        "Pra ser bem sincera, estou me sentindo ótima!"
+        "Essas roupas são muuuito confortáveis e elevam minha autoestima."
+
+    $ periodo = "Tarde"
+    $ atividade = "Almoço"
+    "Depois dos treinos da manhã"
+    n "Finalmente, é hora de encher o buchinho!"
+    n "Opa, tô vendo que hoje tem filé de frango."
+    "Todas nos sentamos à mesa."
+    n "Mal posso esperar pra provar."
+    "Ela prova a refeição."
+    n "!!!"
+    n "Aí, esse filé de frango tá seco e duro!"
+    n "Pensei que teria uma refeição decente nesse lugar!"
+    j "Hmm... Não achei nada de errado com a comida..."
+    r "Eu também nâo encontrei nenhum problema."
+    l "Pare com isso, Nádia. Almoço não é hora de dar chilique."
+    n "Que chilique, nada! Só falei o que eu achei, idiota!"
+    l "Hã? M-Me chamou de idiota?"
+    l "M-Mas eu não tenho culpa de você não ter gostado da comida..."
+    l "Por que vocês sempre desconta sua raiva nas outras pessoas?"
+    "Nádia aumenta o tom da voz."
+    n "Eu não-"
+    "Todas olhamos assustadas para ela."
+    n "... Deixa pra lá."
+    "Um clima pesado se estabelece."
+    l "... Acho que perdi minha fome."
+    l "Eu vou indo, meninas..."
+    r "Eu também vou!"
+    r "Não quero ficar perto dessa gentalha."
+    n "..."
+    "Já acabei minha refeição..."
+    menu(nvl=True):
+        "Sair junto.":
+            m "Ei, me esperem!"
+            "Saio atrás delas."
+            "Linne parece chateada."
+            m "Você tá bem, Linne?"
+            l "S-Sim, estou sim."
+            l "O problema é que... Toda vez ela desconta sua raiva em mim."
+            m "Aliás, você comentou que já a conhecia..."
+            l "Isso. Nós costumavamos ser amigas, mas tudo mudou..."
+            l "Mas está tudo bem... O que aconteceu agora não foi nada."
+            l "Até porque nós já brigamos mais feio antes."
+            r "Que horror! Quela bárbara vai pagar!"
+            l "N-Não..."
+            # linne da uma de misericordiosa e bondosa
+            l "Peço pra que não tenham raiva dela. Isso só vai piorar as coisas..."
+            l "Bem, precisamos voltar ao treino."
+        "Não sair.":
+            "Linne e Roko saem juntas do refeitório."
+            n "Grrr! Eu odeio aquela falsa!"
+            n "E quela vagabunda rica-"
+            m "C-Calma, por favor!"
+            m "Você precisa se acalmar!"
+            j "E-Eu ainda não terminei de comer..."
+            n "Ah... Foi mal."
+            n "Eu não queria ter causado tudo isso..."
+            "..."
+            "Ficamos em silêncio por um tempo."
+            n "Nossa, que climão..."
+            n "Já sei! Eu me lembro de ter visto uma caixa de docinhos em algum armário."
+            n "Podemos pegar unzinho e-"
+            j "U-Uma caixa de doces? vermelha e pequena?"
+            n "Sim... Por que?"
+            j "A-Acho que acabaram os doces..."
+            n "Você comeu tudo, garota?!"
+            j "Me d-desculpa..."
+            n "*suspiro*"
+            
+    $ atividade = "Treino de dança"
+
+    "Quando chego no studio de dança para treinar, encontro Nádia dando uma palsa num canto da sala."
+    m "Oi, Nádia."
+    n "E aí? Vai treinar agora?"
+    m "Sim... Se importa?"
+    n "Nop. Fica a vontade."
+    "Coloco a música pra tocar e inicio meu treino."
+    "Enquanto fazia os passos da coreografia, sinto os olhos de Nádia cravados em mim."
+    "Me sinto julgada..."
+    "Opa. Acho que errei essa parte..."
+    "Ai! Errei denovo!"
+    "Ah, espero que ela não tenha notado..."
+    n "He he!"
+    "Ela tenta disfarçar as risadas."
+    n "Hi ha ha!"
+    m "E-Ei! Tá rindo do quê?"
+    n "Nada, não."
+    m "..."
+    n "Tenta ir com mais calma. Cê tá muito apressada nos passos."
+    m "Tudo bem..."
+    "Ela tá tentando ajudar, pelo menos..."
+    "Sigo as instruções dela."
+    n "Viu? Tá bem melhor agora."
+    if conjunto:
+        n "Aliás, gostei do look."
+        m "Obrigada. Foi um presente."
+        n "É mermo, é? Essa pessoa deve gostar bastante do cê pra te dar uma coisa cara dessas..."
+
+        menu(nvl=True):
+            "Foi da Roko.":
+                m "Foi um presente da Roko."
+                n "Ah, tá explicado o porquê ele parece, tipo, muito caro."
+                n "Ué... Mas porque ela fez isso?"
+                m "Não sei... Foi meio que um pedido de desculpas pelo que aconteceu no evento."
+                n "Pedido de desculpas? Por que eu não recebi nada?"
+                n "Eu também quero se for assim."
+                menu(nvl=True):
+                    "Ela deve ter medo de você.":
+                        m "Acho que talvez... Você assuste um pouco ela."
+                        n "Medo? Que nada! Não lembra do que ela me chamou?"
+                        n "Gen-ta-lha!"
+                        m "Não fique assim... Ela me chamou de ralé!"
+                        "Ela solta uma risada alta e genuína."
+                        n "Só pode ser brincadeira!"
+                        m "Juro..."
+                        $ nadia += 5
+                    "Você é muito chata.":
+                        m "As vezes ela só não quer falar com você..."
+                        m "Porque você é chat-"
+                        n "Eu sou o QUÊ?"
+                        m "N-Nada! Esquece o que eu falei..."
+                        $ nadia -= 5
+            "...":
+                n "Mal posso esperar pra ficar bem rica..."
+                n "Aí eu vou poder comprar todas as coisas que sempre quis, tipo roupas como essa."
+                n "E vou poder pagar as dívidas da família..."
+                n "Seria tão bom..."
+
+    n "Bom, chega de descanso!"
+    n "Posso me juntar a você nessa coreografia, senhorita?"
+    m "Mas é claro, milady."
+    "Treinei com Nádia pelo resto da tarde."
+    "Notei que ela muito boa na dança, a propósito."
+    "No final, foi bem divertido..."
+    "Tirando a parte de que sempre errava minimamente o passo ela gargalhava de mim."
+
+    $ periodo = "Noite"
+    $ atividade = "Antes de dormir"
+    "O dia da eliminação está cada vez mais próximo..."
+    "Ai... O que será de mim?!"
+    "São todas muito habilidosas e-e eu sou só..."
+    "Não! Nada de pensamentos negativos! Vai dar tudo certo."
+    "Vou passar os próximos dias me dedicando totalmente aos treinos."
+    "Vai ser cansativo, com certeza..."
+    "Mas agora, é hora de dormir."
+
+label cap2_3:
+    $ dia += 3
+    $ periodo = "Manhã"
+    $ atividade = "Acordando"
+    # dia da apresentacao
+
     "Hã?"
     "Acordo com o despertador me incomodando de novo."
+    "E hoje... É o dia da tão esperada performance de eliminação."
     "Mal me levanto da cama..."
     "E já escuto barulhos vindos do lado de fora do quarto."    
     l "Ai! Toma cuidado!"
     j "Desculpa! E-eu não quis te machucar."
     "Ouço passos apressados se afastando."
     "Ahhh... Parece que o dia não começou tão bem."
-
 
     "Saio do quarto para ver o que houve."
     m "Bom dia, Linne."
@@ -102,7 +423,6 @@ label cap2_2:
     l "Ah, não, não."
     l "Era só a Juni. Ela esbarrou em mim..."
     l "E acabou machucando meu pé."
-
 
     menu(nvl=True):
         "Foi de propósito!":
@@ -114,7 +434,6 @@ label cap2_2:
             $ linne += 3
             $ karma += 5
 
-
         "Você está bem?":
             m "Nossa, eu sinto muito."
             m "Foi muito grave?"
@@ -122,18 +441,21 @@ label cap2_2:
             l "Como sempre..."
             "..."
 
+    l "E você? Não vai se aprontar?"
+    l "Temos a apresentação de tarde."
+    m "Sim..."
+    l "Tome cuidado, ou..."
+    "Ela sorri de uma forma ironica."
+    l "Já sabe, não é, Moon?"
+    "Sinto arripios percorrerem minha espinha."
+    l "Não se assuste. Sei que se sairá bem."
+    l "Boa sorte!"
+    "Linne volta se seguir seu rumo."
+    "Ela tem razão, tenho que me preparar."
 
-    l "Oh! Estou me demorando aqui."
-    l "Será um dia cheio."
-    m "Sim... Temos a apresentação à tarde e os resultados à noite."
 
-
-    # fim desse pequeno dialogo.
-
-
-    # inicio da apresentacao
-    # participantes nos bastidores
-
+    $ periodo = "Tarde"
+    $ atividade = "Apresentação"
 
     Sr "Boa noite à todos!"
     Sr "Sejam bem-vindos de volta ao reality Star's Selection!"
@@ -143,21 +465,47 @@ label cap2_2:
     Sr "As nossas queridas participantes serão avaliadas de acordo com seus devidos desempenhos."
     Sr "Aquela que ficar em último no ranking..."
     Sr "Será, infelizmente, desqualificada do reality."
-    # bla bla bla
+    Sr "É uma pena, realmente..."
+    Sr "Mas o show tem que CON TI NU AR!"
+    "As luzes diminuem."
     Sr "Começaremos com a promissora moonie!"
     "Eu!!"
-    # Minigame
-
-
-    "Aplausos soaram ao final da apresentação."
+    Sr "Pode vir, querida! O palco é todo seu!"
+    "Subo ao palco. Tentando parecer confiante."
+    Sr "Tudo pronto? Então, vamos coomeeeçaaar!"
+    "As luzes se acendem e a música começa a tocar."
+    "Começei com a voz tremula e os passos da coreografia pouco soltos."
+    "Não foi um bom começo..."
+    "Mas, conforme a música foi tocando, eu fui me sintindo mais a vontade no palco."
+    "Concluo a apresntação bem mais confiante."
+    "Sei que fiz meu melhor."
+    #"Aplausos soaram ao final da apresentação."
     Sr "Foi uma ótima apresentação!"
-    # apresentacao das outras.
+    Sr "Bom, isso tirando aquele comecinho deprimente."
+    "Ótimo..."
+    Sr "E agora, vamos a nossa próxima participante!"
+    "Assim, o show seguiu com as apresentações de Roko, Nádia, Linne e Juni."
+    "A performance de Roko foi... Uma performance. Ela cometeu vários erros e parecia se sentir péssima."
+    "A de Nádia foi muito boa. Ela estava confiante e segura do que estava fazendo."
+    "A de Linne foi... Quase perfeita! Parecia que ela já tinha feito aquilo milhares de vezes."
+    "A de Juni foi boa. Ela estava muito fofa e conseguiu esconder que estava extremamente nervosa."
 
+    Sr "E essas foram as performances, senhoras e senhores!"
+    Sr "E que performances! Fiquei de queixo caído na maior parte do tempo!"
+    Sr "Exeto na performance de Roko. Nessa eu só ri, mesmo!"
+    "Me sinto meio mal por Roko..."
+    "Mas... Ela não demonstrava interese em treinar..."
 
-    # saida dos resultados
-    # definir local
+    "Roko resmunga baixinho."
+    r "Vou mandar meu pai processar esse cara!"
+    Sr "Não saiam daí! Daqui alguns instantes voltamos com os resultados!"
+    "Agora nos resta esperar."
+
+label cap2_4:
+    $ periodo = "Noite"
+    $ atividade = "Resultados"
     Sr "Estamos de volta ao programa!"
-    Sr "Espero que não tenham sentido saudades, ha ha!"
+    Sr "Espero que não tenham sentido saudades!"
     Sr "Chegou o tão esperado..."
     Sr "O tão aguardado..."
     Sr "Momento dos resultados!"
@@ -168,6 +516,73 @@ label cap2_2:
     Sr "A eliminada é..."
     l "É isso meninas..."
     l "Boa sorte."
-    j_m "B-boa sorte."
+    j "B-boa sorte."
+    "Pos mais que eu não tenha saído como eu gostaria... Não acho que serei a eliminada."
     "Após o que parece ser uma eternidade, o ranking aparece no telão."
-    "Parece que Roko ficou em último."
+    Sr "Oh! Mas que surpresa!"
+    Sr "Parece que Roko é a eliminada na noite."
+    Sr "Uma pena mesmo..."
+    r "Como? Eu não posso ser eliminada assim!"
+    r "E-Eu..."
+    "Roko faz biquinho."
+    Sr "Regras são regras, minha querida. E dinheiro nenhum vai mudar isso!"
+    Sr "Últimas palavras, srta.Roko?"
+    "Roko parece prestes a fazer birra. Mas desiste."
+    r "..."
+    r "Nem sei o que dizer..."
+    Sr "Não? Então é isso tuuuudo por hoje, senhoras e senhores!"
+    r "N-Não! Espera-"
+    Sr "Uma ótima noite á todos e até uma próximaaaa!"
+    "O prgrama se encerra."
+    Sr "Peço para que se dirija a saída, querida. Suas coisas já estão a esperando."
+    Sr "E não se esqueça de fazer alguns depoimentos sobre o que achou da sua experiência no reality."
+    Sr "Estão dispensadas, estrelhinhas!"
+    "Sr.Star sai."
+    r "Eu nem ao menos tive a oportunidade de falar ao vivo..."
+    n "No caso você disperdiçou a oportunidade, né?"
+    l "Nádia!"
+    n "Que foi? É verdade."
+    l "Gostaria de ter dito algo roko?"
+    l "Pode compartilhar conosco."
+    r "..."
+    r "Eu só... Não pensei que eu fosse ser eliminada assim."
+    j "Ah, Roko... Eu sinto muito..."
+    if roko>15:
+        r "Na verdade... No fundo eu já esperava isso..."
+        r "Ver vocês todas treinando duro, enquanto eu..."
+        n "Não fazia nada?"
+        r "Não!"
+        r "Quero dizer..."
+        r "Nunca imaginei que seria complicado e-e exaustivo assim..."
+        n "É... Bem-vinda a vida real, garota."
+        "Conhecendo a Roko, essa deve ter sido a primeira vez que ela deve estar passando por uma frustração de verdade."
+        m "O importante é que você tentou Roko."
+        r "..."
+        "Lágrimas escorrem pelo seu rosto."
+        r "Tudo isso me fez pensar o quanto eu ainda tenho que me esforçar para chegar no nível de vocês."
+        r "n-não sei s-se sou capaz de continuar."
+        r "E-E agora? O que eu faço?"
+        r "Acabou para mim..."
+        m "Só acaba de verdade se você desistir."
+        m "Vitórias e derrotas fazem parte da vida."
+        m "Após uma derrota há sempre a possibilidade de se levantar."
+        j "I-Isso! Tenho certeza que é mais do q-que capaz!"
+        r "..."
+        r "Agradeço a a-ajuda, meninas..."
+        r "A-Acredito que... Demorei m-muito..."
+        r "P-Para perceber que chorar e fazer birra não vai resolver meus problemas..."
+        m "Não tem problema. nunca é tarde para melhorar."
+        r "Exato..."
+
+    r "Bem... Isso é um adeus."
+    j "Adeus, Roko. Vamos sentir saudades."
+    l "Até, Roko. Boa sorte com o resto da sua vida!"
+    n "Se cuida, Roko."
+    m "Tchau, Roko!"
+    m "Foi um prazer te conhecer."
+    r "Muito obrigada, mesmo."
+
+    "Ela dá as costas e segue no sentido da saída."
+    "Enquanto nós voltamos aos dormitórios."
+
+    jump cap3_1:

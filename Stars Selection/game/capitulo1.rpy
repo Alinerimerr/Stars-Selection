@@ -1,4 +1,17 @@
 label cap1_1:
+
+    #hide daydisplay
+
+    $ dia += 1
+    $ periodo = "Manhã"
+
+
+    D "[dia]"
+
+
+    show daydisplay
+
+
     "TRRIN TRRIN TRRIN TRRIN TRRIN TRRIN"
     m "Ah!"
     "Acordo assustada como som do despertador"
@@ -6,10 +19,8 @@ label cap1_1:
     "O relógio marca 6:30"
     m "Queria dormir só mais um pouquinho..."
     "Mas nossa presença foi solicitada no pátio às 8:30"
-    "E faremos uma pequena performance durante a tarde."
     "É melhor eu começar a me preparar"
     "Não quero estragar tudo logo no primeiro dia."
-
 
     "Saindo para o corredor dou de cara com as outras."
     "Todas estavam saindo de seus quartos parecendo ter acordado agora também."
@@ -18,28 +29,29 @@ label cap1_1:
     l "Bom dia, garotas!"
     m "Bom dia."
     "Juni boceja alto."
-    j "Bom dia!"
+    j "Bom dia."
     n " 'Dia."
-    "Roko apenas acena para nós e se dirige ao banheiro."
+    "Roko apenas se dirige ao banheiro."
     "E as outras garotas continuam seus preparativos."
-    "..."
-    "Linne já parece estar pronta, mas ainda há tempo até nosso compromisso..."
-    "Que estranho."
-
+    l "Algum problema, Moon? Você está com uma cara horrível."
+    m "N-Não... Nenhum problema..."
+    m "É só que... Eu tenho problemas em acordar cedo."
+    l "Entendi. O despertador deve ser o seu maior inimigo, né? hi hi."
+    m "Heh... Sim, sim."
+    "Gostaria que isso não fosse verdade..."
 
     menu(nvl=True):
         "Falar com Linne":
             m "Linne, que horas você levantou?"
             m "Parece estar acordada há horas."
-            l "Ah, não, nem estou de pé há tanto tempo."
+            l "Ah, não... Nem estou de pé há tanto tempo."
             l "E também já estou acostumada a acordar cedo."
             m "Nossa..."
             menu(nvl=True):                
                 "Quanta determinação":
                     m "Você parece tão disposta, Linne."
-                    m "Admiro que consiga acordar tão cedo e ainda estar com um sorriso no rosto!"
-                    l "Ha, ha... Agora fiquei até sem graça."
-                    l "Mas muito obrigada, Moon!"
+                    m "Admiro que consiga acordar tão cedo e ainda estar com um sorriso no rosto."
+                    l "Muito obrigada, Moon... Nossa, fiquei até sem graça."
                     "Ela está realmente contente."
                     $ linne += 1
                     l "Enfim... Não é melhor você se aprontar?"
@@ -48,34 +60,28 @@ label cap1_1:
                 "Ainda é muito cedo":
                     m "Mas... Ainda há muito tempo até às 8:00."
                     m "Precisava mesmo estar pronta com tanta antecedência?"
-                    l "Hmm."
+                    l "Hmm..."
                     l "Não gosto de deixar as coisas pra última hora."
                     "Não sei se isso responde minha pergunta..."
-                    m "Bom... Vou voltar a me preparar."
-                    l "Até logo."
-
 
         "Continuar minhas tarefas":
-            "Bom, é melhor me apressar."
-            l "Moonie?"
-            "Linne chama meu nome assim que viro as costas."
-            "Percebo que todas as outras já se foram."
+            m "Bom, é melhor me apressar..."
+            l "Ah, claro."
             l "Boa sorte hoje."
-
-
     #jump end
 
-
 label cap1_2:
-    "Dado 8:30, estávamos todas presentes no pátio."
-    "O apresentador e a equipe de produção se preparava para a gravação."
+    $ periodo = "Manhã"
+    $ atividade = "Entrevista"
+    #transicao foda
     Sr "Começamos em alguns instantes!"
     Sr "E não se preocupem! Dessa vez não será ao vivo."
-    "Mas... Essa demora está me deixando ansiosa."
-    "e observando bem, Juni também está tensa."
+    "..."
+    "Essa demora está me deixando ansiosa."
+    "E observando bem... Juni também está tensa."
     menu(nvl=True):
         "tentar acalmá-la":
-            m "Hey, Juni!"
+            m "Ei, Juni!"
             #"Ela olha para mim confusa e surpresa."
             j "Ahn??"
             m "Não precisa ficar assim... Sei que vai se sair bem!"
@@ -84,11 +90,8 @@ label cap1_2:
             $ ajuda_j = True
             $ juni += 1
 
-
         "Não fazer nada":
-            "Também estou nervosa..."
-            "Talvez tentar ajudar tenha o efeito contrário."
-
+            "..."
 
     Sr "Começamos em 3..."
     Sr "2..."
@@ -122,60 +125,100 @@ label cap1_2:
     Sr "Ah, e não se esqueçam que hoje à noite teremos um grande evento!"
     Sr "Eu sou o Sr. Star, e você está acompanhando o reality Star's Selection!"
     "A gravação encerra."
-    Sr "Muito bem, equipe."
-    Sr "Agora, senhoritas"
-    Sr "Vocês serão acompanhadas individualmente em suas atividades de treino."
+    Sr "Muito bem, equipe!"
+    Sr "Agora, senhoritas..."
+    Sr "Vocês serão entrevistadas individualmente em suas atividades de treino."
     Sr "Espero que estejam preparadas."
-    Sr "Estão dispensadas!"
 
 
-    "Cada uma se dirige a uma área de treino diferente."
-    "Hmmm..."
-    "Melhor eu treinar dança."
-    # espaco p primeiro minigame
-    "Durante meu treinamento, tento não ficar nervosa com as câmeras que me acompanham."
-    "Após um longo período, finalmente encerramos as gravações."
+    # entrevista particular
+    "Vejo muitas cameras aponatadas para mim e o sr.Star."
+    "Ele fala animadamente com uma delas."
+    Sr "Finalmente, chegou a vez de Moonie falar um pouco sobre si."
+    Sr "Adimito que estava bem animado para ouvir mais sobre você, querida."
+    m "Hã? Quer dizer... Muito obrigada Sr.Star."
+    "Será que é só um modo de falar... Ou ele realmente acha isso?"
+    Sr "Gostaria de compartilhar sua rotina?"
+    m "C-claro!"
+    m "Logo de manhã eu faço minha skincare e tomo meu café da manhã-"
+    Sr "Ahh, sim, sim! Não deve ser fácil manter esse rostinho bonito, não é mesmo?"
+    "E mais uma vez, ele me interrompe."
+    "Parece que vou ter que me acostumar..."
+    Sr "Oh, me perdoe senhorita."
+    Sr "Por favor continue, querida."
+    m "Bem... ainda na parte da manhã eu faço pilates e treino canto."
+    m "Já no início da tarde eu almoço e, logo após, tiro uns 30 minutos para mim."
+    m "Treino dança e fortaleço minha resistência no restante da tarde."
+    m "Ah, eu também gosto muito de tomar um chá da tarde quando sinto fome..."
+    m "Enfim, durante a noite faço novamente minha skincare, cuido do meu cabelo e unhas."
+    m "Janto e me preaparo para dormir."
+    Sr "*bosejo*"
+    # ele é mt bom em destrir a moral das participantes
+    Sr "Bem, não vi nada de mais... Existem rotinas melhores por aí..."
+    Sr "Por um momento, eu esperei algo mais interesante."
+    "C-Como assim ele esperava mais? Isso já não é o suficiente?"
+    Sr "Mas quem sou eu para julgar, não é?"
+    Sr "Agora, me deixe perguntar o que todos querem saber..."
+    Sr "Qual é..."
+    Sr "O seu segredo?"
+    m "S-Segredo... ?"
+    Sr "Como faz para ter essa pele de porcelana?"
+    Sr "E esse cabelo Impecável? Ou esse corpão violão?"
+    m "Hmmm... N-não sei..."
+    Sr "Ora, deixe de suspense, querida. Diga logo!"
+    Sr "O público precisa saber!"
+    m "A-Acho que não faço nada de mais..."
+    Sr "Nem um procedimento estético? Ou produtos milagrosos?"
+    m "O que? Nada disso."
+    Sr "..."
+    m "Hmm... P-Perdão se eu disse alguma cois-"
+    Sr "Ha ha! Isso é ótimo!"
+    Sr "Saiba que, mesmo tendo essa personalidade beeem sem sal ao meu ver..."
+    Sr "Todo mundo adora um rostinho bonito!"
+    "S-Sem sal?!"
+    Sr "Eu APOSTO que vai se dar bem no programa!"
+    Sr "Era só isso mesmo que tinha para conversar com você, querida."
+    Sr "Muito obrigado e boa sorte com os seus treinos."
+    Sr "E não se atrase para o evento de hoje à noite, viu?"
+    Sr "Está dispensada."
+    "Ainda não posso acreditar que ele me chamou de sem sal..."
+    "Será que todo mundo pensa assim?"
 
 
 label cap1_3:
-    # apos o treino, as personagens podem descansar
-    "Ufa! Finalmente acabou!"
-    "E bem na hora do almoço."
-    "É melhor eu comer algo rapidinho para voltar ao treino..."
+
+
+    $ periodo = "Tarde"
+    "Hora do almoço."
+    "Finalmente. Estou morreeendo de fome."
 
 
     if reconhecimento:
         "???"
         "Escuto alguém se aproximar de mim."
-        j "Hey, Moon!"
+        j "Ei, Moon!"
         "É a Juni."
 
 
         if ajuda_j:
-            j "Não tive oportunidade de te agradecer naquela hora."
+            j "Não tive oportunidade d-de te agradecer naquela hora."
             m "Agradecer por...?"
-            j "P-por me apoiar hoje mais cedo."
+            j "Por me apoiar hoje mais cedo."
             j "E sabe..."
             j "Você também parecia nervosa."
-            #"Ah, Ela notou"
-            j "E-então... Quero que saiba que está se saindo bem!"
-            #menu de possiveis respostas
-            #menu(nvl=True):
-
-
-            #Apos o termino desse assunto    
+            j "E-então... Quero que saiba que está se saindo bem!"  
             j "Ah! Mais uma coisinha..."      
-        j "Uhh..."
+        j "Hm..."
         j "Naquele hora, no dia da primeira apresentação"
         j "O que você disse algo sobre ser alguém importante..."
         j "Achei interessante..."
-        "Ela olha no fundo dos meus olhos."
+
+
         menu(nvl=True):
             "...":
                 m "..."
                 "Nos encaramos por um tempo."          
                 j "..."
-                "Constrangida, ela desvia o olhar."
                 j "Enfim... Era só isso que queria dizer."
                 $ juni -= 1
 
@@ -184,7 +227,6 @@ label cap1_3:
                 m "Oh!"
                 m "você achou mesmo?"
                 j "... Ahan."
-                "Ela finalmente desvia os olhos."
                 m "Isso é ótimo!"
                 m "Obrigada, você é muito gentil."
                 j "Ah, imagina."
@@ -194,17 +236,12 @@ label cap1_3:
             "O que quer dizer?":
                 m "Interessante? Como?"
                 j "..."
-                "Ela continua me encarando."
-                "Isso é estranho."
+                "Ela tá me deixand nervosa..."
                 m "Por que está me olhando assim?..."
                 "Ela percebe que estava me encarando."
                 j "Ah, meu Deus!"
                 j "Eu n-não percebi que estava te deixando nervosa."
-                j "Nossa, me desculpe mesmo."
-                if ajuda_j:
-                    m "Não precisa se desculpar."
-                    m "Eu entendo."
-                    $ juni += 1
+                j "Nossa, me desculpa..."
                 j "É só que... Foi muito legal o que disse."
                 j "Então queria saber se realmente..."
                 m "Sim?"
@@ -213,29 +250,112 @@ label cap1_3:
                 j "Ah... Deixa pra lá."
 
 
-        j "Acho que precisamos ir andando agora."
-        j "Afinal, temos um evento para protagonizar."
-        j "Hehe.."
-        j "T-te vejo mais tarde."
+        j "Acho que precisamos ir, agora..."
+        j "Afinal, temos um evento p-para protagonizar mais tarde."
+        j "He he..."
+        j "Err... T-Tchau."
         "Ela se vira rapidamente e vai embora."
         m "Foi um prazer!"
         "Acho que ela nem escutou..."
-        "Enfim... tenho que comer algo antes que eu desmaie."
+        "Caramba... Não achei que fosse encontrar uma pessoa tão ansiosa quanto eu..."
+        "Talvez eu converse melhor com ela depois."
+        "Agora, eu tenho que comer algo antes que eu desmaie."
 
 
-    #aq acontece a escolha entre passar o tempo sozinha
-        #passar o tempo sozinha faz moon refletir e chegar a novos julgamentos
-        #(talvez n seja uma boa hr pra isso)
-    #ou conversar com roko
-        #ao conversar, ficamos sabendo mais sobre roko(estilo de vida, opinioes etc.)
-        #temos a oportunidade de aumentar a amizade com ela
-   
-    "Enquanto passava pelo jardim, encontro Roko observando as flores."
+    # hr do almoço
+    "Chegando no refeitório, encontro Linne almoçando."
+    l "Olá, Moon."
+    l "Você viu o restante das meninas?"
+    m "Não. Só vi a Juni..."
+    m "Cadê ela, afinal?"
+    j "E-Estou aqui."
+    "Não tinha reparado nela bem atrás de mim."
+    l "Venham. Juntem-se à mesa."
+    "Nos juntamos a ela na mesa para almoçar."
+    l "O que acharam da entrevista, meninas?"
+    j "Acho q-que não foi nada de mais..."
+    l "Não precisa ser tímida. Pode falar."
+    j "..."
+    l "Bem, já que é assim..."
+    l "O que achou Moon?"
+    menu(nvl=True):
+        "Foi bom.":
+            m "Apesar de algumas coisinhas... Acredito que ocorreu tudo muito bem."
+            l "Ah... Eh, isso é bom."
+            l "Não é todo mundo que consegue se manter otimista nessas horas."
+            jump cap1_al
+
+
+        "Foi péssimo.":
+            m "Não sei..."
+            m "Talvez o Sr.Star tenha uma péssima impressão sobre mim."
+            l "Poxa, que chato..."
+            l "Mas... Tenho a impressão de que você está sendo pessimista, Moon."
+            jump cap1_al
+
+
+
+
+        "Tanto faz.":
+            m "Na verdade, não tenho nada a comentar."
+            l "Nada? Nenhuma impressão ou opinião?"
+            m "Err... Não."
+            l "... Então, tá."
+            l "Já que vocês não querem conversar comigo... Eu vou me retirar."
+            "Ela se levanta de maneira dramática."
+            l "Até logo."
+            "Será que ela ficou magoada? Mas essa não era minha intenção..."
+            "Eu só queria comer meu almoço em paz."
+            j "..."
+            "Juni também não parece querer conversar agora"
+            "Termino meu almoço sem trocar uma palavra com Juni."
+            jump cap1_4
+
+
+
+
+label cap1_al:
+    l "Tente tomar cuidado... Esse pensamento pode te arruinar um dia, sabia?"
+    m "É mesmo? por que?"
+    # tentativa de linne de diminuir moon e exaexaltar a si mesma
+    l "Você ainda é muito iniciante e não tem experiência suficiente para julgar algumas coisas, ora!"
+    l "Por isso você corre o risco de passar por muitos micos! acredite em mim!"
+    j "M-Micos?!"
+    m "Nunca tinha pensado nisso..."
+    l "Melhor vocês começarem a se preocupar sobre. Já que isso envolve suas imagens."
+    j "Uhg... Não gosto nem de pensar..."
+    # potencializa uma insegurança das duas
+    l "Eu tenho alguma experiência na área e acreditem, eu já notei vários comportamentos problemáticos em vocês."
+    l "Hihi! Chega até a ser meio engraçado."
+    "Ela se levanta da mesa graciosamente."
+    l "Preciso ir agora, meninas."
+    # mesmo se esse dialogo n acontecer, juni vai procurar por "ajuda" da linne
+    l "Mas se quiserem conversar mais sobre o assunto alguma hora, estarei disposta a ajudar."
+    l "Até logo!"
+    "Linne sai."
+    j "... M-Moon?"
+    j "Acha mesmo q-que eu t-tenho... Co-comportamentos problemáticos?"
+    "Juni tenta disfarçar sua tremedeira sem sucesso."
+    "Confesso que isso me pegou desprevenida... Não achei que estava indo tão mal..."
+    m "..."
+    j "Não estou mais com fome..."
+    "Ela sai correndo, deixando metade de um prato de salada para trás."
+
+
+
+
+label cap1_4:
+    # dps dos treinos da tarde
+    $ atividade = "Depois dos treinos"
+
+
+    "Resolvi dar uma olhada no jardim depois dos meus treinos da tarde."
+    "Enquanto passava pelo jardim, encontrei Roko observando as flores."
     "Seria uma boa ideia conversar com ela?"
     menu(nvl=True):
         "Sim":
             "Me aproximo para conversar com ela."
-            m "Roko!"
+            m "Olá, Roko!"
             r "AAAH!"
             r "Pelos céus! Você me assustou!"
             r "Onde estão seus modos??!"
@@ -251,7 +371,7 @@ label cap1_3:
             m "Caramba!"
             m "Fiquei sem palavras diante de tanta confiança."
             r "Isso acontece com os menos afortunados, de fato."
-            "Oh... h u m i l d a d e..."
+            "Bem humilde..."
             r "É como eu sempre digo:"
             r "Para se tornar uma verdadeira estrela"
             r "Primeiro você deve acreditar que já é!"
@@ -269,9 +389,9 @@ label cap1_3:
                     r "Ahf... Não vou discutir."
                     r "Você não entenderia de qualquer forma..."
                     "Acho que VOCÊ não entenderia de qualquer forma."
-                        #menu(nvl=True):
-                            #"O que te faz pensar assim?":            
-                            #"O que quer dizer com isso?"
+
+
+
 
                 "Tem razão.":
                     m "Faz sentido..."
@@ -346,6 +466,12 @@ label cap1_3:
                     $ ignorante = True
 
 
+
+
+
+
+
+
                 "Talvez...":
                     m "Olha..."
                     m "Talvez o que importasse, no final, não era o sabor do sanduíche."
@@ -362,6 +488,9 @@ label cap1_3:
                     "Pelo menos... pra Roko."
                     # reacao de moon(n sei o que colocar ainda)
 
+
+
+
                     # termino do assunto e convite pra treinar
                     m "Ah, não! Devo estar atrasada pro treino!"
                     r "Treino? Mas já não treinamos hoje cedo?"
@@ -375,23 +504,49 @@ label cap1_3:
                             m "Se quiser pode vir comigo..."
                             r "Não, não... eu já atingi meu limite hoje e não quero cansar minha beleza."
                             r "Que tal... amanhã? De manhãzinha?"
-                            m "Claro! Costumo treinar cardio de manhã."
+                            m "Claro! Costumo fazer pilates de manhã."
                             m "Pode me encontrar na academia."
-                            # n sei como terminar essa parte
                             $ treino_roko = True
-                            #r "Combinado!"
+                            r ""
+
+
+
+
+
+
 
 
                         "Não convidar Roko para treinar":
-                            m "Érr... preciso muito ir agora..."
+                            m "Err... preciso muito ir agora..."
                             r "Ah, sim..."
                             r "Desejo boa sorte."
+
+
+
+
                     # encerramento do dialogo
+
+
+        "Não":
+            "Melhor não... Tenho que me preparar pro evento..."
+           
+    $ atividade = "Preparação do evento"
+    "Dou uma última olhadinha no espelho e..."
+    "É isso, estou pronta."
+    "Espero que eu não estrague tudo ou..."
+    l "Moonie? Cadê você? Vai acabar se atrasando!"
+    m "Hã? J-Já tô indo!"
+
+
 
 
 label cap1_5:
     # inicio do evento
     # Determinar local do acontecimento(fiquei em duvida)
+    $ periodo = "Noite"
+    $ atividade = "Evento ao vivo"
+
+
 
 
     "Ao chegarmos ao local"
@@ -412,6 +567,12 @@ label cap1_5:
     Sr "Vamos ao ar em alguns instantes!"      
     l "Estejam preparadas, garotas."
     "Linne ajeita a postura e muda a sua expressão para algo mais confiante."
+
+
+
+
+
+
 
 
     Sr "Começamos em 3..."
@@ -460,7 +621,19 @@ label cap1_5:
     "Enquanto vestimos nossos aventais, Nádia quebra o silêncio."
 
 
+
+
+
+
+
+
     n "Que situação 'curiosa', não?"
+
+
+
+
+
+
 
 
     menu(nvl=True):
@@ -480,6 +653,12 @@ label cap1_5:
             n "É melhor a gente ficar ligada."
 
 
+
+
+
+
+
+
     "Outros dois nomes aparecem no telão."
     Sr "A equipe 2 será composta por Juni e Linne!"
     Sr "Uma equipe adorável, não é mesmo?"  
@@ -488,7 +667,7 @@ label cap1_5:
     Sr "Bom... Parece que temos uma jurada!"
     Sr "Senhorita Roko!"
     "Nádia sussurra sarcasticamente."
-    n "Nossah, mas que surpresah."
+    n "Nossah, mas que surpresa."
     r "E-eu??"
     r "Não, não. Deve haver algum engano!"
     Sr "Não há enganos neste reality, querida!"
@@ -515,6 +694,12 @@ label cap1_5:
     n "Alguma sugestão do que fazer?"
 
 
+
+
+
+
+
+
     if(vermelho):
         m "Não exatamente..."
         m "Mas eu sei que ela não gosta de coisas vermelhas."
@@ -524,8 +709,6 @@ label cap1_5:
         n "Tipo, como assim ela 'não gosta de coisas vermelhas'?"
         n "Palhaçada isso!"
         "Nádia está completamente indignada."
-
-
     else:
         m "Não tenho nem ideia."
         n "Ótimo..."
@@ -537,7 +720,7 @@ label cap1_5:
         m "Acho que chegamos tarde."
         n "Urhg!"
         m "Calma, vamos fazer outra coisa."
-        "Ela espira fundo e se acalma."
+        "Ela respira fundo e se acalma."
 
 
     n "Nesse caso..."
@@ -545,80 +728,42 @@ label cap1_5:
     n "Você prepara a massa enquanto eu faço o molho."
     m "Pode ser!"
 
+
     n "Temos disponíveis aqui:"
     n "Massas dos tipos tradicional e linguine..."
     m "Linguine é um macarrão?! Pensei que fosse aquele moço do Ratatouille..."
-    n "Claro que não! Sua-"
     n "..."
     n "Meio que é isso também... Mas na verdade esse é aquele macarrão mais achatado, sabe?"
     n "Temos aqui também os queijos parmesão, gorgonzola e mussarela..."
     n "E de proteínas temos frango, salmão e bacon."
     n "Qual massa você acha uma boa?"
 
+
     "Nádia espera por uma resposta."
     $ time = 5
     $ timer_range = 5
     $ timer_range = 'escolha_devagar'
-    show screen countdown
-    menu(nvl=True):
+
+
+    menu:
         "Tradicional":
-            hide screen countdown
             m "Eu gosto do tradicional."
             n "Ok..."
         "Linguine":
-            hide screen countdown
-            $ linguine = True
-            m "Linguine parece interessante."
-            n "Cê escolheu esse por causa do desenho do rato, né?"
+            m "O Linguine parece interessante."
+            n "Ce escolheu esse por causa do desenho do rato, né?"
             menu(nvl=True):
-                "Não!":
+                "Não...":
                     m "Não, não! Eu nunca faria uma coisa desas!"
                     n "Sei..."
                 "Talvez...":
                     m "Hmm... Talvez..."
                     n "Meu irmãozinho de 10 anos teria respondido a mesma coisa."
                     m "Ei!"
-    
+   
     n "E o queijo?"
-
-    $ time = 5
-    $ timer_range = 5
-    $ timer_range = 'escolha_devagar'
-    show screen countdown
-    menu(nvl=True):
-            "Parmesão. ":
-                hide screen countdown
-                n "Tá..."
-                $ parmesao = True
-            "Gorgonzola. ":
-                hide screen countdown
-                n "Eca, que nojo!"
-
-    n "Agora... a carne"
-
-    $ time = 5
-    $ timer_range = 5
-    $ timer_range = 'escolha_devagar'
-    show screen countdown
-
-    menu(nvl=True):
-        "Frango":
-            hide screen countdown
-            n "Uhh, parece bom."
-            $ frango = True
-        "Bacon":
-            hide screen countdown
-            n "Ok..."
-
-    jump escolha_rapida
-
 label escolha_devagar:
-    n "Aí, cê demora demais!"
-    n "Deixa que eu faço."
-    "Ela me afasta e escolhe os ingredientes sozinha."
    
-   
-label escolha_rapida:   
     "Coletamos os ingredientes e materiais e começamos a trabalhar."
     "Enquanto espero o macarrão cozinhar, observo Nádia fazer sua parte."
     "Ela é rápida e confiante em seus movimentos."
@@ -627,16 +772,33 @@ label escolha_rapida:
     n "Ah! Eu?"
     n "É que na verdade já estou acostumada, sabe."
     n "Minha família tem um restaurante"
-    n "e eu costumava ajudar na cozinha."
+    n "E eu costumava ajudar na cozinha."
     m "É sério!? Caramba, que legal!"
     n "Na verdade, não era tão legal assim."
-    n "Tinha muita dor de cabeça..."
-    n "E ainda tem."
-    n "Com o tempo as coisas pioraram."
+    n "Tinha muito problema e dor de cabeça..."
+    n "Ainda tem, no caso…"
+    n "Com o tempo as coisas pioraram por causa do dinheiro."
     m "Ah..."
-    # dialogo caso ignorante=True
 
+    if ignorante:
+        n "Bem que eu poderia ter nascido bem rica pra não ter que passar por esse tipo de coisa..."
+        n "Tipo aquela metida da Roko. O maior dos problemas dela deve ser decidir em que continente vai passar as férias."
+        n "Eu odeio ela... Sempre me olha com aquela cara de nojo."
+        m "Ela te olha com nojo? Que horror!"
+        n "Não me conformo que uma pessoa dessas já tenha ganhado na vida só por ser herdeira."
+        # olha a fofoca
+        m "Hoje mais cedo, eu estava conversando com ela."
+        m "Você não vai acreditar no que ela disse..."
+        n "O que ela disse? Vai, fala logo!"
+        m "Ela chamou a gente de ignorante!"
+        n "*surpresa* Não acredito!"
+        n "Nossa, se eu ver ela na rua..."
+        "Nádia está com MUITA raiva."
+        n "Seria suspeito se, acidentalmente, colocassemos um 'pouco' de pimenta no prato dela?"
+        m "Acho que sim..."
+        m "Vamos deixar essa vingança pra depois."
 
+    "O tempo passou enquanto preparavamos a comida."
     n "Hmm... Acho que vou adicionar alguns brócolis."
     n "Tô achando a receita meio sem graça."
     Sr "O tempo está se esgotando, meninas!"
@@ -654,7 +816,7 @@ label cap1_6:
     n "Com brócolis."
     "Roko se esforça para não fazer cara de nojo mais uma vez."
     Sr "Pode provar, jurada."
-    "Ela empurra os brócolis pra um canto do prato com o garfo."
+    "Ela empurra os brócolis para um canto do prato com o garfo."
     "E prova a massa com molho."
     r "Hmm..."
     r "Até que não está ruim..."
@@ -680,15 +842,15 @@ label cap1_6:
     if (vermelho):
         "Nádia sussurra ao meu lado."
         n "Parece que a Carminha Frufru se deu mal..."
-        #m "Tudo o que vai... volta."
        
     Sr "Uhh! Parece muito bom!"
     Sr "Podem dizer do que se trata?"
     l "Temos aqui o clássico e muito amado espaguete com almôndegas."
     r "E... molho de tomate...?"
-    j "Sim! foi temperado com um ingrediente secreto especial meu!"
+    j "Sim! Foi temperado com um ingrediente secreto especial meu!"
     "Juni parece orgulhosa sobre isso."
-   
+
+
     if (vermelho):
         "Mal ela sabe..."
 
@@ -701,115 +863,101 @@ label cap1_6:
     "Depois de muito esforço mental, ela leva o garfo à boca."
     r "..."
     "Ela mastiga devagar..."
+    Sr "Está tudo bem, srta. Roko...?"
+    r "..."
+    "Ela continua mastigando."
+    "Seu rosto começa a suar e empalidecer."
+    "Ela parece prestes a vomitar ou desmaiar."
+    Sr "Meu Deus, há algo errado!"
+    "As meninas da equipe 2 também parecem nervosas."
+    l "Oh, não! O que houve?!"
+    n "Meninas, quando eu falei de envenenar ela, eu estava BRIN-CAN-DO, tá bem?"
+    "Nádia se diverte com a situação."
+    Sr "Equipe médica, por favor!"
+    "Sr.Star acena para chamar os primeiros socorros."
+    "Nesse momento, Roko finalmente consegue engolir."
+    r "Arhg!"
+    r "Não precisa, eu estou bem..."
+    Sr "Ufa!"
+    "Todos parecem bem mais aliviados."
+    Sr "A senhorita realmente nos preocupou..."
+    Sr "Gostaria de uma pausa para respirar, srta. Roko?"
+    r "Não, não."
+    r "Isso já foi o suficiente para minha decisão final."
+    "O clima se torna mais tenso após suas palavras."
+    Sr "Bem... Então..."
+    Sr "Diga-nos a sua escolha!"
+    r "Dadas as circunstâncias..."
+    r "Minha nota para a equipe 2 é..."
+    "A produção coloca uma música de tensão."
 
-    if (linguine and parmesao and frango):
-
-        r "Hmmmm..."
-        r "Na verdade... iso tá mt bom!"
-
-
-    else:
-        Sr "Está tudo bem, srta. Roko...?"
-        r "..."
-        "Ela continua mastigando."
-        "Seu rosto começa a suar e empalidecer."
-        "Ela parece prestes a vomitar ou desmaiar."
-        Sr "Meu Deus, há algo errado!"
-        "As meninas da equipe 2 também parecem nervosas."
-        l "Oh, não! O que houve?!"
-        n "Meninas, quando eu falei de envenenar ela, eu estava BRIN-CAN-DO, tá bem?"
-        "Nádia se diverte com a situação."
-        Sr "Equipe médica, por favor!"
-        "Sr.Star acena para chamar os primeiros socorros."
-        "Nesse momento, Roko finalmente consegue engolir."
-        r "Arhg!"
-        r "Não precisa, eu estou bem..."
-        Sr "Ufa!"
-        "Todos parecem bem mais aliviados."
-        Sr "A senhorita realmente nos preocupou..."
-        Sr "Gostaria de uma pausa para respirar, srta. Roko?"
-        r "Não, não."
-        r "Isso já foi o suficiente para minha decisão final."
-        "O clima se torna mais tenso após suas palavras."
-        Sr "Bem... Então..."
-        # muda para feicao confiante
-        Sr "Diga-nos a sua escolha!"
-        r "Dadas as circunstâncias..."
-        r "Minha nota para a equipe 2 é..."
-        "A produção coloca uma música de tensão."
-
-
-        r "5.1!"
-        "!!!"
-        "O-o que...?"
-        "Todos permanecem em choque por uns instantes."
-        j "5-5.1??"
-        "Juni se vira para Linne, ainda em choque."
-        j "Então nós..."
-        l "Vencemos?!"
-        Sr "Ha Ha, sim!"
-        Sr "As vencedoras são Linne e Juni!"
-        Sr "Meus parabéns, meninas!"
-        "Confetes são lançados ao ar em comemoração."
-        # elaborar comemoracao
-
-
-        n "Espera aí um instante..."
-        n "Você quase desmaiou provando aquele prato..."
-        n "E mesmo assim deu a MAIOR NOTA?!"
-        #"Nádia finalmente libera sua raiva."
-        r "Eu não estava quase desmaiando..."
-        r "Estava apenas... Saboreando o ingrediente especial da Juni!"
-        r "Sabe ele deu um sabor..."
-        #"Roko procura por palavras."
-        r "Muito..."
-        r "Huh..."
-        r "..."
-        r "Único!"
-        r "Por isso achei que elas mereceram essa nota."
-        n "Escuta aqui o sua-"
-        l "Calma, Nádia. Não há motivos para ficar irritada."
-        l "É só uma brincadeira..."
-        #Sr "Exatamente. Vocês não sairam prejudicadas."
-        n "Grrr!"
-        "Ela vira as costas e sai batendo os pés."
-
-
-    # opcao de escolha?
+    r "5.1!"
+    "!!!"
+    "O-o que...?"
+    "Todos permanecem em choque por uns instantes."
+    j "5-5.1??"
+    "Juni se vira para Linne, ainda em choque."
+    j "Então nós..."
+    l "Vencemos?!"
+    Sr "Ha Ha, sim!"
+    Sr "As vencedoras são Linne e Juni!"
+    Sr "Meus parabéns, meninas!"
+    "Confetes são lançados ao ar em comemoração."
+    # elaborar comemoracao
+    n "Espera aí um instante..."
+    n "Você quase desmaiou provando aquele prato..."
+    n "E mesmo assim deu a MAIOR NOTA?!"
+    #"Nádia finalmente libera sua raiva."
+    r "Eu não estava quase desmaiando..."
+    r "Estava apenas... Saboreando o ingrediente especial da Juni!"
+    r "Sabe ele deu um sabor..."
+    #"Roko procura por palavras."
+    r "Muito..."
+    r "Huh..."
+    r "..."
+    r "Único!"
+    r "Por isso achei que elas mereceram essa nota."
+    n "Escuta aqui, sua-"
+    l "Calma, Nádia. Não há motivos para ficar irritada."
+    l "É só uma brincadeira..."
+    #Sr "Exatamente. Vocês não sairam prejudicadas."
+    n "Grrr!"
+    "Ela vira as costas e sai batendo os pés."
+   
     "É melhor eu conversar com ela."
     m "Nádia, espera!"
-    "Corro atrás dela enquanto Sr.Star encerra o evento."
+    "Corro atrás dela enquanto o Sr.Star encerra o evento."
     "Já estamos na metado do caminho para os dormitórios quando finalmente a alcançou."
     n "Argh! O que foi agora?!"
     n "Será que não posso ter um minuto de paz!??"
-
+    m "Podemos conversar um segundo?"
+    n "..."
 
     menu(nvl=True):
         "Você não devia reagir assim":
             m "Sei que está zangada, mas..."
             m "Explodir daquela forma na frente de todos é loucura!"
             n "Isso... não é algo fácil de controlar e você sabe disso!"
-            n "Afinal, aquilo foi muito pessoal..."
+            n "Afinal, aquilo foi muito pessoal."
             m "..."
             m "Mas se você continuar assim..."
             m "Quem sairá prejudicada será você!"
             n "... Não preciso da sua preocupação."
 
 
-        "Há algo de errado no julgamento.":
-            m "Acredito que você também tenha percebido..."
+        "O julgamento está errado.":
+            m "Olha eu te entendo..."
             m "Pela forma que Roko fez o julgamento..."
             m "Ela-"
             n "Tem algo pessoal contra nós? Sim. Eu percebi!"
+            n "Ela deve achar que a gente é algum tipo se seres primitivos! Por isso fez aquilo!"
             n "Porque não se manifestou naquela hora? Você também fazia parte da equipe."
             m "..."
-            m "Bom... Tenho certeza de que ela colherá o que plantou."
+            "Mas que situação complicada..."
             $ roko -= 3
-
 
     "Solto um longo suspiro."
     m "É melhor esquecermos isso."
-
 
     "Ouço as outras garotas chegando a nós."
     r "Ora se não é a pavio curto e companhia!"
@@ -834,8 +982,36 @@ label cap1_6:
     l "Isso está indo longe demais!"
     l "Não podemos nos esquecer..."
     l "Que no final somos todas colegas e-"
-    n "Cansei dessa conversa furada!"
+    n "Cansei dessa conversa fiada!"
     n "Tô indo pro meu quarto. Uma boa noite pra vocês."
-
-
+    "Nádia segue em direção aos dormitórios."
+    l "Bem... Vamos deixar ela esfriar a cabeça."
+    l "Vocês não sabem do que ela é capaz quando está com muita raiva..."
+    r "Hã?! Como assim?"
+    l "Acreditem em mim... Eu a conheço há muito tempo."
+    m "Conhece?"
+    l "..."
+    l "Está tarde... Vamos dormir, meninas."
     # final da discussao
+
+    $ atividade = "Antes de dormir"
+
+    "Finalmente, tomei um banho e estou pronta para dormir."
+    "Caramba, estou exausta!"
+    "???"
+    "Enquanto me dirigia ao meu quarto, escuto uma voz vinda do quarto fechado ao lado..."
+    r "... Eu já não aguento mais!"
+    "Essa é Roko..."
+    "Me aproximo da porta para ouvir melhor."
+    r "Estou sofrendo uma pressão enorme para treinar duro..."
+    r "Todas aqui são grosseiras... não me tratam com o mínimo de atenção e respeito que mereço."
+    r "E pra piorar eles me obrigam a usar esse shampoo barato!"
+    r "Ai, isso não é justo! Não era pra ser tão difícil assim!"
+    "Escuto ela chorar lá dentro."
+    r "Eu tinha certeza de que daria conta..."
+    "..."
+    "E-Eu gostaria de ajudar... Mas acho que seria muita intromissão minha."
+    "Talvez eu converse com ela sobre isso mais tarde."
+
+    jump cap2_1
+

@@ -16,8 +16,7 @@ label cap3_1:
     "{i}Oh, não! Será que fiz algo errado?{/i}"
 
     Sr "Mas não se preocupe, tentarei ser breve."
-    Sr "Bom... Tenho observado que você 
-    é, realmente, bem habilidosa."
+    Sr "Bom... Tenho observado que você é, realmente, bem habilidosa."
     Sr "E seus feitos no programa chamaram a atenção do público..."
     Sr "Você, basicamente, viralizou nas redes sociais e conquistou uma comunidade de fãs!"
     Sr "Isso trouxe vários novos telespectadores e muuuito engajamento para o programa!"
@@ -41,7 +40,7 @@ label cap3_1:
             m "N-não é nada disso!É que isso me parece meio..."
             m "Corrupto."
             Sr "Ora! Pensei que soubesse com o que estava se metendo quando decidiu se tornar treinee."
-            Sr "Essa indústria esconde vários pobres, garota."
+            Sr "Essa indústria esconde vários podres, garota."
             Sr "Se você quiser ter sucesso, deve saber abraçar a ideia quando lhe é conveniente!"
             "{i}Acho que terei problemas com ele se eu recusar a oferta...{/i}"
             m "Tudo bem. Vou pensar sobre."
@@ -228,7 +227,7 @@ label cap3_2:
                     j "Hmm, e-eu entendo..."
                     n "Cara. Não pensei que cê fosse rancorosa assim."
                     $ karma += 5
-            j "Juro que mão tocarei mais no assunto..."
+            j "Juro que não tocarei mais no assunto..."
 
         "Uma raposa":
             m "Uma rapozinha!"
@@ -395,22 +394,27 @@ label cap3_3:
     #"'Em evento noturno, o reality STAR's SELECTION bate recordes de audi-'"
     #"Tá, tá. Disso eu já sei..."
     "O que os comentários dizem?"
-    "'Bibi Pirigosa: mds vcd viram a cara da nádia flndo da dva line? parec q alguem tava mooreno de invejakkkkj'"
-    "'C: tipo assim tinha 0 necessidade dela ser tao grossa o tempo td tlgd. pq ela n deixa a coitada ser o bixo que ela quer?'"
-    "'Artur Morgana: credo quanto mimimikkkk. Nem a nadia ou a Juni tiveram o direito de escolher o animal delas.'"
+    "'Lini's Heart: mds vcd viram a cara da nádia flndo da dva line? parec q alguem tava mooreno de invejakkkkj'"
+    "'limoon: tipo assim tinha 0 necessidade dela ser tao grossa o tempo td tlgd. pq ela n deixa a coitada ser o bixo que ela quer?'"
+    "'nadinadi: credo quanto mimimikkkk. Nem a nadia ou a Juni tiveram o direito de escolher o animal delas.'"
     "Parando pra pensar... isso é verdade."
-    "'Jet: defender Nádia = argumento anulado.'"
+    "'Sun'n Moonie: defender Nádia = argumento anulado.'"
     "E essa seção continua nesse pique..."
 
     "Vou pra próxima."
-    "'Kastanha: gnt so agr reparei q a Juni e uma toperakkkkkk as semelhancas sao mtas.'"
-    "'C: nunca teria reparado nisso sozinho kkkkkk o sr.start eh um gênio.'"
-    "AlienX: galera HELLO ela tava claramente desconfortável"
-    "Bibi Pirigosa: logica q n véi vc n viu q ate ela concordo no finalzin?"
+    "'beah esposa da line: gnt so agr reparei q a Juni e uma toperakkkkkk as semelhancas sao mtas.'"
+    "'lana missing roko: nunca teria reparado nisso sozinho kkkkkk o sr.start eh um gênio.'"
+    "'jujust4r: galera HELLO ela tava claramente desconfortável'"
+    "'Lini's Heart: logico q n véi, vc n viu q ate ela concordo no finalzin?'"
     
     "Próxima seção."
 
     #comentarios sobre ela msma
+    "'shooting_star (nadia fan): assim, não queria vir aqui para começar o caos, mas vocês não acham a moonie meio apagada?'"
+    "'junini's flower: ufa, finalmente alguem disse isso, estava na hora né'"
+    "'shooting_star (nadia fan): é que ela simplesmente não faz nada, só é um rostinho bonito pagando de 'amiguinha de todos''"
+    "'nadcat: até a roko tinha mais habilidade que ela... e veja quem saiu afinal'"
+    "'bunnieline: deve ser dificil ser fã dela, a única coisa q eles conseguem fazer é elogiar a beleza dela kkkkk'"
 
     "Esses comentários tão me deixando desconfortável..."
     "Melhor eu ir dormir."

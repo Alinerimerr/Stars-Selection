@@ -778,7 +778,7 @@ label cap1_5:
                 n "Eca! que nojo!"
                 m "Que foi? Não gosta?"
                 n "E você gosta?"
-                n "Acho que foi um erro ter deixado você ajudar..."
+                n "Não devia ter deixado você ajudar..."
 
     n "Agora... a carne"
 
@@ -792,16 +792,17 @@ label cap1_5:
             hide screen countdown
             n "Hmm, parece uma boa."
             $ frango = True
+            jump escolha_rapida
         "Bacon":
             hide screen countdown
-            n "Você tem... Gostos diferenciados."
+            n "Você é estranha..."
+            jump escolha_rapida
 
 label escolha_devagar:
-    n "Aí, cê demora demais!"
+    n "Credo, cê demora demais!"
     n "Deixa que eu faço."
     "Ela me afasta e escolhe os ingredientes sozinha."
-   
-   
+
 label escolha_rapida:   
    
     "Coletamos os ingredientes e materiais e começamos a trabalhar."
@@ -834,7 +835,7 @@ label escolha_rapida:
         n "*surpresa* Não acredito!"
         n "Nossa, se eu ver ela na rua..."
         "Nádia está com MUITA raiva."
-        n "Seria suspeito se, acidentalmente, colocassemos um 'pouco' de pimenta no prato dela?"
+        n "Seria suspeito se, acidentalmente, a gente colocasse um 'pouco' de pimenta no prato dela?"
         m "Acho que sim..."
         m "Vamos deixar essa vingança pra depois."
 
@@ -862,9 +863,16 @@ label cap1_6:
     r "Até que não está ruim..."
     r "Eu daria um 8..."
     Sr "8 é uma boa nota!"
+
     if (tradicional && parmesao && frango):
+        Sr "Algo mais a comentar, senhorita Roko?"
+        r "Bem que o macarrão poderia ser fresco."
+        Sr "Aí já é pedir demais."
+        Sr "Será que a equipe 2 fará um trabalho melhor?"
+        Sr "É o que vamos descobrir em instantes! Então fique ligado!"
         $ aceitavel = True
         jump prato2
+
     r "Mas como tem brócolis a minha nota final é 5!"
     Sr "!!!"
     "Ah não, não pode ser..."
@@ -932,20 +940,54 @@ label prato2:
     r "Dadas as circunstâncias..."
     r "Minha nota para a equipe 2 é..."
     "A produção coloca uma música de tensão."
-
     r "5.1!"
+
     if aceitavel:
-        n "UUUHUUU! Nós vencemos!"
-        
+        n "UUUHUUUUU! Nós vencemos!"
+        Sr "Com licença, srta.Nádia? Sou eu quem anuncia as coisas aqui."
+        n "Opss, foi mal."
+        Sr "Senhoras e senhores, eu declaro Moonie e Nádia as vencedoras de hoje!"
+        "Confetes são lançados ao ar em comemoração."
+        Sr "Meus parabéns, garotas!"
+        n "Ha ha! Agora, sim! Nós vencemos!"
+        m "Caramba, nem posso acreditar!"
+        m "Eu queria dedicar essa vitória aos meus pais e aos meus amigos..."
+        m "E a Nádia, também. Ela fez a maior parte."
+        n "Obrigada, obrigada."
+        "Vejo Linne discutindo com Junie ao fundo..."
+        n "Mas até que, tipo... Cê foi bem."
+        l "Sr.Star, eu tenho uma objeção."
+        Sr "Hm? Qual o problema, querida?"
+        l "Acredito que essa competição foi injusta."
+        l "Nádia claramente tem certa vantagem em culinária."
+        Sr "E... Qual o problema?"
+        # ela nao aceita perder
+        l "É que..."
+        l "A competição avaliou uma habilidade muito específica."
+        l "É como avaliar a habilidade de um peixe subir em árvores..."
+        l "Totalmente injunto."
+        r "É verdade. Eu concordo."
+        l "Nem estamos treinando para isso, não é Juni?"
+        j "Hm..."
+        Sr "Ora, srta.Linne... Não vejo o motivo de sua preocupação."
+        Sr "Afinal, isso é apenas uma brincadeira."
+        l "..."
+        Sr "Mas se isso incomoda tanto, te recomendo começar um curso de culinária!"
+        n "Ha! Chuuupaaa!"
+        r "..."
+        Sr "Bem, isso é tuuuuudo por hoje!"
+        Sr "Mas não percam, logo voltaremos com muito mais!"
+        Sr "Uma ótima noite à todos e até mais!"
+        jump cap1_7
     else:
         "!!!"
-        "O-o que...?"
+        "O-O que...?"
         "Todos permanecem em choque por uns instantes."
-        j "5-5.1??"
+        j "5.1??"
         "Juni se vira para Linne, ainda em choque."
         j "Então nós..."
-        l "Vencemos?!"
-        Sr "Ha Ha, sim!"
+        l "Vencemos!"
+        Sr "Ha ha, sim!"
         Sr "As vencedoras são Linne e Juni!"
         Sr "Meus parabéns, meninas!"
         "Confetes são lançados ao ar em comemoração."
@@ -1040,6 +1082,7 @@ label prato2:
         l "Está tarde... Vamos dormir, meninas."
         # final da discussao
 
+label cap1_7:
     $ atividade = "Antes de dormir"
 
     "Finalmente, tomei um banho e estou pronta para dormir."

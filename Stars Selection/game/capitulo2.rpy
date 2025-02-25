@@ -25,7 +25,7 @@ label cap2_1:
     #"Hoje não teremos nenhum evento especial do programa."
     # treino com roko na parte da manhã
     $ atividade = "Pilates"
-    if treino_roko:
+    if (treino_roko && !aceitavel):
         "Tinha combinado com Roko que iríamos treinar juntas hoje."
         "Será que ela ainda está disposta... mesmo com os acontecimentos de ontem?"
         "Bem... acho que só vou descobrir se ela aparecer."
@@ -144,7 +144,9 @@ label cap2_1:
                     "Ela sai sem se despedir."
                     "E parecia estar muito magoada, também..."
                     jump cap2_2
-
+    else:
+        jump cap2_2
+        
 label presente_roko:
 
     r "E-Eu posso te dar um conjunto de roupas de treino novo se quiser."

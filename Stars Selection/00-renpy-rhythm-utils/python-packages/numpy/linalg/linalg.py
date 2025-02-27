@@ -2213,7 +2213,7 @@ def lstsq(a, b, rcond="warn"):
     if rcond == "warn":
         # 2017-08-19, 1.14.0
         warnings.warn("`rcond` parameter will change to the default of "
-                      "machine precision times ``max(M, N)`` where M and N "
+                      "machine precision times ``max(M, N)`` where M and nn "
                       "are the input matrix dimensions.\n"
                       "To use the future default and silence this warning "
                       "we advise to pass `rcond=None`, to keep using the old, "

@@ -2,9 +2,9 @@
 
 While loading <renpy.display.im.Image object ('images/txtbox-nadia.png') at 0x000000000591eeb0>:
   File "game/prologo.rpy", line 31, in script
-    n "Olá, mundo! Preparem-se pois eu vou com tudo!"
+    nn "Olá, mundo! Preparem-se pois eu vou com tudo!"
   File "game/prologo.rpy", line 31, in script
-    n "Olá, mundo! Preparem-se pois eu vou com tudo!"
+    nn "Olá, mundo! Preparem-se pois eu vou com tudo!"
   File "renpy/common/00nvl_mode.rpy", line 380, in do_display
     renpy.display_say(
 Exception: Could not load image 'images/txtbox-nadia.png': error('Unsupported image format')
@@ -21,10 +21,10 @@ Full traceback:
   File "C:\Users\Silvana Lima\Downloads\renpy\renpy-8.2.1-sdk\renpy\execution.py", line 955, in run_context
     context.run()
   File "game/prologo.rpy", line 31, in script
-    n "Olá, mundo! Preparem-se pois eu vou com tudo!"
+    nn "Olá, mundo! Preparem-se pois eu vou com tudo!"
   File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
   File "game/prologo.rpy", line 31, in script
-    n "Olá, mundo! Preparem-se pois eu vou com tudo!"
+    nn "Olá, mundo! Preparem-se pois eu vou com tudo!"
   File "C:\Users\Silvana Lima\Downloads\renpy\renpy-8.2.1-sdk\renpy\ast.py", line 2557, in execute
     Say.execute(self)
   File "C:\Users\Silvana Lima\Downloads\renpy\renpy-8.2.1-sdk\renpy\ast.py", line 615, in execute

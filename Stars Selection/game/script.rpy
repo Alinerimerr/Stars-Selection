@@ -33,14 +33,18 @@
     timerrange = 0
     timerjump = 0
 
+define audio.maintheme = "audio/choosen_by_stars.mp3"
+
 define lh = Character(("Linne"), kind=nvl, color="#fff387", windowbackground="images/txtbox/linnie-happy.png")
-define ln = Character(("Linne"), kind=nvl, color="#fff387", windowbackground="images/txtbox/linnie-neutral.png") #medo e nervoso
+define ln = Character(("Linne"), kind=nvl, color="#fff387", windowbackground="images/txtbox/linnie-neutral.png") #medo e nervoso irritada
 define la = Character(("Linne"), kind=nvl, color="#fff387", windowbackground="images/txtbox/linnie-angry.png")
+define li = Character(("Linne"), kind=nvl, color="#fff387", windowbackground="images/txtbox/linnie-angry.png") #irritada
 
 define jh = Character(("Juni"), kind=nvl, color="#ffc1ec", windowbackground="images/txtbox/junni-happy.png")       #feliz
 define jn = Character(("Juni"), kind=nvl, color="#ffc1ec", windowbackground="images/txtbox/junni-neutral.png")     #normal
-define ja = Character(("Juni"), kind=nvl, color="#ffc1ec", windowbackground="images/txtbox/junni-neutral.png")     #fazerr brava*** e nervosa
+define ja = Character(("Juni"), kind=nvl, color="#ffc1ec", windowbackground="images/txtbox/junni-neutral.png")     #fazerr brava*** e nervosa, surpresa
 define js = Character(("Juni"), kind=nvl, color="#ffc1ec", windowbackground="images/txtbox/junni-sad.png")         #triste
+define jnv = Character(("Juni"), kind=nvl, color="#ffc1ec", windowbackground="images/txtbox/junni-neutral.png")   
 
 define Srh = Character(("Sr. Star"), kind=nvl, color="#ff879b", windowbackground="images/txtbox/srstar-happy.png")      #feliz
 define Srn = Character(("Sr. Star"), kind=nvl, color="#ff879b", windowbackground="images/txtbox/srstar-neutral.png")    #normal
@@ -56,9 +60,13 @@ define nsr = Character(("Nádia"), kind=nvl, color="#db93ff", windowbackground="
 define nsu = Character(("Nádia"), kind=nvl, color="#db93ff", windowbackground="images/txtbox/nadia-surprise.png")   #surpresa
 
 define rh = Character(("Roko"), kind=nvl, color="#81ffb1", windowbackground="images/txtbox/roko-neutral.png")   #feliz  e smile  e zangada e triste/irritada  fazer***
-define rn = Character(("Roko"), kind=nvl, color="#81ffb1", windowbackground="images/txtbox/roko-neutral.png")   #normal
+define rn = Character(("Roko"), kind=nvl, color="#81ffb1", windowbackground="images/txtbox/roko-neutral.png")   #normal 
 define ra = Character(("Roko"), kind=nvl, color="#81ffb1", windowbackground="images/txtbox/roko-angry.png")     #brava
-define rc = Character(("Roko"), kind=nvl, color="#81ffb1", windowbackground="images/txtbox/roko-confident.png") #confiante
+define rc = Character(("Roko"), kind=nvl, color="#81ffb1", windowbackground="images/txtbox/roko-confident.png") #confiante (confiante nervosa)
+define ri = Character(("Roko"), kind=nvl, color="#81ffb1", windowbackground="images/txtbox/roko-neutral.png")   #(ri - irritada)
+define rnv = Character(("Roko"), kind=nvl, color="#81ffb1", windowbackground="images/txtbox/roko-neutral.png")  #nervosa
+define rsu = Character(("Roko"), kind=nvl, color="#81ffb1", windowbackground="images/txtbox/roko-neutral.png")  #surpresa
+
 
 define m = Character(("Moonie"), kind=nvl, color="#a8a7ff", windowbackground="images/txtbox52.png", whatxpos=0.06, whoxpos=0.57, whatwidth=0.7)
 define p = Character(("Pensamento"), kind=nvl, whatxpos=0.1) #{/i}

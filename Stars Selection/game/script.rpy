@@ -39,6 +39,7 @@ define lh = Character(("Linne"), kind=nvl, color="#fff387", windowbackground="im
 define ln = Character(("Linne"), kind=nvl, color="#fff387", windowbackground="images/txtbox/linnie-neutral.png") #medo e nervoso irritada
 define la = Character(("Linne"), kind=nvl, color="#fff387", windowbackground="images/txtbox/linnie-angry.png")
 define li = Character(("Linne"), kind=nvl, color="#fff387", windowbackground="images/txtbox/linnie-angry.png") #irritada
+define lsu = Character(("Linne"), kind=nvl, color="#fff387", windowbackground="images/txtbox/linnie-angry.png") #nervosa/assustada/surpresa
 
 define jh = Character(("Juni"), kind=nvl, color="#ffc1ec", windowbackground="images/txtbox/junni-happy.png")       #feliz
 define jn = Character(("Juni"), kind=nvl, color="#ffc1ec", windowbackground="images/txtbox/junni-neutral.png")     #normal
@@ -59,7 +60,7 @@ define na = Character(("Nádia"), kind=nvl, color="#db93ff", windowbackground="i
 define nsr = Character(("Nádia"), kind=nvl, color="#db93ff", windowbackground="images/txtbox/nadia-serious.png")    #seria/determinada
 define nsu = Character(("Nádia"), kind=nvl, color="#db93ff", windowbackground="images/txtbox/nadia-surprise.png")   #surpresa
 
-define rh = Character(("Roko"), kind=nvl, color="#81ffb1", windowbackground="images/txtbox/roko-neutral.png")   #feliz  e smile  e zangada e triste/irritada  fazer***
+define rh = Character(("Roko"), kind=nvl, color="#81ffb1", windowbackground="images/txtbox/roko-confident.png")   #feliz  e smile  e zangada e triste/irritada  fazer***
 define rn = Character(("Roko"), kind=nvl, color="#81ffb1", windowbackground="images/txtbox/roko-neutral.png")   #normal 
 define ra = Character(("Roko"), kind=nvl, color="#81ffb1", windowbackground="images/txtbox/roko-angry.png")     #brava
 define rc = Character(("Roko"), kind=nvl, color="#81ffb1", windowbackground="images/txtbox/roko-confident.png") #confiante (confiante nervosa)

@@ -632,12 +632,6 @@ label cap1_5:
     nsr "Que situação 'curiosa', não?"
 
 
-
-
-
-
-
-
     menu(nvl=True):
         "Curiosa?":
             m "Hmm? O que quer dizer?"
@@ -662,36 +656,36 @@ label cap1_5:
 
 
     "Outros dois nomes aparecem no telão."
-    Srn "A equipe 2 será composta por Juni e Linne!"
+    Srsu "A equipe 2 será composta por Juni e Linne!"
     Srh "Uma equipe adorável, não é mesmo?"  
     Srh "Ha ha!"
     Srn "Pode se preparar, equipe 2!."
     Srn "Bom... Parece que temos uma jurada!"
     Srn "Senhorita Roko!"
     "Nádia sussurra sarcasticamente."
-    nn "Nossah, mas que surpresa."
-    rn "E-eu??"
-    rn "Não, não. Deve haver algum engano!"
+    nsr "Nossah, mas que surpresa."
+    rsu "E-eu??"
+    ra "Não, não. Deve haver algum engano!"
     Srn "Não há enganos neste reality, querida!"
-    Srn "Pode ficar tranquila."
+    Srh "Pode ficar tranquila."
     "Ele diz isso com um sorriso irônico no rosto, expressando exatamente o oposto."
     Srn "Roko escolherá um prato e as equipes terão 45 minutos para prepará-la."
     Srn "Ah, e não haverá acréscimo de tempo."
     Srn "jurada Roko! Qual será o prato desta noite?"
-    rn "Hãh..."
-    "Consigo ver desespero e angústia nos olhos dela."
+    rnv "Hãh..."
+    p "{i}Consigo ver desespero e angústia nos olhos dela.{/i}"
     Srn "Sim?"
-    rn "Que tal..."
+    rnv "Que tal..."
     "Finalmente acende uma lâmpada na cabeça dela."
-    rn "Espaguete!"
+    rc "Espaguete!"
     Srn "Espaguete?"
-    rn "Isso!"
+    rc "Isso!"
     rn "Mas sem-"
     Srn "É isso! Grupos 1 e 2 terão 45 minutos para preparar um prato de Espaguete!"
-    rn "Espera, não acabei de falar-"
+    ra "Espera, não acabei de falar-"
     Srn "Começando exatamente agora!"
     "O tempo em minutos aparece no telão."
-    Srn "Uma boa sorte para vocês!"
+    Srh "Uma boa sorte para vocês!"
     nn "Pelo menos ela não escolheu um daqueles pratos chiques e complicados..."
     nn "Alguma sugestão do que fazer?"
 
@@ -705,39 +699,38 @@ label cap1_5:
     if(vermelho):
         m "Não exatamente..."
         m "Mas eu sei que ela não gosta de coisas vermelhas."
-        nn "Ela o que!?"
+        nsu "Ela o que!?"
         m "Não gosta d-"
-        nn "Espera, eu ouvi da primeira vez."
-        nn "Tipo, como assim ela 'não gosta de coisas vermelhas'?"
-        nn "Palhaçada isso!"
+        nsr "Espera, eu ouvi da primeira vez."
+        nsr "Tipo, como assim ela 'não gosta de coisas vermelhas'?"
+        na "Palhaçada isso!"
         "Nádia está completamente indignada."
     else:
         m "Não tenho nem ideia."
         nn "Ótimo..."
-        nn "Vamos fazer o tradicional espaguete com almôndegas e molho de tomate."
-        nn "Não tem como errar nisso."
-        "Ao buscarmos pelos ingredientes"
-        "Notamos que não há mais tomates nem almôndegas."
-        nn "Elas pegaram tudo!"
+        nsm "Vamos fazer o tradicional espaguete com almôndegas e molho de tomate."
+        nsm "Não tem como errar nisso."
+        "Ao buscarmos pelos ingredientes notamos que não há mais tomates nem almôndegas."
+        nsr "Elas pegaram tudo!"
         m "Acho que chegamos tarde."
-        nn "Urhg!"
+        na "Urhg!"
         m "Calma, vamos fazer outra coisa."
         "Ela respira fundo e se acalma."
 
 
     nn "Nesse caso..."
-    nn "Podemos preparar um espaguete ao molho branco."
-    nn "Você prepara a massa enquanto eu faço o molho."
+    nsm "Podemos preparar um espaguete ao molho branco."
+    nsm "Você prepara a massa enquanto eu faço o molho."
     m "Pode ser!"
 
 
-    nn "Temos disponíveis aqui:"
-    nn "Massas dos tipos tradicional e linguine..."
+    nsr "Temos disponíveis aqui:"
+    nsr "Massas dos tipos tradicional e linguine..."
     m "Linguine é um macarrão?! Pensei que fosse aquele moço do Ratatouille..."
     nn "..."
-    nn "Meio que é isso também... Mas na verdade esse é aquele macarrão mais achatado, sabe?"
-    nn "Temos aqui também os queijos parmesão, gorgonzola e mussarela..."
-    nn "E de proteínas temos frango, salmão e bacon."
+    nsm "Meio que é isso também... Mas na verdade esse é aquele macarrão mais achatado, sabe?"
+    nsr "Temos aqui também os queijos parmesão, gorgonzola e mussarela..."
+    nsr "E de proteínas temos frango, salmão e bacon."
     nn "Qual massa você acha uma boa?"
 
 
@@ -750,18 +743,18 @@ label cap1_5:
     menu:
         "Tradicional":
             m "Eu gosto do tradicional."
-            nn "Todo mundo gosta do tradicional."
+            nsm "Todo mundo gosta do tradicional."
             $ tradicional = True
         "Linguine":
             m "O Linguine parece interessante."
-            nn "Ce escolheu esse por causa do desenho do rato, né?"
+            nsm "Ce escolheu esse por causa do desenho do rato, né?"
             menu(nvl=True):
                 "Não...":
                     m "Não, não! Eu nunca faria uma coisa desas!"
-                    nn "Sei..."
+                    nsm "Sei..."
                 "Talvez...":
                     m "Hmm... Talvez..."
-                    nn "Meu irmãozinho de 10 anos teria respondido a mesma coisa."
+                    nh "Meu irmãozinho de 10 anos teria respondido a mesma coisa."
                     m "Ei!"
 
     nn "E o queijo?"
@@ -773,14 +766,14 @@ label cap1_5:
     menu(nvl=True):
             "Parmesão. ":
                 hide screen countdown
-                nn "Hmm..."
+                nsm "Hmm..."
                 $ parmesao = True
             "Gorgonzola. ":
                 hide screen countdown
-                nn "Eca! que nojo!"
+                nsr "Eca! que nojo!"
                 m "Que foi? Não gosta?"
-                nn "E você gosta?"
-                nn "Não devia ter deixado você ajudar..."
+                nsr "E você gosta?"
+                nsr "Não devia ter deixado você ajudar..."
 
     nn "Agora... a carne"
 
@@ -792,7 +785,7 @@ label cap1_5:
     menu(nvl=True):
         "Frango":
             hide screen countdown
-            nn "Hmm, parece uma boa."
+            nsm "Hmm, parece uma boa."
             $ frango = True
             jump escolha_rapida
         "Bacon":
@@ -801,8 +794,8 @@ label cap1_5:
             jump escolha_rapida
 
 label escolha_devagar:
-    nn "Credo, cê demora demais!"
-    nn "Deixa que eu faço."
+    nsr "Credo, cê demora demais!"
+    nsr "Deixa que eu faço."
     "Ela me afasta e escolhe os ingredientes sozinha."
 
 label escolha_rapida:   
@@ -812,32 +805,32 @@ label escolha_rapida:
     "Ela é rápida e confiante em seus movimentos."
     "Chega até a cantarolar uma música."
     m "Você parece bem confortável."
-    nn "Ah! Eu?"
-    nn "É que na verdade já estou acostumada, sabe."
-    nn "Minha família tem um restaurante"
-    nn "E eu costumava ajudar na cozinha."
+    nsu "Ah! Eu?"
+    nsm "É que na verdade já estou acostumada, sabe."
+    nsm "Minha família tem um restaurante"
+    nsm "E eu costumava ajudar na cozinha."
     m "É sério!? Caramba, que legal!"
     nn "Na verdade, não era tão legal assim."
-    nn "Tinha muito problema e dor de cabeça..."
+    nsr "Tinha muito problema e dor de cabeça..."
     nn "Ainda tem, no caso…"
     nn "Com o tempo as coisas pioraram por causa do dinheiro."
     m "Ah..."
 
     if ignorante:
         nn "Bem que eu poderia ter nascido bem rica pra não ter que passar por esse tipo de coisa..."
-        nn "Tipo aquela metida da Roko. O maior dos problemas dela deve ser decidir em que continente vai passar as férias."
-        nn "Eu odeio ela... Sempre me olha com aquela cara de nojo."
+        nsr "Tipo aquela metida da Roko. O maior dos problemas dela deve ser decidir em que continente vai passar as férias."
+        nsr "Eu odeio ela... Sempre me olha com aquela cara de nojo."
         m "Ela te olha com nojo? Que horror!"
-        nn "Não me conformo que uma pessoa dessas já tenha ganhado na vida só por ser herdeira."
+        nsr "Não me conformo que uma pessoa dessas já tenha ganhado na vida só por ser herdeira."
         # olha a fofoca
         m "Hoje mais cedo, eu estava conversando com ela."
         m "Você não vai acreditar no que ela disse..."
-        nn "O que ela disse? Vai, fala logo!"
+        nsr "O que ela disse? Vai, fala logo!"
         m "Ela chamou a gente de ignorante!"
-        nn "*surpresa* Não acredito!"
-        nn "Nossa, se eu ver ela na rua..."
-        "Nádia está com MUITA raiva."
-        nn "Seria suspeito se, acidentalmente, a gente colocasse um 'pouco' de pimenta no prato dela?"
+        na "Não acredito!"
+        na "Nossa, se eu ver ela na rua..."
+        "{i}A Nádia está com MUITA raiva.{/i}"
+        na "Seria suspeito se, acidentalmente, a gente colocasse um 'pouco' de pimenta no prato dela?"
         m "Acho que sim..."
         m "Vamos deixar essa vingança pra depois."
 
@@ -855,34 +848,34 @@ label cap1_6:
     "Levamos nosso prato ao balcão de Roko."
     #Srn "Começando por Moonie e Nádia."
     Srn "O que prepararam?"
-    m "Fizemos um delicioso espaguete ao molho branco."
-    nn "Com brócolis."
+    m "Fizemos um delicioso espaguete ao molho branco, com queijo e carne."
+    nsm "E brócolis."
     "Roko se esforça para não fazer cara de nojo mais uma vez."
     Srn "Pode provar, jurada."
     "Ela empurra os brócolis para um canto do prato com o garfo."
     "E prova a massa com molho."
-    rn "Hmm..."
+    rnsu "Hmm..."
     rn "Até que não está ruim..."
     rn "Eu daria um 8..."
-    Srn "8 é uma boa nota!"
+    Srsu "8 é uma boa nota!"
 
     if (tradicional && parmesao && frango):
         Srn "Algo mais a comentar, senhorita Roko?"
         rn "Bem que o macarrão poderia ser fresco."
-        Srn "Aí já é pedir demais."
+        Sra "Aí já é pedir demais."
         Srn "Será que a equipe 2 fará um trabalho melhor?"
-        Srn "É o que vamos descobrir em instantes! Então fique ligado!"
+        Srh "É o que vamos descobrir em instantes! Então fique ligado!"
         $ aceitavel = True
         jump prato2
 
-    rn "Mas como tem brócolis a minha nota final é 5!"
-    Srn "!!!"
-    "Ah não, não pode ser..."
-    "Como ela tem a audácia!?"
+    ri "Mas como tem brócolis a minha nota final é 5!"
+    Srsu "!!!"
+    p "{i}Ah não, não pode ser...{/i}"
+    p "{i}Como ela tem a audácia!?{/i}"
     "Olho para o lado e vejo Nádia com uma expressão vazia."
     "Mas sinto o ódio crescente nela."
-    Srn "Ehr..."
-    "Até mesmo o Sr.Star parece indignado."
+    Sra "Ehr..."
+    p "{i}Até mesmo o Sr.Star parece indignado.{/i}"
     Srn "Neste caso... 5 é a nota final!"
     Srn "He he..."
     "Ele ri meio sem graça."
@@ -895,47 +888,47 @@ label prato2:
 
     if (vermelho):
         "Nádia sussurra ao meu lado."
-        nn "Parece que a Carminha Frufru se deu mal..."
+        nsm "Parece que a Carminha Frufru se deu mal..."
        
-    Srn "Uhh! Parece muito bom!"
+    Srsu "Uhh! Parece muito bom!"
     Srn "Podem dizer do que se trata?"
     ln "Temos aqui o clássico e muito amado espaguete com almôndegas."
-    rn "E... molho de tomate...?"
-    jn "Sim! Foi temperado com um ingrediente secreto especial meu!"
+    ra "E... molho de tomate...?"
+    jh "Sim! Foi temperado com um ingrediente secreto especial meu!"
     "Juni parece orgulhosa sobre isso."
 
     if (vermelho):
-        "Mal ela sabe..."
+        "{i}Mal ela sabe...{/i}"
 
-    rn "... Tenho mesmo que comer isso?"
+    ra "... Tenho mesmo que comer isso?"
     Srn "Para dar uma nota, você precisa primeiro provar."
-    rn "Ok..."
+    ra "Ok..."
     "Ela hesita em provar por algum tempo."
-    Srn "Apresse-se! O prato vai esfriar!"
+    Sra "Apresse-se! O prato vai esfriar!"
     "Depois de muito esforço mental, ela leva o garfo à boca."
-    rn "..."
+    rnv "..."
     "Ela mastiga devagar..."
     Srn "Está tudo bem, srta. Roko...?"
-    rn "..."
+    ra "..."
     "Ela continua mastigando."
     "Seu rosto começa a suar e empalidecer."
     "Ela parece prestes a vomitar ou desmaiar."
-    Srn "Meu Deus, há algo errado!"
+    Srsu "Meu Deus, há algo errado!"
     "As meninas da equipe 2 também parecem nervosas."
-    ln "Oh, não! O que houve?!"
-    nn "Meninas, quando eu falei de envenenar ela, eu estava BRIN-CAN-DO, tá bem?"
+    lsu "Oh, não! O que houve?!"
+    nh "Meninas, quando eu falei de envenenar ela, eu estava BRIN-CAN-DO, tá bem?"
     "Nádia se diverte com a situação."
-    Srn "Equipe médica, por favor!"
+    Srsu "Equipe médica, por favor!"
     "Sr.Star acena para chamar os primeiros socorros."
     "Nesse momento, Roko finalmente consegue engolir."
-    rn "Arhg!"
-    rn "Não precisa, eu estou bem..."
-    Srn "Ufa!"
+    ra "Arhg!"
+    ra "Não precisa, eu estou bem..."
+    Srsu "Ufa!"
     "Todos parecem bem mais aliviados."
-    Srn "A senhorita realmente nos preocupou..."
+    Srsu "A senhorita realmente nos preocupou..."
     Srn "Gostaria de uma pausa para respirar, srta. Roko?"
-    rn "Não, não."
-    rn "Isso já foi o suficiente para minha decisão final."
+    ra "Não, não."
+    ra "Isso já foi o suficiente para minha decisão final."
     "O clima se torna mais tenso após suas palavras."
     Srn "Bem... Então..."
     Srn "Diga-nos a sua escolha!"

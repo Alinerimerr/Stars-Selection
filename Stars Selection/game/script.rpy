@@ -33,32 +33,35 @@
     timerrange = 0
     timerjump = 0
 
-define lh = Character(("Linne"), kind=nvl, color="#fff422", windowbackground="images/novas txtbox/linniehappy.png")
-define ln = Character(("Linne"), kind=nvl, color="#fff422", windowbackground="images/novas txtbox/linnienormal.png")
-define la = Character(("Linne"), kind=nvl, color="#fff422", windowbackground="images/novas txtbox/linnieangry.png")
+define lh = Character(("Linne"), kind=nvl, color="#fff387", windowbackground="images/txtbox/linnie-happy.png")
+define ln = Character(("Linne"), kind=nvl, color="#fff387", windowbackground="images/txtbox/linnie-neutral.png") #medo e nervoso
+define la = Character(("Linne"), kind=nvl, color="#fff387", windowbackground="images/txtbox/linnie-angry.png")
 
-define jh = Character(("Juni"), kind=nvl, color="#deb2d1", windowbackground="images/novas txtbox/junnihappy.png")
-define jn = Character(("Juni"), kind=nvl, color="#deb2d1", windowbackground="images/novas txtbox/junninormal.png")
-define ja = Character(("Juni"), kind=nvl, color="#deb2d1", windowbackground="images/novas txtbox/junniangry.png")
+define jh = Character(("Juni"), kind=nvl, color="#ffc1ec", windowbackground="images/txtbox/junni-happy.png")       #feliz
+define jn = Character(("Juni"), kind=nvl, color="#ffc1ec", windowbackground="images/txtbox/junni-neutral.png")     #normal
+define ja = Character(("Juni"), kind=nvl, color="#ffc1ec", windowbackground="images/txtbox/junni-neutral.png")     #fazerr brava*** e nervosa
+define js = Character(("Juni"), kind=nvl, color="#ffc1ec", windowbackground="images/txtbox/junni-sad.png")         #triste
 
-define Srh = Character(("Sr. Star"), kind=nvl, color="#e93c59", windowbackground="images/novas txtbox/srstarhappy.png")
-define Srn = Character(("Sr. Star"), kind=nvl, color="#e93c59", windowbackground="images/novas txtbox/srstarnormal.png")
-define Sra = Character(("Sr. Star"), kind=nvl, color="#e93c59", windowbackground="images/novas txtbox/srstarangry.png")
-define Srsu = Character(("Sr. Star"), kind=nvl, color="#e93c59", windowbackground="images/novas txtbox/srstarsurprise.png")
-define Srsc = Character(("Sr. Star"), kind=nvl, color="#e93c59", windowbackground="images/novas txtbox/srstarscary.png")
+define Srh = Character(("Sr. Star"), kind=nvl, color="#ff879b", windowbackground="images/txtbox/srstar-happy.png")      #feliz
+define Srn = Character(("Sr. Star"), kind=nvl, color="#ff879b", windowbackground="images/txtbox/srstar-neutral.png")    #normal
+define Sra = Character(("Sr. Star"), kind=nvl, color="#ff879b", windowbackground="images/txtbox/srstar-angry.png")      #bravo
+define Srsu = Character(("Sr. Star"), kind=nvl, color="#ff879b", windowbackground="images/txtbox/srstar-surprise.png")  #surpreso
+define Srsc = Character(("Sr. Star"), kind=nvl, color="#ff879b", windowbackground="images/txtbox/srstar-scary.png")     #assustador
 
-define nh = Character(("Nádia"), kind=nvl, color="#871abe", windowbackground="images/novas txtbox/nadiahappy.png")
-define nn = Character(("Nádia"), kind=nvl, color="#871abe", windowbackground="images/novas txtbox/nadianormal.png")
-define na = Character(("Nádia"), kind=nvl, color="#871abe", windowbackground="images/novas txtbox/nadiaangry.png")
-define nsu = Character(("Nádia"), kind=nvl, color="#871abe", windowbackground="images/novas txtbox/nadiasurprise.png")
+define nh = Character(("Nádia"), kind=nvl, color="#db93ff", windowbackground="images/txtbox/nadia-happy.png")       #feliz
+define nsm = Character(("Nádia"), kind=nvl, color="#db93ff", windowbackground="images/txtbox/nadia-smile.png")      #sorrindo
+define nn = Character(("Nádia"), kind=nvl, color="#db93ff", windowbackground="images/txtbox/nadia-neutral.png")     #normal
+define na = Character(("Nádia"), kind=nvl, color="#db93ff", windowbackground="images/txtbox/nadia-angry.png")       #brava
+define nsr = Character(("Nádia"), kind=nvl, color="#db93ff", windowbackground="images/txtbox/nadia-serious.png")    #seria/determinada
+define nsu = Character(("Nádia"), kind=nvl, color="#db93ff", windowbackground="images/txtbox/nadia-surprise.png")   #surpresa
 
-define rh = Character(("Roko"), kind=nvl, color="#54ff95", windowbackground="images/novas txtbox/rokohappy.png")
-define rn = Character(("Roko"), kind=nvl, color="#54ff95", windowbackground="images/novas txtbox/rokonormal.png")
-define ra = Character(("Roko"), kind=nvl, color="#54ff95", windowbackground="images/novas txtbox/rokoangry.png")
+define rh = Character(("Roko"), kind=nvl, color="#81ffb1", windowbackground="images/txtbox/roko-neutral.png")   #feliz  e smile  e zangada e triste/irritada  fazer***
+define rn = Character(("Roko"), kind=nvl, color="#81ffb1", windowbackground="images/txtbox/roko-neutral.png")   #normal
+define ra = Character(("Roko"), kind=nvl, color="#81ffb1", windowbackground="images/txtbox/roko-angry.png")     #brava
+define rc = Character(("Roko"), kind=nvl, color="#81ffb1", windowbackground="images/txtbox/roko-confident.png") #confiante
 
-
-define m = Character(("Moonie"), kind=nvl, color="#5754ff", windowbackground="images/txtbox52.png", whatxpos=0.06, whoxpos=0.57, whatwidth=0.7)
-define p = Character(("Pensamento"), kind=nvl, whatxpos=0.1)
+define m = Character(("Moonie"), kind=nvl, color="#a8a7ff", windowbackground="images/txtbox52.png", whatxpos=0.06, whoxpos=0.57, whatwidth=0.7)
+define p = Character(("Pensamento"), kind=nvl, whatxpos=0.1) #{/i}
 define narrator = Character(None, kind=nvl, whatxpos=0.1)
 define tempo = Character(None, whatypos=3.5, fontsize=20)
 

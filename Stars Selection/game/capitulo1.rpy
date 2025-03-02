@@ -5,13 +5,6 @@ label cap1_1:
     $ dia += 1
     $ periodo = "Manhã"
 
-
-    D "[dia]"
-
-
-    show daydisplay
-
-
     "TRRIN TRRIN TRRIN TRRIN TRRIN TRRIN"
     m "Ah!"
     "Acordo assustada como som do despertador"

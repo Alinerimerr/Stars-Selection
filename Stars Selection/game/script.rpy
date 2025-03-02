@@ -69,6 +69,7 @@ define nn = Character(("Nádia"), kind=nvl, color="#db93ff", window_background="
 define na = Character(("Nádia"), kind=nvl, color="#db93ff", window_background="images/txtbox/nadia-angry.png")      #brava
 define nsr = Character(("Nádia"), kind=nvl, color="#db93ff", window_background="images/txtbox-nadia-serious.png")    #seria/determinada
 define nsu = Character(("Nádia"), kind=nvl, color="#db93ff", window_background="images/nadia-surprise.png")         #surpresa
+define ns = Character(("Nádia"), kind=nvl, color="#db93ff", window_background="images/nadia-neutral.png")
 
 define rh = Character(("Roko"), kind=nvl, color="#81ffb1", window_background="images/txtbox/roko-neutral.png")   #feliz  e smile  e zangada e triste/irritada  fazer***
 define rn = Character(("Roko"), kind=nvl, color="#81ffb1", window_background="images/txtbox/roko-neutral.png")   #normal

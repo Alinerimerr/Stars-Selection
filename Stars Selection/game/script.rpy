@@ -86,7 +86,7 @@ define rs = Character(("Roko"), kind=nvl, color="#81ffb1", window_background="im
 
 define m = Character(("Moonie"), kind=nvl, color="#a8a7ff", window_background="images/txtbox5-2.png", what_xpos=0.07, who_xpos=0.08, what_width=0.8, font_size=120)
 define p = Character(("Pensamento"), kind=nvl, whatxpos=0.1, what_xpos=0.07, who_xpos=0.08, what_width=1) #{/i}
-define desc = Character(("???"), kind=nvl, whatxpos=0.1, what_xpos=0.07, who_xpos=0.08, what_width=1) #para desconhecidos
+define desc = Character(("???"), kind=nvl, color="#ebd2a9", whatxpos=0.1, what_xpos=0.07, who_xpos=0.08, what_width=1) #para desconhecidos
 define narrator = Character(None, kind=nvl, what_xpos=0.1)
 #define tempo = Character(None, what_ypos=3.5, font_size=20)
 

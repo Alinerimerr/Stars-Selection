@@ -281,8 +281,8 @@ label cap5_3:
     Srn "E a vencedora é...."
     "Depois do que pareceu uma eternidade, finalmente aparece no telão os resultados."
 
-    if karma > 30: # situacao em q moon perde
-    # n sei expressar alegria
+    if karma >= 30: # situacao em q moon perde
+        # n sei expressar alegria
         Srh "A VENCEDORA É LINNE!"
         p "O QUE?!"
         Srh "Meus parabéns, querida!"

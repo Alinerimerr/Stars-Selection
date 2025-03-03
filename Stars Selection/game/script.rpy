@@ -45,18 +45,19 @@
     timer_range = 0
     timer_jump = 0
 
-define lh = Character(("Linne"), kind=nvl, color="#fff387", window_background="images/txtbox/linnie-happy.png")   #feliz
-define ln = Character(("Linne"), kind=nvl, color="#fff387", window_background="images/txtbox/linnie-neutral.png") #medo e nervoso
-define la = Character(("Linne"), kind=nvl, color="#fff387", window_background="images/txtbox/linnie-angry.png")   #raiva
-define li = Character(("Linne"), kind=nvl, color="#fff387", windowba_ckground="images/txtbox/linnie-angry.png")   #irritada
-define ls = Character(("Linne"), kind=nvl, color="#fff387", windowba_ckground="images/txtbox/linnie-angry.png")   #triste
+define lh = Character(("Linne"), kind=nvl, color="#fff387", window_background="images/txtbox/linnie-happy.png")       #feliz
+define ln = Character(("Linne"), kind=nvl, color="#fff387", window_background="images/txtbox/linnie-neutral.png")     #medo e nervoso
+define la = Character(("Linne"), kind=nvl, color="#fff387", window_background="images/txtbox/linnie-angry.png")       #raiva
+define li = Character(("Linne"), kind=nvl, color="#fff387", windowba_ckground="images/txtbox/linnie-irritated.png")   #irritada
+define ls = Character(("Linne"), kind=nvl, color="#fff387", windowba_ckground="images/txtbox/linnie-sad.png")         #triste
+define lnv = Character(("Linne"), kind=nvl, color="#fff387", windowba_ckground="images/txtbox/linnie-nervous.png")    #nervosa
 
 define jh = Character(("Juni"), kind=nvl, color="#ffc1ec", window_background="images/txtbox/junni-happy.png")       #feliz
 define jn = Character(("Juni"), kind=nvl, color="#ffc1ec", window_background="images/txtbox/junni-neutral.png")     #normal
-define ja = Character(("Juni"), kind=nvl, color="#ffc1ec", window_background="images/txtbox/junni-neutral.png")     #fazerr brava*** e nervosa
+define ja = Character(("Juni"), kind=nvl, color="#ffc1ec", window_background="images/txtbox/junni-angry.png")       #fazerr brava*** e nervosa
 define js = Character(("Juni"), kind=nvl, color="#ffc1ec", window_background="images/txtbox/junni-sad.png")         #triste
-define jnv = Character(("Juni"), kind=nvl, color="#ffc1ec", window_background="images/txtbox/junni-neutral.png")    #nervosa
-define jsu = Character(("Juni"), kind=nvl, color="#ffc1ec", window_background="images/txtbox/junni-neutral.png")    #surpresa
+define jnv = Character(("Juni"), kind=nvl, color="#ffc1ec", window_background="images/txtbox/junni-nervous.png")    #nervosa
+define jsu = Character(("Juni"), kind=nvl, color="#ffc1ec", window_background="images/txtbox/junni-surprise.png")    #surpresa
 
 define Srh = Character(("Sr. Star"), kind=nvl, color="#ff879b", window_background="images/txtbox/srstar-happy.png")      #feliz
 define Srn = Character(("Sr. Star"), kind=nvl, color="#ff879b", window_background="images/txtbox/srstar-neutral.png")    #normal
@@ -66,21 +67,21 @@ define Srsc = Character(("Sr. Star"), kind=nvl, color="#ff879b", window_backgrou
 
 define nh = Character(("Nádia"), kind=nvl, color="#db93ff", window_background="images/txtbox/nadia-happy.png")      #feliz
 define nsm = Character(("Nádia"), kind=nvl, color="#db93ff", window_background="images/txtbox/nadia-smile.png")     #sorrindo
-define nn = Character(("Nádia"), kind=nvl, color="#db93ff", window_background="images/txtbox-nadia-neutra.png")     #normal
+define nn = Character(("Nádia"), kind=nvl, color="#db93ff", window_background="images/txtbox/nadia-neutral.png")     #normal
 define na = Character(("Nádia"), kind=nvl, color="#db93ff", window_background="images/txtbox/nadia-angry.png")      #brava
-define nsr = Character(("Nádia"), kind=nvl, color="#db93ff", window_background="images/txtbox-nadia-serious.png")   #seria/determinada
-define nsu = Character(("Nádia"), kind=nvl, color="#db93ff", window_background="images/nadia-surprise.png")         #surpresa
-define ns = Character(("Nádia"), kind=nvl, color="#db93ff", window_background="images/nadia-neutral.png")           #triste
-define nnv = Character(("Nádia"), kind=nvl, color="#db93ff", window_background="images/nadia-neutral.png")          #nervosa
+define nsr = Character(("Nádia"), kind=nvl, color="#db93ff", window_background="images/txtbox/nadia-serious.png")   #seria/determinada
+define nsu = Character(("Nádia"), kind=nvl, color="#db93ff", window_background="images/txtbox/nadia-surprise.png")         #surpresa
+define ns = Character(("Nádia"), kind=nvl, color="#db93ff", window_background="images/txtbox/nadia-sad.png")               #triste
+define nnv = Character(("Nádia"), kind=nvl, color="#db93ff", window_background="images/txtbox/nadia-nervous.png")          #nervosa
 
-define rh = Character(("Roko"), kind=nvl, color="#81ffb1", window_background="images/txtbox/roko-neutral.png")   #feliz
+define rh = Character(("Roko"), kind=nvl, color="#81ffb1", window_background="images/txtbox/roko-happy.png")     #feliz
 define rn = Character(("Roko"), kind=nvl, color="#81ffb1", window_background="images/txtbox/roko-neutral.png")   #normal
 define ra = Character(("Roko"), kind=nvl, color="#81ffb1", window_background="images/txtbox/roko-angry.png")     #brava
 define rc = Character(("Roko"), kind=nvl, color="#81ffb1", window_background="images/txtbox/roko-confident.png") #confiante
-define ri = Character(("Roko"), kind=nvl, color="#81ffb1", window_background="images/txtbox/roko-neutral.png")   #(ri - irritada)
-define rnv = Character(("Roko"), kind=nvl, color="#81ffb1", window_background="images/txtbox/roko-neutral.png")  #nervosa
-define rsu = Character(("Roko"), kind=nvl, color="#81ffb1", window_background="images/txtbox/roko-neutral.png")  #surpresa
-define rs = Character(("Roko"), kind=nvl, color="#81ffb1", window_background="images/txtbox/roko-neutral.png")  #triste
+define ri = Character(("Roko"), kind=nvl, color="#81ffb1", window_background="images/txtbox/roko-irritated.png") #(ri - irritada)
+define rnv = Character(("Roko"), kind=nvl, color="#81ffb1", window_background="images/txtbox/roko-nervous.png")  #nervosa
+define rsu = Character(("Roko"), kind=nvl, color="#81ffb1", window_background="images/txtbox/roko-surprise.png") #surpresa
+define rs = Character(("Roko"), kind=nvl, color="#81ffb1", window_background="images/txtbox/roko-sad.png")       #triste
 
 define m = Character(("Moonie"), kind=nvl, color="#a8a7ff", window_background="images/txtbox5-2.png", what_xpos=0.07, who_xpos=0.08, what_width=0.8, font_size=120)
 define p = Character(("Pensamento"), kind=nvl, whatxpos=0.1, what_xpos=0.07, who_xpos=0.08, what_width=1) #{/i}
